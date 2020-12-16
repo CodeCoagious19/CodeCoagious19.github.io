@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: SiDiRi
+title: 8-bit
 email: simone.diricco.1@gmail.com
 #description: >- # this means to ignore newlines until "baseurl:"
 #  Write an awesome description for your new site here. You can edit this
@@ -69,7 +69,7 @@ custom_schemes: [wider, left-align]
 #markup / liquid-based content.
 #footer_content: "Copyright &copy; 2020 Simone Di Ricco, distribuito tramite licenza <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT</a>"
 
-footer_content: "Copyright &copy; 2020 Simone Di Ricco, distribuito tramite licenza <a href=\"#\">MIT</a>"
+#footer_content: "Copyright &copy; 2020 Simone Di Ricco, distribuito tramite licenza <a href=\"#\">MIT</a>"
 
 # Footer last edited timestamp
 #last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
@@ -84,9 +84,9 @@ footer_content: "Copyright &copy; 2020 Simone Di Ricco, distribuito tramite lice
 #gh_edit_view_mode: "" # "tree" or "edit" if you want the user to jump into the editor immediately
 
 
-aux_links:
-  "GitHub":
-    - "https://github.com/simonediricco1" 
-  "xda-developer":
-    -"www.google.it"
+#aux_links:
+#  "GitHub":
+#    - "https://github.com/simonediricco1" 
+#  "xda-developer":
+#    -"www.google.it"
 
