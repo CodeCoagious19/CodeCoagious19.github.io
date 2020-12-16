@@ -1,0 +1,173 @@
+//animazione
+@keyframes side-bar-border-animation {
+    from {border-left: 0px #2C001E solid;}
+    to {border-left: 7px #E95420 solid;}
+}
+
+//Per i contenuti .markdown utilizzo una formattazione
+body{
+    text-align: justify;
+}
+
+//----------------------------------------------------------------------------------------------
+//MENU BUTTON MOBILE
+//Valido per il bottone di espansione menu in modalità mobile
+.icon {
+    color: #F6F6F5;
+}
+.icon:hover{
+    color: #E95420;
+}
+//Valido per il bottone di espansione menu in modalità mobile
+//Ho sovraiscritto "background-image" con un valore trasparente
+#menu-button.site-button:hover {
+    background-image: linear-gradient(-90deg, rgba(65, 25, 52, 0) 100%, rgba(65, 25, 52, 0) 100%, rgba(65, 25, 52, 0) 100%);
+}
+//----------------------------------------------------------------------------------------------
+
+
+//Divisore header side-bar
+.site-header {
+    border-bottom: 1px #AEA79F solid;
+}
+
+
+//----------------------------------------------------------------------------------------------
+//TITLE
+//Stile titolo pagina
+.site-title{
+    color:#F6F6F5;
+    justify-content: left;
+}
+//Ho sovraiscritto "background-image" con un valore trasparente
+.site-title:hover {
+    background-image: linear-gradient(-90deg, rgba(65, 25, 52, 0) 100%, rgba(65, 25, 52, 0) 100%, rgba(65, 25, 52, 0) 100%);
+}
+//----------------------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------------------
+//SIDE BAR
+//Colore della .side-bar
+//#2C001E == Ubuntu, Dark Aubergine 100% 
+.side-bar{
+    background:#2C001E;
+}
+
+//Imposto una distanza tra l'header, il titolo e gli elementi della nav-list
+.site-nav{
+    margin-top: 40px;
+}
+
+//Stile degli elementi della side-bar
+.nav-list .nav-list-item  .nav-list-link{
+    //#F6F6F5 == Ubuntu, Warm Grey 10%
+    color: #F6F6F5;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1.01rem;
+}
+
+//Stile dei figli (eventuali) degli elementi della side-bar
+.nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-link {
+    // #D6D3CF == Ubuntu, Warm Grey 50%
+    color: #D6D3CF;
+    font-weight: unset;
+}
+
+//Stile dell'expander dei figli (eventuali) degli elementi della side-bar
+.nav-list .nav-list-item .nav-list-expander {
+    //#F6F6F5 == Ubuntu, Warm Grey 10%
+    color: #F6F6F5;
+}
+
+//Stile hover dell'expander dei figli (eventuali) degli elementi della side-bar
+//Ho aggiunto "background-image" per sovraiscivere il vecchio valore
+.nav-list .nav-list-item .nav-list-expander:hover { 
+    background-image: linear-gradient(-90deg, rgba(65, 25, 52, 0) 100%, rgba(65, 25, 52, 0) 100%, rgba(65, 25, 52, 0) 100%);
+}
+
+
+//Stile hover e active degli elementi della side-bar e dei figli
+//Ho sovraiscritto "background-image" con un valore trasparente
+.nav-list .nav-list-item .nav-list-link:hover {
+    border-left: 7px #E95420 solid;
+    background-image: linear-gradient(-90deg, rgba(65, 25, 52, 0) 100%, rgba(65, 25, 52, 0) 100%, rgba(65, 25, 52, 0) 100%);
+}
+
+.nav-list .nav-list-item .nav-list-link.active {
+    border-left: 7px #E95420 solid;
+    background-image: linear-gradient(-90deg, rgba(65, 25, 52, 0) 100%, rgba(65, 25, 52, 0) 100%, rgba(65, 25, 52, 0) 100%);
+}
+//----------------------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------------------
+//ANCHOR TAG
+//Per i link tag dei contenuti della pagina..
+//Ho aggiunto l'opzione "vai a capo" se i link tag risultano lunghi
+.main-content a {
+    white-space: inherit;
+}
+
+//Tutti i link tag si colorano di rosso
+//Ho aggiunto anche l'opzione "vai a capo" se i link tag risultano lunghi
+a {
+    color: #E95420;
+    white-space: inherit;
+}
+
+//Stile dell'anchor tag dei contenuti, elementi markdown (nei titoli)
+.main-content .anchor-heading svg {
+    color: #2C001E;
+}
+
+
+//Stile hover su link tag dei contenuti, elementi markdown.
+a:not([class]):hover {
+    background-image: linear-gradient(rgba(44, 0, 30, 0.45) 0%, rgba(44, 0, 30, 0.45) 100%);
+}
+//----------------------------------------------------------------------------------------------
+
+
+
+
+//Responsive queries
+@media (min-width: 800px) { 
+    .main { 
+        position: relative; 
+        max-width: 1200px; 
+        margin-left: 264px;     
+    } 
+//Aggiungo un animazione quando la schemrata supera gli 800px
+    .nav-list .nav-list-item .nav-list-link:hover {
+        animation-name: side-bar-border-animation;
+        animation-duration: 0.2s;
+    }
+}
+@media (min-width: 800px) {     
+    .side-bar {
+        min-width: 264px;
+        //min-width: 400px;
+    }
+}
+
+@media (min-width: 1064px) { 
+    .side-bar {
+        //max-width: 264px;
+        max-width: 400px;
+    }
+}
+@media (min-width: 1064px) { 
+    .main { 
+        //margin-left: 264px;
+        margin-left: 400px;
+    }
+ }
+ @media (min-width: 1366px) { 
+    .main { 
+        //margin-left: 264px;
+        margin-left: 400px;
+    }
+}
+
