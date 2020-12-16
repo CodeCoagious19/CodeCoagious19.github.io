@@ -2288,7 +2288,11 @@ a { color: #E95420; white-space: inherit; }
 a:not([class]):hover { background-image: linear-gradient(rgba(44, 0, 30, 0.45) 0%, rgba(44, 0, 30, 0.45) 100%); }
 
 @media (min-width: 800px) { .main { position: relative; max-width: 1200px; margin-left: 264px; }
-  .nav-list .nav-list-item .nav-list-link:hover { animation-name: side-bar-border-animation; animation-duration: 0.2s; } }
+  .nav-list .nav-list-item .nav-list-link:hover { animation-name: side-bar-border-animation; animation-duration: 0.2s; }
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .site-nav::-webkit-scrollbar { display: none; }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .site-nav { -ms-overflow-style: none; /* IE and Edge */ scrollbar-width: none; /* Firefox */ } }
 @media (min-width: 800px) { .side-bar { min-width: 264px; } }
 @media (min-width: 1064px) { .side-bar { max-width: 400px; } }
 @media (min-width: 1064px) { .main { margin-left: 400px; } }

@@ -7,6 +7,7 @@
 //Per i contenuti .markdown utilizzo una formattazione
 body{
     text-align: justify;
+
 }
 
 //----------------------------------------------------------------------------------------------
@@ -132,6 +133,7 @@ a:not([class]):hover {
 
 
 
+
 //Responsive queries
 @media (min-width: 800px) { 
     .main { 
@@ -144,6 +146,17 @@ a:not([class]):hover {
         animation-name: side-bar-border-animation;
         animation-duration: 0.2s;
     }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+.site-nav::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.site-nav{
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
 }
 @media (min-width: 800px) {     
     .side-bar {
