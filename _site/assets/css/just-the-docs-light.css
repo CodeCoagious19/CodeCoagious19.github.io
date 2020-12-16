@@ -2267,7 +2267,7 @@ body { text-align: justify; }
 
 .site-nav { margin-top: 40px; }
 
-.nav-list .nav-list-item .nav-list-link { color: #F6F6F5; text-align: left; font-weight: 600; font-size: 1.01rem; }
+.nav-list .nav-list-item .nav-list-link { color: #F6F6F5; text-align: left; font-weight: 600; }
 
 .nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-link { color: #D6D3CF; font-weight: unset; }
 

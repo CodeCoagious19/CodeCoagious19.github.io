@@ -38,7 +38,7 @@ github_username:  simonediricco1
 remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-feed
-
+  - jekyll-seo-tag
 
 custom_schemes: [wider, left-align]
 
