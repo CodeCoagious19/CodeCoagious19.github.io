@@ -439,6 +439,30 @@ body{
 #main-content {
     color: $main-content-color;
 }
+
+//----------------------------------------------------------------------------------------------
+//LINK-TAG MAIN-CONTENT
+a {
+    color: $main-link-tag-color;
+}
+
+//if a link-tag is too big, the text wraps to a new line
+.main-content a {
+    white-space: inherit;
+}
+
+//header anchor tag style
+.main-content .anchor-heading svg {
+    color: $ubuntu-dark-aubergine-100;
+}
+
+//main content link tag hover
+//add color at underline
+a:not([class]):hover {
+    background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%, rgba(44, 0, 30, 0.5) 100%);
+}
+//----------------------------------------------------------------------------------------------
+
 //----------------------------------------------------------------------------------------------
 
 //----------------------------------------------------------------------------------------------
@@ -522,28 +546,7 @@ body{
 //----------------------------------------------------------------------------------------------
 
 
-//----------------------------------------------------------------------------------------------
-//LINK-TAG
-a {
-    color: $main-link-tag-color;
-}
 
-//if a link-tag is too big, the text wraps to a new line
-.main-content a {
-    white-space: inherit;
-}
-
-//Stile dell'anchor tag dei titoli dei contenuti, documenti .markdown
-.main-content .anchor-heading svg {
-    color: $ubuntu-dark-aubergine-100;
-}
-
-//Stile hover su link tag dei contenuti, documenti markdown.
-//Coloro di scuro l'underline..
-a:not([class]):hover {
-    background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%, rgba(44, 0, 30, 0.5) 100%);
-}
-//----------------------------------------------------------------------------------------------
 
 
 
@@ -596,7 +599,8 @@ a:not([class]):hover {
 
 
 
-
+//----------------------------------------------------------------------------------------------
+//HEADER FONTS
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
     font-weight: 500;
 }
@@ -608,16 +612,26 @@ h2, .text-beta {
 }
 }
 
+
+
 @media (min-width: 31.25rem){
 h3, .text-gamma {
     font-size: 22px !important;
 }
 }
 
+
+
 @media (min-width: 31.25rem){
 h4, .text-delta {
     font-size: 18px !important;
 }
+}
+
+
+
+h2, .text-beta {
+    font-size: 24px !important;
 }
 
 h4, .text-delta {
@@ -626,6 +640,12 @@ h4, .text-delta {
     text-transform: none;
     letter-spacing: 0;
 }
+
+
+h3, .text-gamma {
+    font-size: 20px !important;
+}
+//----------------------------------------------------------------------------------------------
 
 //Responsive queries
 @media (min-width: 800px) { 

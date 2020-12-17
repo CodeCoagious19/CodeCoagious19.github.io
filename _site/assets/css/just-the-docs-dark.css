@@ -2414,6 +2414,14 @@ body { text-align: justify; font-family: -apple-system, BlinkMacSystemFont, Sego
 
 #main-content { color: #111111; }
 
+a { color: #E95420; }
+
+.main-content a { white-space: inherit; }
+
+.main-content .anchor-heading svg { color: #2C001E; }
+
+a:not([class]):hover { background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%, rgba(44, 0, 30, 0.5) 100%); }
+
 .icon { color: #F6F6F5; }
 
 #menu-button.site-button:hover { background-image: none; }
@@ -2440,14 +2448,6 @@ body { text-align: justify; font-family: -apple-system, BlinkMacSystemFont, Sego
 
 .nav-list .nav-list-item .nav-list-link.active { border-left: 7px #E95420 solid; background-image: none; }
 
-a { color: #E95420; }
-
-.main-content a { white-space: inherit; }
-
-.main-content .anchor-heading svg { color: #2C001E; }
-
-a:not([class]):hover { background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%, rgba(44, 0, 30, 0.5) 100%); }
-
 .site-footer { font-size: 32px !important; text-align: center; margin-bottom: 24px; margin-top: 24px; }
 
 #site-footer-text { font-size: 11px !important; text-align: center; }
@@ -2465,7 +2465,11 @@ a:not([class]):hover { background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%
 @media (min-width: 31.25rem) { h2, .text-beta { font-size: 28px !important; } }
 @media (min-width: 31.25rem) { h3, .text-gamma { font-size: 22px !important; } }
 @media (min-width: 31.25rem) { h4, .text-delta { font-size: 18px !important; } }
+h2, .text-beta { font-size: 24px !important; }
+
 h4, .text-delta { font-size: 18px !important; font-weight: 500; text-transform: none; letter-spacing: 0; }
+
+h3, .text-gamma { font-size: 20px !important; }
 
 @media (min-width: 800px) { .main { max-width: 60%; margin-left: 264px; }
   .side-bar { width: 264px; }
