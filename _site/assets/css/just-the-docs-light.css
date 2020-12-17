@@ -2414,8 +2414,6 @@ body { text-align: justify; font-family: -apple-system, BlinkMacSystemFont, Sego
 
 #main-content { color: #111111; }
 
-h1, h2, h3, h4, h5, h6 { font-weight: 500; }
-
 .icon { color: #F6F6F5; }
 
 #menu-button.site-button:hover { background-image: none; }
@@ -2461,6 +2459,13 @@ a:not([class]):hover { background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%
 .aux-nav .aux-nav-list { display: flex; justify-content: center; }
 
 #aux-nav-text { display: block; font-size: 11px !important; text-align: center; }
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { font-weight: 500; }
+
+@media (min-width: 31.25rem) { h2, .text-beta { font-size: 28px !important; } }
+@media (min-width: 31.25rem) { h3, .text-gamma { font-size: 22px !important; } }
+@media (min-width: 31.25rem) { h4, .text-delta { font-size: 18px !important; } }
+h4, .text-delta { font-size: 18px !important; font-weight: 500; text-transform: none; letter-spacing: 0; }
 
 @media (min-width: 800px) { .main { max-width: 60%; margin-left: 264px; }
   .side-bar { width: 264px; }

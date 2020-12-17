@@ -418,12 +418,11 @@ code {
 
 
 //----------------------------------------------------------------------------------------------
-//Animazioni
+//Animations
 @keyframes side-bar-border-animation {
     from {border-left: 0px $ubuntu-dark-aubergine-100 solid;}
     to {border-left: 7px $ubuntu-orange-100 solid;}
 }
-
 @keyframes site-footer-element-animation {
     from {font-size: 32px}
     to {font-size: 36px}
@@ -432,7 +431,7 @@ code {
 
 
 //----------------------------------------------------------------------------------------------
-//MAIN-CONTENT
+//MAIN-CONTENT aligns, fonts, colors
 body{
     text-align: justify;
     font-family: $main-font-family;
@@ -440,22 +439,15 @@ body{
 #main-content {
     color: $main-content-color;
 }
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 500;
-}
 //----------------------------------------------------------------------------------------------
 
 //----------------------------------------------------------------------------------------------
-//MENU BUTTON - MOBILE MODE
-//Valido per il bottone di espansione menu in modalità mobile
+//BUTTON MENU- MOBILE MODE
 .icon {
     color: $ubuntu-warm-grey-10;
 }
-
-//Valido per il bottone di espansione menu in modalità mobile
-//Ho sovraiscritto "background-image" con un valore trasparente
 #menu-button.site-button:hover {
-    //background-image: linear-gradient(-90deg, rgba(65, 25, 52, 0) 100%, rgba(65, 25, 52, 0) 100%, rgba(65, 25, 52, 0) 100%);
+    //Remove the default background-image when hover
     background-image: none;
 }
 //----------------------------------------------------------------------------------------------
@@ -466,13 +458,12 @@ h1, h2, h3, h4, h5, h6 {
 
 //----------------------------------------------------------------------------------------------
 //TITLE
-//Stile titolo pagina
 .site-title{
     color: $site-title-color;
     justify-content: left;
 }
-//tolgo l'immagine di background
 .site-title:hover {
+    //Remove the default background-image when hover
     background-image: none;
 }
 //----------------------------------------------------------------------------------------------
@@ -480,7 +471,6 @@ h1, h2, h3, h4, h5, h6 {
 
 //----------------------------------------------------------------------------------------------
 //SIDE BAR
-
 .side-bar{
     background: $side-bar-background-color;
 }
@@ -603,6 +593,39 @@ a:not([class]):hover {
 //----------------------------------------------------------------------------------------------
 
 
+
+
+
+
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+    font-weight: 500;
+}
+
+@media (min-width: 31.25rem){
+h2, .text-beta {
+    font-size: 28px !important;
+    //line-height: 1.25;
+}
+}
+
+@media (min-width: 31.25rem){
+h3, .text-gamma {
+    font-size: 22px !important;
+}
+}
+
+@media (min-width: 31.25rem){
+h4, .text-delta {
+    font-size: 18px !important;
+}
+}
+
+h4, .text-delta {
+    font-size: 18px !important;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0;
+}
 
 //Responsive queries
 @media (min-width: 800px) { 
