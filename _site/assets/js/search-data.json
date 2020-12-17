@@ -1,7 +1,7 @@
 {"0": {
     "doc": "Chi sono",
-    "title": "Ciao..",
-    "content": "Sono Simone, sono un programmatore C embededd appassionato di elettronica e informatica. Visita la sezione Tutorial o la mia pagina GitHub . GitHub Tutorial . ",
+    "title": "Ciao!",
+    "content": "Visita la sezione Corsi, Tutorial o la mia pagina GitHub.. Corsi Tutorial GitHub . ",
     "url": "http://localhost:4000/chisono/#ciao",
     "relUrl": "/chisono/#ciao"
   },"1": {
@@ -18,8 +18,8 @@
     "relUrl": "/corsi/"
   },"3": {
     "doc": "Pagina Iniziale",
-    "title": "Ciao..",
-    "content": "Sono Simone, sono un programmatore C embededd appassionato di elettronica e informatica. Visita la sezione Tutorial o la mia pagina GitHub . GitHub Tutorial . ",
+    "title": "Ciao!",
+    "content": "Visita la sezione Corsi, Tutorial o la mia pagina GitHub.. Corsi Tutorial GitHub . ",
     "url": "http://localhost:4000/#ciao",
     "relUrl": "/#ciao"
   },"4": {

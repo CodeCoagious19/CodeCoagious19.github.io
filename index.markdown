@@ -8,10 +8,11 @@ permalink:
 nav_order: 1
 ---
 
-# Ciao..
+## Ciao!
 
-Sono Simone, sono un programmatore C embededd appassionato di elettronica e informatica. Visita la sezione Tutorial o la mia pagina GitHub
+Visita la sezione Corsi, Tutorial o la mia pagina GitHub..
 
-[GitHub](https://github.com/simonediricco1/){: .btn .btn-purple }
+[Corsi](./corsi.markdown){: .btn .btn-green }
 [Tutorial](./tutorial.markdown){: .btn .btn-blue }
+[GitHub](https://github.com/sidiri-8bit/){: .btn .btn-purple }
 
