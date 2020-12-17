@@ -104,27 +104,25 @@ body{
 
 
 //----------------------------------------------------------------------------------------------
-//ANCHOR TAG
-//Per i link tag dei contenuti della pagina..
+//ANCHOR TAGs
+//Tutti i link tag si colorano di rosso
+a {
+    color: #E95420;
+}
+
+//Per i link tag dei contenuti della pagina, quindi per i documenti .markdown..
 //Ho aggiunto l'opzione "vai a capo" se i link tag risultano lunghi
 .main-content a {
     white-space: inherit;
 }
 
-//Tutti i link tag si colorano di rosso
-//Ho aggiunto anche l'opzione "vai a capo" se i link tag risultano lunghi
-a {
-    color: #E95420;
-    white-space: inherit;
-}
-
-//Stile dell'anchor tag dei contenuti, elementi markdown (nei titoli)
+//Stile dell'anchor tag dei titoli dei contenuti, documenti .markdown
 .main-content .anchor-heading svg {
     color: #2C001E;
 }
 
-
-//Stile hover su link tag dei contenuti, elementi markdown.
+//Stile hover su link tag dei contenuti, documenti markdown.
+//Coloro di scuro l'underline..
 a:not([class]):hover {
     background-image: linear-gradient(rgba(44, 0, 30, 0.45) 0%, rgba(44, 0, 30, 0.45) 100%);
 }
@@ -135,89 +133,109 @@ a:not([class]):hover {
     to {font-size: 36px}
 }
 
-
+//----------------------------------------------------------------------------------------------
+//SIDE-BAR FOOTER - DESKTOP MODE
 .site-footer {
-    display:none;
     font-size: 32px !important;
     text-align: center;
-    position: absolute;
-    //bottom: 0px;
+    margin-bottom: 24px;
+    margin-top: 24px;
 } 
-
-
 #site-footer-text {
     font-size: 11px !important;
     text-align: center;
 }
+//----------------------------------------------------------------------------------------------
+
+
+//----------------------------------------------------------------------------------------------
+//SIDE-BAR FOOTER - MOBILE MODE
+//Disabilito il footer dalla sidebar
+.site-footer {
+    display:none;
+}
+
+//----------------------------------------------------------------------------------------------
+//AUX SOCIAL LINK - ONLY MOBILE MODE
+//Attivo i social link sotto la search-bar..
+//Allineo centralmente gli elementi
+.aux-nav .aux-nav-list .aux-nav-list-item {
+    font-size: 32px !important;
+    padding: 10px;
+}
+
+.aux-nav .aux-nav-list {
+    display: flex;
+    justify-content: center;
+}
+//----------------------------------------------------------------------------------------------
+
 
 
 //Responsive queries
 @media (min-width: 800px) { 
+    //----------------------------------------------------------------------------------------------
+    //PROPORZIONI TRA MAIN E SIDE-BAR - DESKTOP MODE little
     .main { 
-        position: relative; 
-        max-width: 1200px; 
+        //position: relative; 
+        max-width: 800px; 
         margin-left: 264px;     
     } 
-//Aggiungo un animazione quando la schemrata supera gli 800px
+    .side-bar {
+        width: 264px;
+    }
+    //---------------------------------------------------------------------------------------------
+
+    //----------------------------------------------------------------------------------------------
+    //SIDE-BAR - DESKTOP MODE
+    //Per gli elementi della side-bar ..
+    //Aggiungo un animazione quando la schemrata supera gli 800px
     .nav-list .nav-list-item .nav-list-link:hover {
         animation-name: side-bar-border-animation;
         animation-duration: 0.2s;
     }
 
     /* Hide scrollbar for Chrome, Safari and Opera */
-.site-nav::-webkit-scrollbar {
-    display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-.site-nav{
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-.site-footer {
-    display: block;
-    position: relative;
-    margin-bottom: 24px;
-    margin-top: 24px;
-    //border-left: 1px #E95420 solid;
-}
-
-
-.site-footer .site-footer-item {
-    padding: 10px;
-
-}
-
-.site-footer .site-footer-item:hover {
-    animation-name: site-footer-element-animation;
-    animation-duration: 0.2s;
-    font-size: 36px;
-
-}
-
-}
-@media (min-width: 800px) {     
-    .side-bar {
-        min-width: 264px;
-        //min-width: 400px;
+    .site-nav::-webkit-scrollbar {
+        display: none;
     }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .site-nav{
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    } 
+    //----------------------------------------------------------------------------------------------  
+
+    //----------------------------------------------------------------------------------------------
+    //SIDE BAR FOOTER - DESKTOP MODE
+    .site-footer {
+        display: block;
+
+    }
+    //Abilito un'animazione sul footer dei social link
+    .site-footer .site-footer-item:hover {
+        animation-name: site-footer-element-animation;
+        animation-duration: 0.2s;
+        font-size: 36px;
+    }
+    //----------------------------------------------------------------------------------------------
+
+    //----------------------------------------------------------------------------------------------
+    //AUX SOCIAL LINK - DESKTOP MODE
+    //Disabilito gli aux social link, poichè in desktop mode sono abilitati nel footer della side-bar
+    .aux-nav .aux-nav-list {
+        display: none;
+    }
+    //----------------------------------------------------------------------------------------------
 }
 
-@media (min-width: 1064px) { 
-    .side-bar {
-        //max-width: 264px;
-        max-width: 400px;
-    }
-}
-@media (min-width: 1064px) { 
-    .main { 
-        //margin-left: 264px;
-        margin-left: 400px;
-    }
- }
  @media (min-width: 1366px) { 
+    //----------------------------------------------------------------------------------------------
+    //PROPORZIONI TRA MAIN E SIDE-BAR - DESKTOP MODE big
+    .side-bar {
+        width: 400px;
+    }
     .main { 
-        //margin-left: 264px;
         margin-left: 400px;
     }
 }

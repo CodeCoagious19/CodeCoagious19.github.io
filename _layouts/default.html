@@ -89,10 +89,12 @@ layout: table_wrappers
         </div>
       {% endif %}
       {% include header_custom.html %}
+      <!--
       {% if site.aux_links %}
         <nav aria-label="Auxiliary" class="aux-nav">
           <ul class="aux-nav-list">
             {% for link in site.aux_links %}
+            <a href="https://github.com/sidiri-8bit" class="fa fa-github site-footer-item"></a>
               <li class="aux-nav-list-item">
                 <a href="{{ link.last }}" class="site-button"
                   {% if site.aux_links_new_tab %}
@@ -106,6 +108,14 @@ layout: table_wrappers
           </ul>
         </nav>
       {% endif %}
+      -->
+      <nav aria-label="Auxiliary" class="aux-nav">
+        <ul class="aux-nav-list">
+            <li class="aux-nav-list-item">
+              <a href="https://github.com/sidiri-8bit" class="fa fa-github site-footer-item"></a>
+            </li>
+        </ul>
+      </nav>
     </div>
     <div id="main-content-wrap" class="main-content-wrap">
       {% unless page.url == "/" %}
