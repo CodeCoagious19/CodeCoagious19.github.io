@@ -37,7 +37,7 @@
   },"6": {
     "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
     "title": "Indice",
-    "content": ". | E’ facile o difficile installare Ubuntu? | Installazione di Ubuntu . | 1. Collegati alla pagina ufficiale | 2. Crea un disco di avvio tramite penna USB . | Creazione di un disco di avvio tramite penna USB su Windows | Creazione di un disco di avvio tramite penna USB su Ubuntu | . | 3. Riavvia il PC nel bios/uefi menu | 4. Avvia ubuntu tramite penna USB | 5. Prova o installa ubuntu | 6. Installa Ubuntu | 7. GRUB Manager | . | Post-Installazione | Applicazioni utili per tutti . | VLC media player | Chromium web browser | Telegram | Gimp | GNOME tweaks | . | Applicazioni utili per programmatori . | git | Visual studio code | peek - gif video recorder | . | Rimozione di Ubuntu da dual-boot tramite Windows | . ",
+    "content": ". | E’ facile o difficile installare Ubuntu? | Installazione di Ubuntu . | 1. Collegati alla pagina ufficiale | 2. Crea un disco di avvio tramite penna USB . | Creazione di un disco di avvio tramite penna USB su Windows | Creazione di un disco di avvio tramite penna USB su Ubuntu | . | 3. Riavvia il PC nel bios/uefi menu | 4. Avvia ubuntu tramite penna USB | 5. Prova o installa ubuntu | 6. Installa Ubuntu | 7. GRUB Manager | . | Post-Installazione | Applicazioni utili per tutti . | VLC media player | Chromium web browser | Telegram | Gimp | GNOME tweaks | . | Applicazioni utili per programmatori . | git | Visual studio code | peek - gif video recorder | . | Qualche configurazione . | Installazione/rimozione pacchetti e applicazioni | File manager Nautilus | . | Rimozione di Ubuntu da dual-boot tramite Windows | . ",
     "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#indice",
     "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#indice"
   },"7": {
@@ -49,460 +49,568 @@
   },"8": {
     "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
     "title": "Installazione di Ubuntu",
-    "content": "1. Collegati alla pagina ufficiale . ubuntu.com e scarica la versione di Ubuntu che preferisci. Consiglio sempre di installare le versioni LTS (come la 20.04 LTS) poichè sono quelle più supportate e stabili. In questa guida installerò la versione 20.10 ma la procedura è la stessa anche per la 20.04 LTS . A fine download verrà scaricato un file con estensione .iso, ad esempio nel caso della versione 20.10 sarà ubuntu-20.10-desktop-amd64.iso. Il file appena scaricato è detto file immagine e deve essere trasferito e scompattato su CD o su penna USB creando un disco di avvio. Ti consiglio di procurarti una penna USB da almeno 8Gb vuota o con dei file che non ritieni importanti. L’intero contenuto della penna USB verrà sovra-iscritto con il contenuto del file immagine di Ubuntu . 2. Crea un disco di avvio tramite penna USB . Procurati una penna USB da almeno 8Gb e inseriscila nel PC. Se sei su Windows segui la procedura Creazione di un disco di avvio tramite penna USB su Windows, se sei su ubuntu segui invece Creazione di un disco di avvio tramite penna USB su Ubuntu . Creazione di un disco di avvio tramite penna USB su Windows . Scarica ed esegui il software Rufus. Dovrai selezionare nella scheda Dispositivo/unità la penna USB appena inserita, dopodichè tramite il pulsante SELEZIONA dovrai scegliere il file immagine di ubuntu ubuntu-20.10-desktop-amd64.iso. Delle impostazioni successive ti consiglio di impostare: . | Schema partizione: MBR | Sistema destinazione: UEFI (non CSM) | . Premi su AVVIA e attendi che abbia finito . Nota: Potrebbe comparire un messaggio chiedendo la connessione ad internet per scaricare dalla rete alcuni file importanti per il boot di Ubunut, acconsenti e procedi . Creazione di un disco di avvio tramite penna USB su Ubuntu . Apri il software “Creatore dischi di avvio” e seleziona, nella scheda superiore, la sorgente che nel nostro caso sarà ubuntu-20.10-desktop-amd64.iso e, nella scheda inferiore, il disco da usare ovvero la penna USB appena inserita. Dopodichè clicca su Crea disco di avvio. Una volta terminata la procedura sarai pronto per lanciare ubuntu e installarlo . 3. Riavvia il PC nel bios/uefi menu . Una volta che hai caricato il sistema operativo Ubuntu sulla penna USB dovrai istruire il tuo PC ad accendersi e leggere il contenuto della penna USB anzichè il sistema operativo Windows installato sul tuo hard disk interno. Per far ciò dovrai ravviare il computer in un menù speciale detto BIOS e cambiare il cosìdetto boot order. Devi sapere infatti che all’accensione del PC, questo software fa una semplice scansione tra tutti i dischi rigidi alla ricerca di un sistema avviabile, nel nostro caso un sistema operativo. Poichè in prima posizione c’è di default la voce Internal hard drive o qualcosa del genere significa che all’accensione verrà sempre controllato se c’è un sistema operativo sull’hard disk interno, troverà Windows installato e lo caricherà. Se per qualche assurdo motivo (l’hard disk viene danneggiato o formattato) il BIOS non troverà un sistema avviabile nell’hard disk, passerà alla seconda voce che probabilmente sarà CD-ROM drive e quindi cercherà un sistema avviabile all’interno del CD inserito nel lettore CD e così via. Tra queste voci c’è anche la voce Removable devices o USB o USB Hard Disk o USB HDD o voci simili che rappresenta proprio la penna USB. Quello che dobbiamo riuscire a fare sarà semplicemente spostare questa voce in prima posizione in modo da poter finalmente istruire il PC a partire tramite il sistema avviabile che sta sulla penna USB, Ubuntu. Per accedere al BIOS menu’ dovrai riavviare il PC e probabilmente dovrai premere ripetutamente il tasto F2 o F12 oppure ESC o F10. Se fai attenzione, appena si avvia il PC in basso compare per un istante una scritta con le indicazioni del tasto da premere per entrare nel BIOS menu. Ecco un esempio in cui per accedere al menu’ è necessario premere il tasto DEL . Lifewire - Change the Boot Order in BIOS . Se siete riusciti ad entrare nel BIOS menu probabilmente vi apparirà a schermo un’interfaccia del genere: . Lifewire - Change the Boot Order in BIOS . Il BIOS è un software essenziale ben lontano dalle attuali app Android. Per muoversi all’interno del menu’ è possibile consultare le indicazioni riportate in fondo allo schermo. In genere ci si muove con i tasti freccia, si esce con il tasto ESC e si esce salvando le impostazioni con F10. Devi raggiungere la scheda Boot. A questo punto appariranno le opzioni di boot elencate in ordine di priorità. Lifewire - Change the Boot Order in BIOS . Devi riuscire a spostare l’opzione relativa al disco USB, Removable devices o USB o USB Hard Disk o USB HDD o voci simili alla prima posizione. In molti casi per spostare le voci su utilizzano i tasti F5/F6 oppure i tasti +/-. Quando sarai riuscito a spostarla in prima posizione premi F10, salverai le modifiche e al prossimo avvio il PC scansionerà i dischi a partire dalla penna USB che hai inserito con Ubuntu pronto a partire. E’ tutto! . 4. Avvia ubuntu tramite penna USB . Una volta settato l’avvio tramite penna USB, mantieni collegata la penna USB e riavvia il PC. Apparirà una schermata simile alla seguente . linux.org . Scegli la prima opzione Ubuntu e attendi che la procedura abbia finito. 5. Prova o installa ubuntu . Appena avviato, si aprirà la procedura di installazione. Vi chiederà se vorrete provare Ubuntu (Try Ubuntu) o se vorrete installarlo (Install Ubunutu) . Se per voi è la prima volta vi consiglio l’opzione Try Ubuntu. Potrete navigare tra le applicazioni, nel file manager o nelle impostazioni per prendere familiarità con i settaggi principali. Non abbiate paura di fare pasticci. Ubuntu “vive” nella vostra penna USB. Troverete comunque il link di accesso rapido al setup di installazione sul desktop . 6. Installa Ubuntu . Riporto passo passo la procedura wizard per l’installazione di ubuntu. Se avete scelto Install Ubuntu o avete aperto il link rapido alla wizard sul desktop seguite i seguenti passaggi. Selziona una lingua . Selziona il tipo di tastiera . Seleziona una rete wifi . Scegli il tipo di installazione . Se è la prima volta che installate Ubuntu, ti consiglio Installazione normale. Con questo tipo di installazione verranno aggiunti software e altri pacchetti utili e ti aiuta in fase di post-installazione. Spunta anche le altre opzioni come in figura . Dual boot? . Se è la prima volta che installate Ubuntu, ti consiglio di installare ubuntu a fianco di windows, nella cosìdetta modalità dual-boot. Ciò ti consentirà di avere sia Windows che Ubuntu sul tuo PC e di poter scegliere quale dei due sistemi operativi lanciare all’accensione del PC. E’ fortemente consigliata questa modalità per chi è alle prime armi con Ubuntu perchè per qualsiasi pasticcio tu possa combinare con Ubuntu potrai sempre riavviare il PC e lanciare windows per ripristinare il sistema. Personalmente uso questa modalità. Scegli la dimensione della partizione Ubuntu . E’ possibile scegliere quanta dimensione di spazio fisso allocare a Ubuntu e quanta lasciare per Windows. Se sei alla prima installazione di Ubuntu ti consiglio di allocare circa 100Gb in base anche ai programmi che hai intenzione di installare . Clicca su Installa e accetta i messaggi successivi. Imposta la località . Imposta lu tue informazioni personali . Scegli un nome per l’account e una password di accesso. Attendi la fine della procedura di installazione . Riavvia il pc . Togli la penna USB . Quando compare la seguente schermata (o simile), togli la penna USB e premi Invio . SHAILESHJHA.com . 7. GRUB Manager . Al riavvio, se hai scelto la modalità dual boot dovrebbe apparire la schermata del software di gestione del dual boot, GRUB. Una cosa del genere.. Nel tuo caso apparirà la voce Ubuntu e Windows boot manager. Ogni volta che accenderai il PC avrai la possibilità di scegliere il sistema operativo da lanciare. Nota: normalmente il software ha un timeout di circa 10 secondi. Se non si sceglie nessuna opzione sceglierà la prima che in questo caso è Ubuntu . ",
+    "content": ". | 1. Collegati alla pagina ufficiale | 2. Crea un disco di avvio tramite penna USB . | Creazione di un disco di avvio tramite penna USB su Windows | Creazione di un disco di avvio tramite penna USB su Ubuntu | . | 3. Riavvia il PC nel bios/uefi menu | 4. Avvia ubuntu tramite penna USB | 5. Prova o installa ubuntu | 6. Installa Ubuntu | 7. GRUB Manager | . ",
     "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#installazione-di-ubuntu",
     "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#installazione-di-ubuntu"
   },"9": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "1. Collegati alla pagina ufficiale",
+    "content": "ubuntu.com e scarica la versione di Ubuntu che preferisci. Consiglio sempre di installare le versioni LTS (come la 20.04 LTS) poichè sono quelle più supportate e stabili. In questa guida installerò la versione 20.10 ma la procedura è la stessa anche per la 20.04 LTS . A fine download verrà scaricato un file con estensione .iso, ad esempio nel caso della versione 20.10 sarà ubuntu-20.10-desktop-amd64.iso. Il file appena scaricato è detto file immagine e deve essere trasferito e scompattato su CD o su penna USB creando un disco di avvio. Ti consiglio di procurarti una penna USB da almeno 8Gb vuota o con dei file che non ritieni importanti. L’intero contenuto della penna USB verrà sovra-iscritto con il contenuto del file immagine di Ubuntu . ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#1-collegati-alla-pagina-ufficiale",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#1-collegati-alla-pagina-ufficiale"
+  },"10": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "2. Crea un disco di avvio tramite penna USB",
+    "content": "Procurati una penna USB da almeno 8Gb e inseriscila nel PC. Se sei su Windows segui la procedura Creazione di un disco di avvio tramite penna USB su Windows, se sei su ubuntu segui invece Creazione di un disco di avvio tramite penna USB su Ubuntu . Creazione di un disco di avvio tramite penna USB su Windows . Scarica ed esegui il software Rufus. Dovrai selezionare nella scheda Dispositivo/unità la penna USB appena inserita, dopodichè tramite il pulsante SELEZIONA dovrai scegliere il file immagine di ubuntu ubuntu-20.10-desktop-amd64.iso. Delle impostazioni successive ti consiglio di impostare: . | Schema partizione: MBR | Sistema destinazione: UEFI (non CSM) | . Premi su AVVIA e attendi che abbia finito . Nota: Potrebbe comparire un messaggio chiedendo la connessione ad internet per scaricare dalla rete alcuni file importanti per il boot di Ubunut, acconsenti e procedi . Creazione di un disco di avvio tramite penna USB su Ubuntu . Apri il software “Creatore dischi di avvio” e seleziona, nella scheda superiore, la sorgente che nel nostro caso sarà ubuntu-20.10-desktop-amd64.iso e, nella scheda inferiore, il disco da usare ovvero la penna USB appena inserita. Dopodichè clicca su Crea disco di avvio. Una volta terminata la procedura sarai pronto per lanciare ubuntu e installarlo . ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#2-crea-un-disco-di-avvio-tramite-penna-usb",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#2-crea-un-disco-di-avvio-tramite-penna-usb"
+  },"11": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "3. Riavvia il PC nel bios/uefi menu",
+    "content": "Una volta che hai caricato il sistema operativo Ubuntu sulla penna USB dovrai istruire il tuo PC ad accendersi e leggere il contenuto della penna USB anzichè il sistema operativo Windows installato sul tuo hard disk interno. Per far ciò dovrai ravviare il computer in un menù speciale detto BIOS e cambiare il cosìdetto boot order. Devi sapere infatti che all’accensione del PC, questo software fa una semplice scansione tra tutti i dischi rigidi alla ricerca di un sistema avviabile, nel nostro caso un sistema operativo. Poichè in prima posizione c’è di default la voce Internal hard drive o qualcosa del genere significa che all’accensione verrà sempre controllato se c’è un sistema operativo sull’hard disk interno, troverà Windows installato e lo caricherà. Se per qualche assurdo motivo (l’hard disk viene danneggiato o formattato) il BIOS non troverà un sistema avviabile nell’hard disk, passerà alla seconda voce che probabilmente sarà CD-ROM drive e quindi cercherà un sistema avviabile all’interno del CD inserito nel lettore CD e così via. Tra queste voci c’è anche la voce Removable devices o USB o USB Hard Disk o USB HDD o voci simili che rappresenta proprio la penna USB. Quello che dobbiamo riuscire a fare sarà semplicemente spostare questa voce in prima posizione in modo da poter finalmente istruire il PC a partire tramite il sistema avviabile che sta sulla penna USB, Ubuntu. Per accedere al BIOS menu’ dovrai riavviare il PC e probabilmente dovrai premere ripetutamente il tasto F2 o F12 oppure ESC o F10. Se fai attenzione, appena si avvia il PC in basso compare per un istante una scritta con le indicazioni del tasto da premere per entrare nel BIOS menu. Ecco un esempio in cui per accedere al menu’ è necessario premere il tasto DEL . Lifewire - Change the Boot Order in BIOS . Se siete riusciti ad entrare nel BIOS menu probabilmente vi apparirà a schermo un’interfaccia del genere: . Lifewire - Change the Boot Order in BIOS . Il BIOS è un software essenziale ben lontano dalle attuali app Android. Per muoversi all’interno del menu’ è possibile consultare le indicazioni riportate in fondo allo schermo. In genere ci si muove con i tasti freccia, si esce con il tasto ESC e si esce salvando le impostazioni con F10. Devi raggiungere la scheda Boot. A questo punto appariranno le opzioni di boot elencate in ordine di priorità. Lifewire - Change the Boot Order in BIOS . Devi riuscire a spostare l’opzione relativa al disco USB, Removable devices o USB o USB Hard Disk o USB HDD o voci simili alla prima posizione. In molti casi per spostare le voci su utilizzano i tasti F5/F6 oppure i tasti +/-. Quando sarai riuscito a spostarla in prima posizione premi F10, salverai le modifiche e al prossimo avvio il PC scansionerà i dischi a partire dalla penna USB che hai inserito con Ubuntu pronto a partire. E’ tutto! . ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#3-riavvia-il-pc-nel-biosuefi-menu",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#3-riavvia-il-pc-nel-biosuefi-menu"
+  },"12": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "4. Avvia ubuntu tramite penna USB",
+    "content": "Una volta settato l’avvio tramite penna USB, mantieni collegata la penna USB e riavvia il PC. Apparirà una schermata simile alla seguente . linux.org . Scegli la prima opzione Ubuntu e attendi che la procedura abbia finito. ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#4-avvia-ubuntu-tramite-penna-usb",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#4-avvia-ubuntu-tramite-penna-usb"
+  },"13": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "5. Prova o installa ubuntu",
+    "content": "Appena avviato, si aprirà la procedura di installazione. Vi chiederà se vorrete provare Ubuntu (Try Ubuntu) o se vorrete installarlo (Install Ubunutu) . Se per voi è la prima volta vi consiglio l’opzione Try Ubuntu. Potrete navigare tra le applicazioni, nel file manager o nelle impostazioni per prendere familiarità con i settaggi principali. Non abbiate paura di fare pasticci. Ubuntu “vive” nella vostra penna USB. Troverete comunque il link di accesso rapido al setup di installazione sul desktop . ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#5-prova-o-installa-ubuntu",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#5-prova-o-installa-ubuntu"
+  },"14": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "6. Installa Ubuntu",
+    "content": "Riporto passo passo la procedura wizard per l’installazione di ubuntu. Se avete scelto Install Ubuntu o avete aperto il link rapido alla wizard sul desktop seguite i seguenti passaggi. Selziona una lingua . Selziona il tipo di tastiera . Seleziona una rete wifi . Scegli il tipo di installazione . Se è la prima volta che installate Ubuntu, ti consiglio Installazione normale. Con questo tipo di installazione verranno aggiunti software e altri pacchetti utili e ti aiuta in fase di post-installazione. Spunta anche le altre opzioni come in figura . Dual boot? . Se è la prima volta che installate Ubuntu, ti consiglio di installare ubuntu a fianco di windows, nella cosìdetta modalità dual-boot. Ciò ti consentirà di avere sia Windows che Ubuntu sul tuo PC e di poter scegliere quale dei due sistemi operativi lanciare all’accensione del PC. E’ fortemente consigliata questa modalità per chi è alle prime armi con Ubuntu perchè per qualsiasi pasticcio tu possa combinare con Ubuntu potrai sempre riavviare il PC e lanciare windows per ripristinare il sistema. Personalmente uso questa modalità. Scegli la dimensione della partizione Ubuntu . E’ possibile scegliere quanta dimensione di spazio fisso allocare a Ubuntu e quanta lasciare per Windows. Se sei alla prima installazione di Ubuntu ti consiglio di allocare circa 100Gb in base anche ai programmi che hai intenzione di installare . Clicca su Installa e accetta i messaggi successivi. Imposta la località . Imposta lu tue informazioni personali . Scegli un nome per l’account e una password di accesso. Attendi la fine della procedura di installazione . Riavvia il pc . Togli la penna USB . Quando compare la seguente schermata (o simile), togli la penna USB e premi Invio . SHAILESHJHA.com . ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#6-installa-ubuntu",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#6-installa-ubuntu"
+  },"15": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "7. GRUB Manager",
+    "content": "Al riavvio, se hai scelto la modalità dual boot dovrebbe apparire la schermata del software di gestione del dual boot, GRUB. Una cosa del genere.. Nel tuo caso apparirà la voce Ubuntu e Windows boot manager. Ogni volta che accenderai il PC avrai la possibilità di scegliere il sistema operativo da lanciare. Nota: normalmente il software ha un timeout di circa 10 secondi. Se non si sceglie nessuna opzione sceglierà la prima che in questo caso è Ubuntu . ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#7-grub-manager",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#7-grub-manager"
+  },"16": {
     "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
     "title": "Primo avvio",
     "content": "Una volta avviato Ubuntu da grub ti chiederà di effettuare l’accesso ad un account. Se effettuerai l’accesso tramite google, troverai tra i documenti il link rapido a google drive, indicato tramite l’email . Contemporaneamente si attiverà l’applicazione “Aggiornamenti software” che verificherà la presenza di aggiornamenti . Attendi che il processo finisca e riavvia il PC. ",
     "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#primo-avvio",
     "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#primo-avvio"
-  },"10": {
+  },"17": {
     "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
     "title": "Post-Installazione",
     "content": "Una volta riavviato il PC apri il terminale con il comando Ctrl + Alt + T oppure tramite l’applicazione “Terminale” che puoi trovare nella lista delle applicazioni. Per un aggiornamento manuale del sistema digita: . sudo apt update &amp;&amp; sudo apt upgrade -y . Devo utilizzare obbligatoriamente il Terminale? 🤔 La maggior parte delle cose interessanti con Ubuntu si fanno attraverso il Terminale ma non devi spaventarti, non ha niente a che vedere con il prompt dei comandi di Windows. All’inizio ti limiterai a copiare qualche comando dal web senza capire molto (immagino che molti abbiano utilizzato questo approccio, il sottoscritto compreso) e non è raro che tu possa creare dei pasticci assolutamente rimediabili ma non certo da un utente inesperto ecco perchè ti ho consigliato di installare Ubuntu a fianco di Windows, così se avrai dei problemi potrai formattare la partizione di Ubuntu e riprovarci (non nego che l’ho fatto diverse volte) oppure abbandonare se pensi che il gioco non valga la candela.. ",
     "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#post-installazione",
     "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#post-installazione"
-  },"11": {
+  },"18": {
     "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
     "title": "Applicazioni utili per tutti",
-    "content": "Prima di installare qualche applicazione interessante apri il terminale con il comando Ctrl + Alt + T oppure tramite l’applicazione “Terminale” che puoi trovare nella lista delle applicazioni e aggiorna il sistema con il comando: . sudo apt-get upgrade . Ecco una breve lista di applicazioni utili per tutti che ho deciso di riportare: . | VLC media player | Chromium web browser | Telegram | Gimp | GNOME tweaks | . VLC media player . VLC media player è un software di riproduzione multimediale gratuito e open source, portatile, multipiattaforma e un server multimediale in streaming sviluppato dal progetto VideoLAN, VLC - official webpage . Per installarlo digita da terminale: . sudo snap install vlc . Chromium web browser . Chromium è un browser per la navigazione web free e open source, chromium - offical webpage . Per installarlo digita da terminale: . sudo apt-get install chromium-browser . Telegram . Telegram è un servizio di messaggistica istantanea, videochiamata e VoIP multipiattaforma basato su cloud, Telegram - offical webpage . Per installarlo digita da terminale: . sudo snap install telegram-desktop . Gimp . GIMP è un editor di grafica raster gratuito e open source utilizzato per la manipolazione e l’editing di immagini o il disegno in forma libera, gimp - official webpage . Per installarlo digita da terminale: . sudo snap install gimp . GNOME tweaks . GNOME Tweak Tool è un’estensione della shell GNOME che puoi usare per modificare l’interfaccia GNOME . Cosa puoi fare con Gnome-tweaks? Puoi cambiare font o l’aspetto della barra superiore, togliere animazioni.. e richiamare altre estensioni che ti permettondo di estendere la personalizzazione dell’interfaccia grafica . E’ possibile installarlo dall’applicazione “Ubuntu Software” cercando nella barra di ricerca “Tweaks” o “Personalizzazioni” . Troverete l’applicazione sotto il nome di “Personalizzazioni”. ",
+    "content": "Prima di installare qualche applicazione interessante apri il terminale con il comando Ctrl + Alt + T oppure tramite l’applicazione “Terminale” che puoi trovare nella lista delle applicazioni e aggiorna il sistema con il comando: . sudo apt-get upgrade . Ecco una breve lista di applicazioni utili per tutti che ho deciso di riportare: . | VLC media player | Chromium web browser | Telegram | Gimp | GNOME tweaks | . ",
     "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#applicazioni-utili-per-tutti",
     "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#applicazioni-utili-per-tutti"
-  },"12": {
+  },"19": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "VLC media player",
+    "content": "VLC media player è un software di riproduzione multimediale gratuito e open source, portatile, multipiattaforma e un server multimediale in streaming sviluppato dal progetto VideoLAN, VLC - official webpage . Per installarlo digita da terminale: . sudo snap install vlc . ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#vlc-media-player",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#vlc-media-player"
+  },"20": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "Chromium web browser",
+    "content": "Chromium è un browser per la navigazione web free e open source, chromium - offical webpage . Per installarlo digita da terminale: . sudo apt-get install chromium-browser . ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#chromium-web-browser",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#chromium-web-browser"
+  },"21": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "Telegram",
+    "content": "Telegram è un servizio di messaggistica istantanea, videochiamata e VoIP multipiattaforma basato su cloud, Telegram - offical webpage . Per installarlo digita da terminale: . sudo snap install telegram-desktop . ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#telegram",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#telegram"
+  },"22": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "Gimp",
+    "content": "GIMP è un editor di grafica raster gratuito e open source utilizzato per la manipolazione e l’editing di immagini o il disegno in forma libera, gimp - official webpage . Per installarlo digita da terminale: . sudo snap install gimp . ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#gimp",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#gimp"
+  },"23": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "GNOME tweaks",
+    "content": "GNOME Tweak Tool è un’estensione della shell GNOME che puoi usare per modificare l’interfaccia GNOME . Cosa puoi fare con Gnome-tweaks? Puoi cambiare font o l’aspetto della barra superiore, togliere animazioni.. e richiamare altre estensioni che ti permettondo di estendere la personalizzazione dell’interfaccia grafica . E’ possibile installarlo dall’applicazione “Ubuntu Software” cercando nella barra di ricerca “Tweaks” o “Personalizzazioni” . Troverete l’applicazione sotto il nome di “Personalizzazioni”. ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#gnome-tweaks",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#gnome-tweaks"
+  },"24": {
     "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
     "title": "Applicazioni utili per programmatori",
-    "content": "Ecco una breve lista di applicazioni utili per programmatori che ho deciso di riportare: . | git | Visual studio code | peek - gif video recorder | . git . Git è un sistema di controllo di versione distribuito gratuito e open source progettato per gestire qualsiasi progetto software, dai più piccoli ai più grandi vantando velocità ed efficienza, git - official webpage . Per installarlo digita da terminale: . sudo apt-get install git . Visual studio code . Visual Studio Code è un editor di test gratuito realizzato da Microsoft per Windows, Linux e macOS, VS code - offical webpage . Per installarlo digita da terminale: . sudo snap install code --classic . Riporto anche alcune estensioni utili: . | Python (ms-python.python) | Live Server (ritwickdey.liveserver) | JavaScript (ES6) code snippets (xabikos.javascriptsnippets) | HTML Snippets (abusaidm.html-snippets) | Atom One Dark Theme (akamud.vscode-theme-onedark) | Markdown Preview Github Styling (bierner.markdown-preview-github-styles) | . peek - gif video recorder . peek è un semplice registratore di schermo che consente l’esportazione diretta in formato .gif. Il progetto è free e open source, peek - offical webpage . Per installarlo digita da terminale: . sudo add-apt-repository ppa:peek-developers/stable sudo apt update sudo apt install peek . ",
+    "content": "Ecco una breve lista di applicazioni utili per programmatori che ho deciso di riportare: . | git | Visual studio code | peek - gif video recorder | . ",
     "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#applicazioni-utili-per-programmatori",
     "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#applicazioni-utili-per-programmatori"
-  },"13": {
+  },"25": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "git",
+    "content": "Git è un sistema di controllo di versione distribuito gratuito e open source progettato per gestire qualsiasi progetto software, dai più piccoli ai più grandi vantando velocità ed efficienza, git - official webpage . Per installarlo digita da terminale: . sudo apt-get install git . ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#git",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#git"
+  },"26": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "Visual studio code",
+    "content": "Visual Studio Code è un editor di test gratuito realizzato da Microsoft per Windows, Linux e macOS, VS code - offical webpage . Per installarlo digita da terminale: . sudo snap install code --classic . Riporto anche alcune estensioni utili: . | Python (ms-python.python) | Live Server (ritwickdey.liveserver) | JavaScript (ES6) code snippets (xabikos.javascriptsnippets) | HTML Snippets (abusaidm.html-snippets) | Atom One Dark Theme (akamud.vscode-theme-onedark) | Markdown Preview Github Styling (bierner.markdown-preview-github-styles) | . ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#visual-studio-code",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#visual-studio-code"
+  },"27": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "peek - gif video recorder",
+    "content": "peek è un semplice registratore di schermo che consente l’esportazione diretta in formato .gif. Il progetto è free e open source, peek - offical webpage . Per installarlo digita da terminale: . sudo add-apt-repository ppa:peek-developers/stable sudo apt update sudo apt install peek . ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#peek---gif-video-recorder",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#peek---gif-video-recorder"
+  },"28": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "Qualche configurazione",
+    "content": ". | Installazione/rimozione pacchetti e applicazioni | File manager Nautilus | . ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#qualche-configurazione",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#qualche-configurazione"
+  },"29": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "Installazione/rimozione pacchetti e applicazioni.",
+    "content": "Ubuntu non ha un software equivalente a windows come Disinstalla un programma da Pannello di controllo. Molte applicazioni puoi trovarle su Ubuntu Software e da questo centro è possibili disinstallarle. Molte altre invece, trovate sul web, è probabile che tu le abbia installate tramite il comando da terminale: . sudo apt install [package name]. In questo caso per disinstallarle devi digitare: . sudo apt remove [package name]. sudo apt autoremove. ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#installazionerimozione-pacchetti-e-applicazioni",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#installazionerimozione-pacchetti-e-applicazioni"
+  },"30": {
+    "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
+    "title": "File manager Nautilus",
+    "content": "Nautilus è il file manager di ubuntu. Di default la visualizzazione di file e cartelle è disposta orizzontalmente. E’ possibile cambiare la visualizzazione delle cartelle, le opzioni di antemprima dei file ed altre preferenze generali dai tre tasti in alto a destra. In alto, centralmente, Nautilus mostra il percorso attuale detto anche path-address o semplicemente path. Premendo Ctrl + L, il path diventa editabile ed è possibile inserire un percorso specifico (utile per raggiungere velocemente una directory). Personalmente ho preferito abilitare di default l’opzione del path editabile. Se vuoi farlo pure tu digita da terminale: . gsettings set org.gnome.nautilus.preferences always-use-location-entry true . Se vuoi tornare all’opzione di default digita: . gsettings set org.gnome.nautilus.preferences always-use-location-entry false . Inoltre ho impostato la visualizzazione di file nascoti e, dal menu’ preferenze/viste/viste a elenco, l’opzione Consentire l'espansione delle cartelle. Il risultato è il seguente. Un’altra cosa molto utile è richiamare il file manager da terminale. per far ciò basta digitare da terminale . nautilus . In questo modo aprirà tramite il file manager il path attuale a cui punta il terminale . Osservazione: E’ sempre possibile richiamare un’applicazione da terminale digitando il nome di esecuzione (che non coincide in generale con il nome esteso) . sudo apt remove [package name]. sudo apt autoremove . ",
+    "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#file-manager-nautilus",
+    "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#file-manager-nautilus"
+  },"31": {
     "doc": "Installazione e setup di Ubuntu in dual boot con Windows",
     "title": "Rimozione di Ubuntu da dual-boot tramite Windows",
     "content": "Qualcosa non va con Ubuntu? Vuoi tornare ad avere Windows come unica partizione? Nessun problema.. Una buona guida non dovrebbe solo aiutarti a raggiungere uno scopo ma anche a tornare indietro. | Clicca con il tasto destro su start e seleziona “Gestione disco”. Il software “Gestione disco” mostra tutte le partizioni presenti su disco. | Tra le partizioni troverai sicuramente (C:) ovvero la partizione principale Windows e altre partizioni che potranno essere identificate con il nome (Disco 0 partizione 0), (Disco 0 partizione 4) e così via.. Tra queste partizioni dovresti cercare una partizione che abbia una dimensione considerevole o, per essere più precisi, quella che hai impostato per ubuntu in fase di installazione dual-boot. Se ad esempio hai riservato 100Gb per ubuntu in fase di installazione, sarà la partizione da 100Gb ad dover essere eliminata. Non toccare le partizioni da qualche centinaia di Mb o pochi Gb, potrebbero essere riservate al sistema Windows. | . Nota: Nella scheda centrale di “Gestione disco” trovate una descrizione dettagliata delle partizioni. Dovresti essere in grado di individuare facilmente la Partizione Primaria che non rappresenta (C:) . Una volta individuata clicca con il tasto destro sulla partizione e seleziona Elimina Volume.. A questo punto non ti resta che estendere il volume (C:) (l’unica partizione valida) comprendendo la partizione non più allocata e ti ritroverai nella condizione esatta prima dell’installazione in dual boot di Ubunutu. Per far ciò clicca con il tasto destro sulla partizione (C:) e seleziona la voce Estendi Volume.. ",
     "url": "http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html#rimozione-di-ubuntu-da-dual-boot-tramite-windows",
     "relUrl": "/tutorial/installa-ubunutu/installa-ubuntu.html#rimozione-di-ubuntu-da-dual-boot-tramite-windows"
-  },"14": {
+  },"32": {
     "doc": "Corso Python - 01",
     "title": "Prerequisiti",
     "content": "Conoscenza di un linguaggio qualsiasi OOP come C++ o Javascript . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-00.html#prerequisiti",
     "relUrl": "/corsi/python/Lezioni/py-course-00.html#prerequisiti"
-  },"15": {
+  },"33": {
     "doc": "Corso Python - 01",
     "title": "Corso Python",
     "content": "Python è un linguaggio di programmazione di più “alto livello” rispetto alla maggior parte degli altri linguaggi, orientato a oggetti, adatto, tra gli altri usi, a sviluppare applicazioni distribuite, scripting, computazione numerica e system testing. Ideato da Guido van Rossum all’inizio degli anni novanta, il nome fu scelto per la passione dello stesso inventore verso i Monty Python e per la loro serie televisiva Monty Python’s Flying Circus ed è spesso paragonato a Ruby, Tcl, Perl, JavaScript, Visual Basic o Scheme . Wikipedia - Python . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-00.html#corso-python",
     "relUrl": "/corsi/python/Lezioni/py-course-00.html#corso-python"
-  },"16": {
+  },"34": {
     "doc": "Corso Python - 01",
     "title": "Installazione e setup",
     "content": "Collegati alla pagina ufficiale di Python e installa la versione per il tuo sistema operativo. ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-00.html#installazione-e-setup",
     "relUrl": "/corsi/python/Lezioni/py-course-00.html#installazione-e-setup"
-  },"17": {
+  },"35": {
     "doc": "Corso Python - 01",
     "title": "Installazione e setup - Linux",
     "content": "Per i sistemi su base linux è sufficiente digitare i seguenti comandi: . sudo apt-get install python3 sudo apt-get install python3-pip . Nota: Il modulo pip di Python permette la gestione e l’installazione di moduli esterni . Per verificare la corretta installazione dell’interprete python digitare da terminale python3. In questo modo apriremo inoltre la shell interattiva di python in cui sarà possibile inserire direttamente del codice ed avere una risposta simultanea . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-00.html#installazione-e-setup---linux",
     "relUrl": "/corsi/python/Lezioni/py-course-00.html#installazione-e-setup---linux"
-  },"18": {
+  },"36": {
     "doc": "Corso Python - 01",
     "title": "Configurazione di un IDE",
     "content": "Un ottimo ambiente di sviluppo per Python è Pycharm. Per questo corso ho preferito non utilizzare un IDE specifico come Pycharm ma uno con un target più ad uso generale come Visual Studio Code con l’ausilio di un’estensione che possa supportare gli emmet (abbreviazioni intelligenti) per il linguaggio python e opzioni per il debug del codice. L’estension che ho installato si chiama Python ed è quella che riporto nell’immagine animata qua sotto. ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-00.html#configurazione-di-un-ide",
     "relUrl": "/corsi/python/Lezioni/py-course-00.html#configurazione-di-un-ide"
-  },"19": {
+  },"37": {
     "doc": "Corso Python - 01",
     "title": "Corso Python - 01",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-00.html",
     "relUrl": "/corsi/python/Lezioni/py-course-00.html"
-  },"20": {
+  },"38": {
     "doc": "Corso Python - 02",
     "title": "Primo script",
     "content": "Ogni file python ha un’estensione .py. Per l’esecuzione di uno script python è possibile lanciare il file creato con l’estensione .py (esempio test.py) direttamente dal terminale digitando il comando per l’invocazione dell’interprete python python3 ad esempio python3 test.py all’interno della cartella contenente il file test.py oppure attraverso l’estensione appena installata per VS code Run/Start Debugging . Ecco l’esecuzione del primo script python . print('ciao mondo') . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-01.html#primo-script",
     "relUrl": "/corsi/python/Lezioni/py-course-01.html#primo-script"
-  },"21": {
+  },"39": {
     "doc": "Corso Python - 02",
     "title": "Aggiunta di moduli",
     "content": "Per l’aggiunta di un modulo che rientra nella libreria standard python basta semplicemente digitare: . import &lt;nomeModulo&gt; . A volte tuttavia potremmo aver bisogno di un modulo non standard disponibile sul web. Per installarlo possiamo far ricorso al pacchetto pip che permette la gestione e l’installazione dei moduli aggiuntivi python. Supponiamo di voler scaricare il modulo PyPDF2 per la gestione dei PDF. Digitare da terminale . pip install PyPDF2 . Qualora si avessero dubbi sul nome del modulo o sul comando esatto, niente paura, il browser ci è di supporto . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-01.html#aggiunta-di-moduli",
     "relUrl": "/corsi/python/Lezioni/py-course-01.html#aggiunta-di-moduli"
-  },"22": {
+  },"40": {
     "doc": "Corso Python - 02",
     "title": "Introduzione a webbrowser",
     "content": "Il seguente script aprirà una località su google.maps digitata come input dall’utente. Utilizzeremo il comando input() che permette l’acquisizione dati da tastiera e la funzione open del modulo python webbrowser. La funzione open permette di aprire un certo url specificato come parametro tra gli apici. Il parametro è quindi passato come una stringa e come tale valgono tutte le operazioni e i metodi applicabili su stringa tra cui l’operatore + utilizzato per concatenare due o più stringhe . | input(): consente l’acquisizione dati da tastiera dell’utente. | webbrowser.open(myUrl): Apre l’indirizzo web specificato dal parametro myUrl. Il parametro specificato viene passato come stringa | +: Operatore di concatenazione stringhe | . Ecco lo script completo: . import webbrowser destinazione = input() webbrowser.open('https://www.google.com/maps' + '/place/' + destinazione) . E’ possibile ridurre ancora il codice . import webbrowser webbrowser.open('https://www.google.com/maps' + '/place/' + input()) . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-01.html#introduzione-a-webbrowser",
     "relUrl": "/corsi/python/Lezioni/py-course-01.html#introduzione-a-webbrowser"
-  },"23": {
+  },"41": {
     "doc": "Corso Python - 02",
     "title": "Come rendo eseguibile un file python?",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-01.html#come-rendo-eseguibile-un-file-python",
     "relUrl": "/corsi/python/Lezioni/py-course-01.html#come-rendo-eseguibile-un-file-python"
-  },"24": {
+  },"42": {
     "doc": "Corso Python - 02",
     "title": "Linux",
     "content": "Aggiungere la seguente linea di codice in testa allo script: . #!/usr/bin/env python3 . Ad esempio: . #!/usr/bin/env python3 import webbrowser webbrowser.open('https://www.google.com/maps' + '/place/' + input()) . E’ sufficiente rendere il file eseguibile (all’interno delle proprietà del file sezione “permessi”) e lanciarlo da terminale. ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-01.html#linux",
     "relUrl": "/corsi/python/Lezioni/py-course-01.html#linux"
-  },"25": {
+  },"43": {
     "doc": "Corso Python - 02",
     "title": "Commenti",
     "content": "# questo è un commento e verrà ignorato dall'interprete print('ciao') . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-01.html#commenti",
     "relUrl": "/corsi/python/Lezioni/py-course-01.html#commenti"
-  },"26": {
+  },"44": {
     "doc": "Corso Python - 02",
     "title": "Corso Python - 02",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-01.html",
     "relUrl": "/corsi/python/Lezioni/py-course-01.html"
-  },"27": {
+  },"45": {
     "doc": "Corso Python - 02",
     "title": "Introduzione al modulo PyPDF2",
     "content": "Il seguente script tratterà l’elaborazione di file pdf. Saremo in grado quindi di generare un file pdf con nome predefinito “Output.pdf” che è la copia della prima pagina di un pdf con nome “input.pdf” ricevuto in input . Faremo uso del modulo aggiuntivo PyPDF2 da installare da terminale tramite il comando pip install PyPDF2 . Utilizzeremo le funzioni standard Python di apertuta e chiusura file: . | open(myFile, mode): apre un file e lo restituisce come oggetto. | myfile indica il nome comprensivo del path del file da aprire | mode indica la modalità di apertura del file . | mode = \"r\" modalità lettura | mode = \"rb\" modalità lettura binaria | mode = \"w\" modalità scrittura | mode = \"wb\" modalità scrittura binaria | . | . | close(): chiude un file aperto. È necessario chiudere sempre i file aperti poichè in alcuni casi, a causa del buffering, le modifiche apportate a un file potrebbero non essere visualizzate finché non si chiude il file. | . w3schools - Python open() Function w3schools - Python close() Function . Del modulo aggiuntivo PyPDF2 utilizzeremo le classi: . | PdfFileReader(myPdf): Chiama il costruttore della classe PdfFileReader che inzializza in lettura il file oggetto pdf myPdf ricevuto come parametro e restituisce un’istanza della classe PdfFileReader The PdfFileReader Class Metodi . | getPage(pageNumber): restituisce una pagina in base al numero pageNumber passato come parametro | . | PdfFileWriter(): Chiama il costruttore della classe PdfFileWriter() che inizializza in scrittura un file oggetto pdf e restituisce un’istanza della classe PdfFileWriter() The PdfFileWriter Class Metodi . | addPage(page): Aggiunge una pagina PDF, all’istanza della classe PdfFileWriter a cui si applica il metodo. La pagina viene solitamente acquisita da un’istanza di PdfFileReader. | write(myPdf): Scrive (su disco, da ram a rom) la raccolta di pagine aggiunte a questo oggetto come file PDF, riceve come parametro l’oggetto pdf da scrivere, myPdf. | . | . Nota: Le “funzioni/classi” di un modulo devono essere invocate sempre specificando il nome del modulo. Esempio: . import PyPDF2 pdfInput = open(\"pdf/input.pdf\", \"rb\") #PyPDF2 è il nome del modulo, PdfFileReader è il nome della classe del modulo PyPDF2 reader1 = PyPDF2.PdfFileReader(pdfInput) . Script completo . import PyPDF2 #Apro il file &lt;input.pdf&gt; all'interno della cartella &lt;pdf&gt; in modalità lettura binaria #Restituisco un oggetto all'interno della variabile &lt;pdfInput&gt; pdfInput = open(\"pdf/input.pdf\", \"rb\") #Restituisco un'istanza della classe &lt;PdfFileReader&gt; all'interno della variabile &lt;reader1&gt; reader1 = PyPDF2.PdfFileReader(pdfInput) #apro un file &lt;Output.pdf&gt; all'interno della cartella &lt;pdf&gt; in modalità scrittura binaria #Restituisco un oggetto all'interno della variabile &lt;pdfOutput&gt; pdfOutput = open(\"pdf/Output.pdf\", \"wb\") #Restituisco un'istanza della classe &lt;PyPDF2.PdfFileWriter&gt; all'interno della variabile &lt;writer1&gt; writer1 = PyPDF2.PdfFileWriter() #Prelevo la pagina numero &lt;0&gt; e ritorno un oggetto pdf di una pagina all'interno della variabile &lt;pag0&gt; pag0 = reader1.getPage(0) #Aggiungo in coda pag0 all'istanza &lt;writer1&gt; (della classe PdfFileWriter) #Ripeto l'operazione per tre volte writer1.addPage(pag0) writer1.addPage(pag0) writer1.addPage(pag0) #Scrittura su disco dell'istanza della classe &lt;writer1&gt; su &lt;pdfOutput&gt; l'oggetto in scrittura corrispondente a \"Output.pdf\" writer1.write(pdfOutput) #aChiudo i File pdfInput.close() pdfOutput.close() . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-02.html#introduzione-al-modulo-pypdf2",
     "relUrl": "/corsi/python/Lezioni/py-course-02.html#introduzione-al-modulo-pypdf2"
-  },"28": {
+  },"46": {
     "doc": "Corso Python - 02",
     "title": "Corso Python - 02",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-02.html",
     "relUrl": "/corsi/python/Lezioni/py-course-02.html"
-  },"29": {
+  },"47": {
     "doc": "Corso Python - 03",
     "title": "Costrutto condizionale if...else",
     "content": "Le istruzioni condizionali vengono utilizzate per eseguire un blocco di codice solo nel caso in cui una condizione risulti true o false . Sintassi costrutto if esteso: . if condition1: #code 01 #.. elif condition2: #code 02 #.. else: #code 03 #.. Esempio: . print(\"Inserisci due numeri..) primoValore = input() secondoValore = input() if a &gt; b: print(\"Il primo valore inserito, \" + primoValore + \" è maggiore del secondo valore inserito, \" + secondoValore) elif b &gt; a: print(\"Il secondo valore inserito, \" + secondoValore + \" è maggiore del primo valore inserito, \" + primoValore) else: print(\"i due valori inseriti sono uguali\") . Notare che per il costrutto if in python, la condition è priva di parentesi tonde ( ) comuni invece a molti altri linguaggi di programmazione; l’operatore : è usato come terminatore della condition e l’indentazione è necessaria per racchiudere la porzione di codice condizionato da if. ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-03.html#costrutto-condizionale-ifelse",
     "relUrl": "/corsi/python/Lezioni/py-course-03.html#costrutto-condizionale-ifelse"
-  },"30": {
+  },"48": {
     "doc": "Corso Python - 03",
     "title": "Costrutto iterativo for",
     "content": "Un ciclo for viene utilizzato per iterare su una sequenza (che può essere una lista, una tupla, un dizionario, un insieme o una stringa). È meno simile alla keyword for in altri linguaggi di programmazione e funziona più come un metodo iteratore che si trova in altri linguaggi di programmazione orientati agli oggetti. w3schools - Python For Loops . Sintassi: . #Sintassi 1: for target_list in expression_list: #code . Esempio: . for numero in [1, 2, 3, 4, 5]: print(numero*numero) # 1 # 4 # 9 # 16 # 25 for frutto in [\"banana\", \"mela\", \"pera\"]: print(frutto) # banana # mela # pera . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-03.html#costrutto-iterativo-for",
     "relUrl": "/corsi/python/Lezioni/py-course-03.html#costrutto-iterativo-for"
-  },"31": {
+  },"49": {
     "doc": "Corso Python - 03",
     "title": "Indentazione Python",
     "content": "Il linguaggio python, a differenza di altri linguaggi come C/C++, Javascript .. Non utilizza delimitatori di blocco codice come { } ma si affida alla semplice indentazione. Rende quindi indispensabile l’uso di un buon editor di testo per evitare problemi di sintassi o semantica (in alcuni casi nemmeno troppo rari). Non utilizza neanche un terminatore di statement come il classico ; ma si affida al carattere a capo. L’interprete python comunque è in grado di rilevare errori sintattici di indentazione e segnalarlo. ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-03.html#indentazione-python",
     "relUrl": "/corsi/python/Lezioni/py-course-03.html#indentazione-python"
-  },"32": {
+  },"50": {
     "doc": "Corso Python - 03",
     "title": "range() Function",
     "content": "Per iterare un insieme di codice un numero di volte specificato, possiamo usare la funzione range (). La funzione range (number) restituisce una sequenza di numeri, a partire da 0 per impostazione predefinita, incrementa di 1 (per impostazione predefinita) e termina con un numero specificato tramite il parametro number. In realtà termina con il numero number - 1. La funzione range () può accettare 1, 2 o 3 parametri: . | range(number): un parametro, genera una lista numerica incrementale nel range 0 - number-1 | range(numberStart, numberEnd): due parametri, genera una lista numerica incrementale nel range numberStart - numberEnd-1 | range(numberStart, numberEnd, step): tre parametri, genera una lista numerica con incremento pari a step nel range massimo numberStart - numberEnd-1 | . w3schools - The range() Function . range(5) #[0, 1, 2, 3, 4] range(1, 5) #[1, 2, 3, 4] range(1, 5, 2) #[1, 3] . for target_list in range(number): #code . # range(number) costruisce una lista da 0 a number-1 for numero in range(5): print(numero*numero) # 0 # 1 # 4 # 9 # 16 for numero in range(1, 5, 2): print(numero) # 1 # 3 . Nel seguente esempio specifico alla funzione print() di non utilizzare il terminatore di default a capo rendendo nullo l’attributo end . print(end=\"\") . Esempio: . for numero in range(5): print(str(numero) + \":\", end=\"\") print(numero*numero) # 0:0 # 1:1 # 2:4 # 3:9 # 4:16 . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-03.html#range-function",
     "relUrl": "/corsi/python/Lezioni/py-course-03.html#range-function"
-  },"33": {
+  },"51": {
     "doc": "Corso Python - 03",
     "title": "Corso Python - 03",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-03.html",
     "relUrl": "/corsi/python/Lezioni/py-course-03.html"
-  },"34": {
+  },"52": {
     "doc": "Corso Python - 04",
     "title": "PyPDF2 - Copia PDF",
     "content": "Il seguente script prende in input un pdf “input.pdf” e ne produce una copia sul file “Output.pdf” Faremo uso della proprietà della classe PdfFileReader: . | numPages: Restituisce il numero delle pagine del file pdf dell’istanza (della classe PdfFileReader) si cui si legge la proprietà | . import PyPDF2 pdfInput = open(\"pdf/input.pdf\", \"rb\") reader1 = PyPDF2.PdfFileReader(pdfInput) pdfOutput = open(\"pdf/Output.pdf\", \"wb\") writer1 = PyPDF2.PdfFileWriter() #Copia delle pagine dell'oggetto (classe) pdf &lt;reader1&gt; nell'oggetto (classe) pdf &lt;writer1&gt; for numeroPagina in range(reader1.numPages): page = reader1.getPage(numeroPagina) writer1.addPage(page) writer1.write(pdfOutput) #aChiudo i File pdfInput.close() pdfOutput.close() . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-04.html#pypdf2---copia-pdf",
     "relUrl": "/corsi/python/Lezioni/py-course-04.html#pypdf2---copia-pdf"
-  },"35": {
+  },"53": {
     "doc": "Corso Python - 04",
     "title": "PyPDF2 - Merge All pdf",
     "content": "Il seguente script unisce tutti i file pdf presenti nella root directory salvandoli con un nome stabilito dall’utente. Faremo uso di: . | Modulo os è un modulo che contiene funzioni per interagire con il sistema operativo per la manipolazione di file e processi, os — Miscellaneous operating system interfaces. Nota: Per questo esercizio importeremo solo il metodo listdir() del modulo os: from os import listdir . | listdir(path): Metodo del modulo os. Elenca file e cartelle specificate nella path-directory come parametro. Se non viene specificato nessun parametro restituisce i file della root-directory. Viene restituita una lista Python3 os.listdir () method . | Metodi su stringa . | endswith(myString): Restituisce true se la stringa a cui applichiamo il metodo termina con la stringa indicata come parametro, myString | . | . Altre funzionalità del modulo PyPDF2. | classe PdfFileMerger: Inizializza un oggetto PdfFileMerger. PdfFileMerger unisce più PDF in un unico PDF. Restituisce un’istanza della classe PdfFileMerger, PyPDF2 - The PdfFileMerger Class. | metodo append(myPDF) della classe PdfFileMerger: Concatena tutte le pagine di un oggetto PDF passato come parametro, myPDF, alla fine del file PDF a cui si applica il metodo | . Riporto lo script completo: . #Merge all pdf files from os import listdir import PyPDF2 print(\"**********************************************\") print(\"Unisco i file pdf presenti in questa directory\") print(\"**********************************************\") #Non devo specificare &lt;os.listdir&gt; poichè ho spcificato l'importazione &lt;from os import listdir&gt; #Se avessi usato &lt;import os&gt; avrei dovuto scrivere &lt;os.listdir&gt; #listdir restituisce file e cartelle in formato &lt;lista&gt; listaFiles = listdir() for nomeFile in listaFiles: if nomeFile.endswith('.pdf'): print(nomeFile) print('\\n') #chiedo all'utente come vuole chiamare il file di output print(\"Salvo il risultato con il nome:\") nomeFileDestinazione = input() #Apro il file in scrittura binaria PDF_Destinazione = open(nomeFileDestinazione, \"wb\") print('\\n') merger = PyPDF2.PdfFileMerger() print(\"Elaborazione di..\") for nomeFile in listaFiles: #Elaboro solo i file con estensione \".pdf\" if nomeFile.endswith('.pdf'): #stampo il nome del file print(nomeFile) #lo apro in lettura binaria pdfFileInput = open(nomeFile, \"rb\") #creo un'istanza della classe &lt;PdfFileReader&gt; sul file appena aperto PDF_Reader = PyPDF2.PdfFileReader(pdfFileInput) #Appendo il file PDF in coda all'oggetto merger merger.append(PDF_Reader) #chiudo il file aperto pdfFileInput.close() print('\\n') #Operazione di scrittura print(\"Scrittura su: \" + nomeFileDestinazione) merger.write(PDF_Destinazione) PDF_Destinazione.close() print(\"Finito..\") . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-04.html#pypdf2---merge-all-pdf",
     "relUrl": "/corsi/python/Lezioni/py-course-04.html#pypdf2---merge-all-pdf"
-  },"36": {
+  },"54": {
     "doc": "Corso Python - 04",
     "title": "Corso Python - 04",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-04.html",
     "relUrl": "/corsi/python/Lezioni/py-course-04.html"
-  },"37": {
+  },"55": {
     "doc": "Corso Python - 05",
     "title": "Liste",
     "content": "Abbiamo già visto implicitamente un’introduzione al tipo lista e in particolare come creare e iterare sugli elementi di una lista attraverso il ciclo for e la funzione range(). Il tipo dato lista è molto importante nel linguaggio python. Le liste sono un tipo di dato utilizzato per memorizzare diversi elementi in una singola variabile. Le liste sono uno dei 4 tipi di dati incorporati in Python utilizzati per memorizzare raccolte di dati, gli altri 3 sono Tuple, Set e Dictionary, tutti con qualità e utilizzo diversi. Vediamo le caratteristiche principali delle liste: . | Le liste possono contenere qualsiasi tipo di dato | Gli elementi della lista sono indicizzati, il primo elemento ha indice [0], il secondo elemento ha indice [1] .. A differenza della maggior parte dei linguaggi si possono usare anche indici negativi, [-1] si riferisce all’ultimo elemento, [-2] si riferisce al penultimo elemento ecc. | Gli elementi in una lista sono ordinati e l’ordine è stabilito dall’indice. | Dopo la creazione, è possibile aggiungere elementi, cambiare il valore degli elementi già esistenti o rimuoverli | Dal momento che le liste sono indicizzate è possibile avere elementi duplicati | La funzione len() ritorna il numero degli elementi presenti in una lista | L’operatore [::] permette lo slicing di liste ovvero la creazione di porzioni di liste a partire dalla lista a cui si applica l’operatore [::] | . w3schools - Python Lists . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-05.html#liste",
     "relUrl": "/corsi/python/Lezioni/py-course-05.html#liste"
-  },"38": {
+  },"56": {
     "doc": "Corso Python - 05",
     "title": "Accesso agli elementi di una lista",
     "content": "L’accesso agli elementi di una lista si effettua tramite l’operatore [] . #indici 0 1 2 3 4 #indici -5 -4 -3 -2 -1 myList = [\"banana\", \"kiwi\", \"mela\", \"mandarino\", \"cachi\"] print(myList[2]) #mela print(myList[-1]) #cachi print(len(myList)) #5 . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-05.html#accesso-agli-elementi-di-una-lista",
     "relUrl": "/corsi/python/Lezioni/py-course-05.html#accesso-agli-elementi-di-una-lista"
-  },"39": {
+  },"57": {
     "doc": "Corso Python - 05",
     "title": "Modifica del valore degli elementi in una lista.",
     "content": "Per cambiare il valore degli elementi in una lista si utilizza l’operatore [] . #indici 0 1 2 3 4 #indici -5 -4 -3 -2 -1 myList = [\"banana\", \"kiwi\", \"mela\", \"mandarino\", \"cachi\"] myList[-1] = \"arancia\" myList[2] = \"pera\" print(myList) myList[1:3] = [\"mandorla\", \"nocciola\"] print(myList) . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-05.html#modifica-del-valore-degli-elementi-in-una-lista",
     "relUrl": "/corsi/python/Lezioni/py-course-05.html#modifica-del-valore-degli-elementi-in-una-lista"
-  },"40": {
+  },"58": {
     "doc": "Corso Python - 05",
     "title": "Aggiunta di elementi in una lista",
     "content": "Sono disponibili i metodi: . | append(elem): Appende elem in coda alla lista | insert(index, elem): Inserisce (senza nessun replace) elem alla posizione index facendo scalare di una posizione gli elementi dalla posizione index | extend(otherList): Appende in coda gli elementi della lista passata come parametro, otherList | . myList = [\"banana\", \"kiwi\", \"mela\", \"mandarino\", \"cachi\"] myList2 = [\"mandorla\", \"nocciola\", \"noce\"] myList.append(\"anguria\") print(myList) #['banana', 'kiwi', 'mela', 'mandarino', 'cachi', 'anguria'] myList.insert(2, \"melone\") print(myList) #['banana', 'kiwi', 'melone', 'mela', 'mandarino', 'cachi', 'anguria'] myList.extend(myList2) print(myList) #['banana', 'kiwi', 'melone', 'mela', 'mandarino', 'cachi', 'anguria', 'mandorla', 'nocciola', 'noce'] . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-05.html#aggiunta-di-elementi-in-una-lista",
     "relUrl": "/corsi/python/Lezioni/py-course-05.html#aggiunta-di-elementi-in-una-lista"
-  },"41": {
+  },"59": {
     "doc": "Corso Python - 05",
     "title": "Rimozione di elementi in una lista",
     "content": "Sono disponibili i metodi: . | remove(elem) : Toglie elem dalla lista | pop(?index): Toglie l’elemento corrispondente all’indice index passato come parametro opzionale. Se non viene passato nessun parametro toglie l’ultimo elemento. E’ possibile ottenere questo risultato anche con il comando del, specificando l’elemento, del myList[index] | clear(): Svuota la lista. La lista esiste ma è vuota. E’ possibile ottenere questo risultato anche con il comando del specificando il nome della lista del myList ma in questo caso elimina anche l’identificatore | . myList = ['banana', 'kiwi', 'melone', 'mela', 'mandarino', 'cachi', 'anguria', 'mandorla', 'nocciola', 'noce'] myList.remove(\"mandarino\") print(myList) #['banana', 'kiwi', 'melone', 'mela', 'cachi', 'anguria', 'mandorla', 'nocciola', 'noce'] myList.pop(2) print(myList) #['banana', 'kiwi', 'mela', 'cachi', 'anguria', 'mandorla', 'nocciola', 'noce'] myList.pop() print(myList) #['banana', 'kiwi', 'mela', 'cachi', 'anguria', 'mandorla', 'nocciola'] del myList[0] print(myList) #['kiwi', 'mela', 'cachi', 'anguria', 'mandorla', 'nocciola'] myList.clear() print(myList) #[] myList = ['banana', 'kiwi', 'melone', 'mela', 'mandarino', 'cachi', 'anguria', 'mandorla', 'nocciola', 'noce'] del myList print(myList) #NameError: name 'myList' is not defined . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-05.html#rimozione-di-elementi-in-una-lista",
     "relUrl": "/corsi/python/Lezioni/py-course-05.html#rimozione-di-elementi-in-una-lista"
-  },"42": {
+  },"60": {
     "doc": "Corso Python - 05",
     "title": "Creazione di sotto liste, slicing ",
     "content": "Sintassi: mySubList = myList[?startIndex: ?endIndex: ?Step]: Ritorna una sotto lista a partire dalla lista a cui si applica lo slicing (myList). L’operatore [] può ricevere tre parametri opzionali separati da :. Il primo rappresenta l’indice di partenza (incluso), il secondo l’indice di fine (non incluso) e il terzo il passo. Se il primo parametro non è specificato si assume 0 come valore di partenza. Se il secondo parametro non è specificato si assume len(myList) - 1 come valore di fine cioè l’ultimo elemento della lista. Se il terzo parametro non è specificato si assume un incremento positivo unitario . #indici 0 1 2 3 4 #indici -5 -4 -3 -2 -1 myList = [\"banana\", \"kiwi\", \"mela\", \"mandarino\", \"cachi\"] mySubList = myList[1:] print(mySubList) #['kiwi', 'mela', 'mandarino', 'cachi'] mySubList = myList[-2:] print(mySubList) #['mandarino', 'cachi'] mySubList = myList[2:4] print(mySubList) #['mela', 'mandarino'] mySubList = myList[::2] print(mySubList) #['banana', 'mela', 'cachi'] #Restituisce una copia &lt;non profonda&gt; di una lista #Non valido per liste annidate mySubList = myList[:] print(mySubList) #[\"banana\", \"kiwi\", \"mela\", \"mandarino\", \"cachi\"] #Ordinamento inverso mySubList = myList[::-1] print(mySubList) #['cachi', 'mandarino', 'mela', 'kiwi', 'banana'] . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-05.html#creazione-di-sotto-liste-slicing-",
     "relUrl": "/corsi/python/Lezioni/py-course-05.html#creazione-di-sotto-liste-slicing-"
-  },"43": {
+  },"61": {
     "doc": "Corso Python - 05",
     "title": "Corso Python - 05",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-05.html",
     "relUrl": "/corsi/python/Lezioni/py-course-05.html"
-  },"44": {
+  },"62": {
     "doc": "Corso Python - 06",
     "title": "Copia di Liste",
     "content": "Abbiamo visto nel paragrafo precedente che per la copia di liste è sufficiente utilizzare l’operatore [:] ma che non vale per liste annidate. In questa lezione approfondiremo l’operazione di copia di elementi. Copia semplice, valida per liste non annidate: . myList = [\"banana\", \"kiwi\", \"mela\", \"mandarino\", \"cachi\"] myList2 = myList[:] print(myList) #['banana', 'kiwi', 'mela', 'mandarino', 'cachi'] print(myList2) #['banana', 'kiwi', 'mela', 'mandarino', 'cachi'] . Cosa succede se eseguo la copia tramite il semplice assegnamento? . myList = [\"banana\", \"kiwi\", \"mela\", \"mandarino\", \"cachi\"] myList2 = myList print(myList) #['banana', 'kiwi', 'mela', 'mandarino', 'cachi'] print(myList2) #['banana', 'kiwi', 'mela', 'mandarino', 'cachi'] . Sfruttando quindi l’operatore di assegnamento = non ottengo una copia dei valori ma una copia dei riferimenti. In pratica in questo modo myList e myList2 condividono gli stessi dati. Se modifico uno modifico anche l’altro . myList = [\"banana\", \"kiwi\", \"mela\", \"mandarino\", \"cachi\"] myList2 = myList #Togliendo l'elemento da \"myList\" lo tolgo anche da \"myList2\" perchè condividono gli stessi elementi myList.remove(\"banana\") print(myList) #['kiwi', 'mela', 'mandarino', 'cachi'] # !!! print(myList2) #['kiwi', 'mela', 'mandarino', 'cachi'] . Ciò non accade con la copia poichè diventano due liste indipendenti: . myList = [\"banana\", \"kiwi\", \"mela\", \"mandarino\", \"cachi\"] myList2 = myList[:] myList.remove(\"banana\") print(myList) #['kiwi', 'mela', 'mandarino', 'cachi'] print(myList2) #['banana', 'kiwi', 'mela', 'mandarino', 'cachi'] . Attenzione! Per liste più complicate come liste annidate l’operatore [:] non può essere utilizzato per la copia perchè effettuerebbe una copia per riferimento degli elementi annidati. In generale per effettuare una copia ricorsiva e profonda è necessario utilizzare la funzione deepcopy() del modulo copy. Per liste annidate l’operatore [:] fallisce: . myList = [\"banana\", \"kiwi\", \"mela\", [1, 2], \"cachi\"] myList2 = myList[:] myList.remove(\"banana\") myList2[3][0] = 12 # !!! la scrittura su myList2 ha scritto anche myList perchè la lista annidata è stata copiata per riferimento print(myList) #['kiwi', 'mela', [12, 2], 'cachi'] print(myList2) #'banana', 'kiwi', 'mela', [12, 2], 'cachi'] . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-06.html#copia-di-liste",
     "relUrl": "/corsi/python/Lezioni/py-course-06.html#copia-di-liste"
-  },"45": {
+  },"63": {
     "doc": "Corso Python - 06",
     "title": "deepcopy()",
     "content": "Per la copia di liste e qualsiasi altro oggetto è possibile ed è consigliabile utilizzare una funzione deepcopy() del modulo copy che esegue una copia profonda quindi considera anche oggetti e liste annidate . import copy myList = [\"banana\", \"kiwi\", \"mela\", \"mandarino\", \"cachi\"] myList2 = copy.deepcopy(myList) myList.remove(\"banana\") print(myList) #['kiwi', 'mela', 'mandarino', 'cachi'] print(myList2) #['banana', 'kiwi', 'mela', 'mandarino', 'cachi'] . La funzione deepcopy() è l’unica che eseegue in modo affidabile la copia di elementi considerando eventuali elementi annidati. import copy myList = [\"banana\", \"kiwi\", \"mela\", [1, 2], \"cachi\"] myList2 = copy.deepcopy(myList) myList.remove(\"banana\") myList2[3][0] = 12 print(myList) #['kiwi', 'mela', [1, 2], 'cachi'] print(myList2) #['banana', 'kiwi', 'mela', [12, 2], 'cachi'] . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-06.html#deepcopy",
     "relUrl": "/corsi/python/Lezioni/py-course-06.html#deepcopy"
-  },"46": {
+  },"64": {
     "doc": "Corso Python - 06",
     "title": "Corso Python - 06",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-06.html",
     "relUrl": "/corsi/python/Lezioni/py-course-06.html"
-  },"47": {
+  },"65": {
     "doc": "Corso Python - 07",
     "title": "Le stringe",
     "content": "Le stringhe sono un tipo di dato immutabile in python . Questo significa che la copia di stringhe può essere fatta attraverso l’assegnamento tra i nomi (contrariamente a quanto accade per altri linguaggi come C++) poichè quando viene creata una copia tramite l’assegnamento non viene copiato il riferimento della stringa ma l’intero oggetto stringa. s1 = \"ciao\" s2 = s1 s2 = \"ciaociao\" print(s2) #ciaociao print(s1) #ciao . Ecco una dimostrazione approfondita andando ad scavare tra gli indirizzi in memoria con la funzione id . s1 = \"ciao\" print(id(s1)) #140440511029104 s2 = s1 print(id(s2)) #140440511029104 s2 = \"ciaociao\" print(id(s2)) #140440511029168 print(s2) #ciaociao print(s1) #ciao . Attenzione Eseguendo la copia s2 = s1 ancora non si assegna ad s2 un nuovo indirizzo in memoria per motivi di efficienza. Lo si assegna quando ad s2 si assegna un nuovo valore . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-07.html#le-stringe",
     "relUrl": "/corsi/python/Lezioni/py-course-07.html#le-stringe"
-  },"48": {
+  },"66": {
     "doc": "Corso Python - 07",
     "title": "Interpolazione di stringhe - Metodo format()",
     "content": "Il metodo format() applicabile alle stringhe consente di inserire espressioni valutabili all’interno di stringhe w3schools - Python String format() Method. Il metodo format() formatta i valori specificati e li inserisce all’interno del segnaposto della stringa. Il segnaposto viene definito utilizzando le parentesi graffe: {}. Esempio: . #sintassi 1 txt = \"1Kg di sale da cucina a solo {price} euro!\" print(txt.format(price = 2)) #1Kg di sale da cucina a solo 2 euro! #sintassi 2 txt = \"1Kg di sale da cucina a solo {0} euro! Rimasti {1} pezzi\" print(txt.format(2, 500)) #1Kg di sale da cucina a solo 2 euro! Rimasti 500 pezzi . Esiste anche una sintassi leggermente diversa: . myList = [\"dentista\", \"17:00\"] print(f\"Evento: {myList[0]} - Ora: {myList[1]} \") #Evento: dentista - Ora: 17:00 . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-07.html#interpolazione-di-stringhe---metodo-format",
     "relUrl": "/corsi/python/Lezioni/py-course-07.html#interpolazione-di-stringhe---metodo-format"
-  },"49": {
+  },"67": {
     "doc": "Corso Python - 07",
     "title": "Corso Python - 07",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-07.html",
     "relUrl": "/corsi/python/Lezioni/py-course-07.html"
-  },"50": {
+  },"68": {
     "doc": "Corso Python - 08",
     "title": "PyPDF2 - Merge All pdf v2",
     "content": "Questa è una versione migliorata dello script Merge All pdf. Aggiunge dei controlli sull’estensione del file e sulla natura del file. Controlla infatti se un file termina con formati “strani” come “.pdF”, “PDf” considerandoli comunque validi e controlla eventuali falsi file trappola come cartella che termina con estensione “.pdf”. Faremo uso di: . | os.path.isfile(path+file): Ritorna true se il file specificato come parametro (eventualmente con un path relativo o assoluto) è realmente un file. | Metodo su stringhe .upper(): Ritorna una copia della stringa a cui si applica il metodo in caratteri maiscoli | chaining condition and: Permette la concatenazione di condizioni logiche. Ritorna true se tutte le condizioni concatenate sono true | . Script completo e migliorato . import PyPDF2 import os print(\"**********************************************\") print(\"Unisco i file pdf presenti in questa directory\") print(\"**********************************************\") listaFiles = os.listdir() for nomeFile in listaFiles: if nomeFile.endswith('.pdf'): print(nomeFile) print('\\n') #chiedo all'utente come vuole chiamare il file di output print(\"Salvo il risultato con il nome:\") nomeFileDestinazione = input() #Apro il file in scrittura binaria PDF_Destinazione = open(nomeFileDestinazione, \"wb\") print('\\n') merger = PyPDF2.PdfFileMerger() print(\"Elaborazione di..\") for nomeFile in listaFiles: #Elaboro solo i file con estensione \".pdf\" o \"PDF\" o \"PdF\" .. if os.path.isfile(nomeFile) and nomeFile.upper().endswith('.PDF'): #stampo il nome del file print(nomeFile) #lo apro in lettura binaria pdfFileInput = open(nomeFile, \"rb\") #creo un'istanza della classe &lt;PdfFileReader&gt; sul file appena aperto PDF_Reader = PyPDF2.PdfFileReader(pdfFileInput) #Appendo il file PDF in coda all'oggetto merger merger.append(PDF_Reader) #chiudo il file aperto pdfFileInput.close() print('\\n') #Operazione di scrittura print(\"Scrittura su: \" + nomeFileDestinazione) merger.write(PDF_Destinazione) PDF_Destinazione.close() print(\"Finito..\") . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-08.html#pypdf2---merge-all-pdf-v2",
     "relUrl": "/corsi/python/Lezioni/py-course-08.html#pypdf2---merge-all-pdf-v2"
-  },"51": {
+  },"69": {
     "doc": "Corso Python - 08",
     "title": "Introduzione alla manipolazione dei docx",
     "content": "Con il seguente script inizieremo a manipolare i docx Da terminale puoi installare il modulo per la manipolazione dei docx con il comando: . pip install python-docx . Importa il modulo “python-docx” all’interno del tuo script con: . import docx . La documentazione ufficiale del modulo “python-docx” la puoi trovare su docx - documentazione. Del modulo “python-docx” utilizzeremo: . | docx.Document(docxFile): Chiama il costruttore della classe Document passando come parametro di inizializzazione il file “docx” che intendiamo elaborare. Ritorna un’istanza della classe Document . | Metodo sections della classe Document: applicato a un’istanza della classe Document restituisce le sezioni del documento “docx”- . | Metodo paragraphs della classe Document: applicato a un’istanza della classe Document restituisce una lista dell’oggetto Paragraph . | Metodo text della classe Paragraph: applicato a un’istanza della classe Paragraph restituisce il testo di un paragrafo . | . Utilizzeremo anche l’operatore * su stringa che permette di generare una ripetizione della stringa a cui si applica l’operatore. print(\"ciao \"*2 + \"!\") #ciao ciao ! . Script completo: . #Manipolazione docx import docx divina = docx.Document(\"divina1.docx\") sezioni = divina.sections print(\"il documento contine:\") #Utile quando ci sono diversi valori da valutare print(\"- {0} sezioni\".format(len(sezioni))) #altrenativa &gt;&gt;&gt; print(str( len(sezioni) ) + \" sezioni\" ) paragrafi = divina.paragraphs print(\"- {0} paragrafi\".format(len(paragrafi))) #4 sezioni print(\"\\nStampo i paragrafi..\") print(\"-\"*50) #Per ogni elemento p estratto dalla lista paragrafi.. for p in paragrafi: #p.text restituisce il testo di un paragrafo print(p.text) #questo metodo su stringa genera una ripetizione print(\"-\"*50) . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-08.html#introduzione-alla-manipolazione-dei-docx",
     "relUrl": "/corsi/python/Lezioni/py-course-08.html#introduzione-alla-manipolazione-dei-docx"
-  },"52": {
+  },"70": {
     "doc": "Corso Python - 08",
     "title": "Corso Python - 08",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-08.html",
     "relUrl": "/corsi/python/Lezioni/py-course-08.html"
-  },"53": {
+  },"71": {
     "doc": "Corso Python - 08",
     "title": "Python while()",
     "content": "Con il ciclo while possiamo eseguire un insieme di istruzioni fintanto che una condizione è vera. w3schools - Python While Loops . Sintassi: . while condition: #code . Esempio: . i = 1 while i &lt; 6: #1 &lt; 6, true #2 &lt; 6, true #3 &lt; 6, true #4 &lt; 6, true #5 &lt; 6, true #6 &lt; 6, false -&gt; exit print(i) #1 #2 #3 #4 #5 i = i + 1 #i = 2 #i = 3 #i = 4 #i = 5 #i = 6 # 1 # 2 # 3 # 4 # 5 . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-09.html#python-while",
     "relUrl": "/corsi/python/Lezioni/py-course-09.html#python-while"
-  },"54": {
+  },"72": {
     "doc": "Corso Python - 08",
     "title": "Comando break",
     "content": "Con l’istruzione break possiamo interrompere il ciclo anche se la condizione while è vera: . Sintassi: . while condition: #code #code #.. break #esce . Esempio: . i = 1 while i &lt; 6: #1 &lt; 6, true #2 &lt; 6, true print(i) #1 #2 i = i + 1 #i = 2 #i = 3 if i == 3: #i = 2, false #i = 3, true -&gt; exit break # 1 # 2 . Con i cicli c’è sempre da tenere in considerazione quando viene effettuato il controllo delle condizioni di uscita ed entrata del ciclo e la sequenza con cui vengono eseguite le istruzioni all’interno del ciclo. Leggendo l’esempio di sopra non è chiaro se il programmatore con la condizione i == 3 vuole che venga stampato il numero 3 oppure no. Un’ottima strategia è quella di inserire tutte le condizioni di uscita del ciclo all’inizio ed eventuali istruzioni di controllo ciclo alla fine. Al centro del ciclo andranno tutte le istruzioni che verranno eseguite nel caso standard . i = 1 while i &lt; 6: #1 &lt; 6, true #2 &lt; 6, true #3 &lt; 6 #Condizione di uscita ciclo if i == 3: #i = 1, false #i = 2, false #i = 3, true -&gt; exit break print(i) #1 #2 #Condizione di controllo ciclo i = i + 1 #i = 2 #i = 3 # 1 # 2 . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-09.html#comando-break",
     "relUrl": "/corsi/python/Lezioni/py-course-09.html#comando-break"
-  },"55": {
+  },"73": {
     "doc": "Corso Python - 08",
     "title": "Comando continue",
     "content": "Con l’istruzione continue possiamo interrompere l’iterazione corrente e continuare con la successiva . Sintassi: . while condition: #code #code #.. continue #esce . Esempio . i = 1 while i &lt; 6: #1 &lt; 6, true #2 &lt; 6, true #3 &lt; 6, true #4 &lt; 6, true #5 &lt; 6, true #6 &lt; 6, false -&gt; exit if i == 3: #i = 1, false #i = 2, false #i = 3, true #i = 4, false #i = 5, false print(\"Numero \" + i) #Numero 3 i = i + 1 #i = 4 continue #execute print(i) #1 #2 #4 #5 i = i + 1 #i = 2 #i = 3 #i = 4 #i = 5 #i = 6 # 1 # 2 # Numero 3 # 4 # 5 . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-09.html#comando-continue",
     "relUrl": "/corsi/python/Lezioni/py-course-09.html#comando-continue"
-  },"56": {
+  },"74": {
     "doc": "Corso Python - 08",
     "title": "Alcune considerazioni finali",
     "content": "Python ha due comandi di loop primitivi: . | while loop | for loop | . E’ normale chiedersi quando usare uno e quando usare l’altro.. Riporto quindi una serie di caratteristiche dei due cicli iterativi in Python . | for loop è un ciclo enumerativo. Andrebbe utilizzato quando è noto a priori il numero di iterazioni totali | while loop è un ciclo indefinito. Andrebbe utilizzato quando non è noto a priori il numero di iterazioni totali | I comandi break e continue possono essere utilizzati indistintamente sia sul ciclo for che sul ciclo while | . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-09.html#alcune-considerazioni-finali",
     "relUrl": "/corsi/python/Lezioni/py-course-09.html#alcune-considerazioni-finali"
-  },"57": {
+  },"75": {
     "doc": "Corso Python - 08",
     "title": "Corso Python - 08",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-09.html",
     "relUrl": "/corsi/python/Lezioni/py-course-09.html"
-  },"58": {
+  },"76": {
     "doc": "Corso Python - 10",
     "title": "Esercizio Asta online v1",
     "content": "Il seguente script vuole simulare l’andamento di un’asta online con la seguente regola: . | L’asta verrà aggiudicata da chi avrà fatto un’offerta la più vicina alla media delle offerte degli altri | . L’utente dovrà inserire un’offerta in bit coin e una email che rappresenterà l’identificativo. E’ consentita un’unica offerta per utente! In questa prima parte ci occuperemo dell’acquisizione dati da tastiera e della generazione di una struttura dati adeguata. offerte = [] #dato booleano di controllo ciclo altre_offerte = True while altre_offerte: #offerta contiene l'offerte in bitcoin offerta = input(\"Inserisci l`offerta pervenuta (0 per terminare): \") #Converto il dato ricevuto da tastiera in intero offerta = int(offerta) #Il valore \"0\" è il terminatore if offerta == 0: altre_offerte = False continue if offerta &lt; 0: print(\"Non possono essere fatte offerte negative!\") continue #Se l'offerta supera i controlli chiedo l'email email = input(\"Inserire l`email dell`offerente: \") #Inserisco la coppia email-offerta nella lista delle offerte offerte.append([email, offerta]) print(\"Le offerte valide sono:\") print(offerte) . Che cosa succede se l’utente inserisce dei valori di input non atesi? Ad esempio, invece che inserire un numero inserisce una stringa o qualche carattere non previsto? . Vedremo nel capito successivo come trattare questi errori tramite il costrutto try Except . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-10.html#esercizio-asta-online-v1",
     "relUrl": "/corsi/python/Lezioni/py-course-10.html#esercizio-asta-online-v1"
-  },"59": {
+  },"77": {
     "doc": "Corso Python - 10",
     "title": "Corso Python - 10",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-10.html",
     "relUrl": "/corsi/python/Lezioni/py-course-10.html"
-  },"60": {
+  },"78": {
     "doc": "Corso Python - 11",
     "title": "Costrutto try Except",
     "content": "Quando si verifica un errore (o un’eccezione), Python normalmente si ferma e genera un messaggio di errore. w3schools - Python Try Except . Nell’esempio chiedo all’utente l’inserimento di un numero intero.. Fintanto che l’utente inserisce numeri interi tutto funziona correttamente ma quando per sbaglio l’utente inserisce un carattere non valido, un numero decimale o altro, che succede? . while 1: print(\"inserisci un numero intero..\") x = int(input()) if x == 0 break print(x) #input() = 1 #1 #input() = 2 #2 #input() = dd # #Traceback (most recent call last): # File \"test.py\", line 3, in &lt;module&gt; # x = int(input()) #ValueError: invalid literal for int() with base 10: 'dd' . Inserendo la stringa \"dd\" la conversione esplicita int() fallisce e restituisce un errore: . #Traceback (most recent call last): # File \"test.py\", line 3, in &lt;module&gt; # x = int(input()) #ValueError: invalid literal for int() with base 10: 'dd' . L’errore è di tipo ValueError e la descrizione è: invalid literal for int() with base 10: 'dd' che significa che la costante letterale dd inserita non è un tipo di dato valido per la conversione in base 10, cioè in un numero decimale. Come gestisco queste situazioni di errore? Il costrutto try Except permette la gestione di queste situazioni. Sintassi: . try: #code1 except #typeError: #code2 . Significa: prova (try) ad eseguire code1, se rilevi un’eccezione di tipo typeError esegui code2 ed “ignora” code1 ovvero fai finta che code1 non sia mai stato eseguito. Se non rilevi nessun errore nella fase di try allora esegui code1 . Esempio: . while 1: print(\"Inserisci un numero intero..\") try: x = int(input()) except ValueError: print(\"\\nNon è un numero intero, riprova..\") continue if x == 0: break print(\"\\nIl numero inserito è: \" + str(x) + \"\\n\") . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-11.html#costrutto-try-except",
     "relUrl": "/corsi/python/Lezioni/py-course-11.html#costrutto-try-except"
-  },"61": {
+  },"79": {
     "doc": "Corso Python - 11",
     "title": "Corso Python - 11",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-11.html",
     "relUrl": "/corsi/python/Lezioni/py-course-11.html"
-  },"62": {
+  },"80": {
     "doc": "Corso Python - 12",
     "title": "Introduzione alle espressioni regolari con Python",
     "content": "Una RegEx, o espressione regolare, è una sequenza di caratteri che forma un modello di ricerca. Le RegEx possono essere utilizzate per verificare se una stringa contiene il modello di ricerca specificato. Python ha un modulo integrato chiamato re, che può essere utilizzato per lavorare con le espressioni regolari. w3schools - Python RegEx . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-12.html#introduzione-alle-espressioni-regolari-con-python",
     "relUrl": "/corsi/python/Lezioni/py-course-12.html#introduzione-alle-espressioni-regolari-con-python"
-  },"63": {
+  },"81": {
     "doc": "Corso Python - 12",
     "title": "Corso Python - 12",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-12.html",
     "relUrl": "/corsi/python/Lezioni/py-course-12.html"
-  },"64": {
+  },"82": {
     "doc": "Corso Python - 13",
     "title": "Esercizio Asta online v2",
     "content": "Il seguente script vuole simulare l’andamento di un’asta online con la seguente regola: . | L’asta verrà aggiudicata da chi avrà fatto un’offerta la più vicina alla media delle offerte degli altri | . L’utente dovrà inserire un’offerta in bit coin e una email che rappresenterà l’identificativo. E’ consentita un’unica offerta per utente! In questa seconda parte ci occuperemo di inserire dei controlli aggiuntivi dei dati acquisiti. | Aggiungeremo la possibilità di inserire numeri decimali “floating point”. Per far ciò utilizzeremo la funzione di conversione esplicita da stringa (l’input da tastiera) a numero decimale, float() . | Rileveremo tutti gli errori legati ad un’inserimento di un dato float non valido come una stringa o qualche altro carattere (come ad esempio Invio) non interpretabile come numero decimale. Alla rivelazione dell’errore stamperemo il messaggio d’errore \"Formato non valido, riprova ..\". Utilizzeremo il costrutto try-except . | Aggiungeremo un’espressione regolare abbastanza semplice per il controllo del formato dell’email. Per far ciò utilizzeremo la funzione re.match(regExp, myVar) del modulo re. L’espressione regolare controlla se la stringa (nel nostro caso l’email) inizia ^ con la sequenza di caratteri minuscoli \"a-z\", maiuscoli \"A-Z\" o numerici \"0-9\" ripetuti. E’ seguita dal carattere @, continua con la sequenza di caratteri minuscoli, maiuscoli o numerici, prosegue con il carattere . ed p seguita dal dominio che per noi sarà nuovamente una sequenza di caratteri minuscoli, maiuscoli o numerici. | . import re offerte = [] altre_offerte = True while altre_offerte: offerta = input(\"Inserisci l`offerta pervenuta (0 per terminare): \") try: offerta = float(offerta) except ValueError: print(\"Formato non valido, riprova ...\") continue if offerta == 0: altre_offerte = False continue if offerta &lt; 0: print(\"Non possono essere fatte offerte negative!\") continue email = input(\"Inserire l`email dell`offerente: \") if not re.match(\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", email): print(\"Email non valida, riprova ...\") continue nuova_offerta = [offerta, email] print(offerte) . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-13.html#esercizio-asta-online-v2",
     "relUrl": "/corsi/python/Lezioni/py-course-13.html#esercizio-asta-online-v2"
-  },"65": {
+  },"83": {
     "doc": "Corso Python - 13",
     "title": "Corso Python - 13",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-13.html",
     "relUrl": "/corsi/python/Lezioni/py-course-13.html"
-  },"66": {
+  },"84": {
     "doc": "Corso Python - 14",
     "title": "Costrutto if ... in",
     "content": "Analogamente al costrutto for ... in il costrutto if ... in si applica a collezioni di elementi in cui si richiede la ricerca di un particolare elemento in una lista . if item in list: #code else: #code . Esempio: . myFruitsList = [\"banana\", \"mela\", \"kiwi\", \"mandarino\", \"mela\"] print(\"Inserisci il nome di un frutto\") itemToSearch = input() if itemToSearch in myFruitsList: print(\"C'è almeno un/una: \" + itemToSearch + \" nella lista\") else: print(\"Non è presente nessuno/a \" + itemToSearch + \" nella lista\") . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-14.html#costrutto-if--in",
     "relUrl": "/corsi/python/Lezioni/py-course-14.html#costrutto-if--in"
-  },"67": {
+  },"85": {
     "doc": "Corso Python - 14",
     "title": "Esercizio Asta online v3",
     "content": "Il seguente script vuole simulare l’andamento di un’asta online con la seguente regola: . | L’asta verrà aggiudicata da chi avrà fatto un’offerta la più vicina alla media delle offerte degli altri | . L’utente dovrà inserire un’offerta in bit coin e una email che rappresenterà l’identificativo. E’ consentita un’unica offerta per utente! In questa terza parte contrellero che la coppia utente/offerta sia unica utilizzando il costrutto if ... in . import re offerte = [] altre_offerte = True while altre_offerte: offerta = input(\"Inserisci l`offerta pervenuta (0 per terminare): \") try: offerta = float(offerta) except ValueError: print(\"Formato non valido, riprova ...\") continue if offerta == 0: altre_offerte = False continue if offerta &lt; 0: print(\"Non possono essere fatte offerte negative!\") continue email = input(\"Inserire l`email dell`offerente: \") if not re.match(\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", email): print(\"Email non valida, riprova ...\") continue nuova_offerta = [email, offerta] # controllo valido solo se viene fatta la stessa offerta con la stessa mail ... limitato! if nuova_offerta in offerte: print(\"Questo utente ha già fatto la sua unica offerta ... respinto!\") continue else: offerte.append(nuova_offerta) print(\"Le offerte valide sono:\") print(offerte) . Come si vede una coppia identica utente/bit coin viene catturata e rifiutata ma è ancora permesso che un utente possa fare più offerte . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-14.html#esercizio-asta-online-v3",
     "relUrl": "/corsi/python/Lezioni/py-course-14.html#esercizio-asta-online-v3"
-  },"68": {
+  },"86": {
     "doc": "Corso Python - 14",
     "title": "Corso Python - 14",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-14.html",
     "relUrl": "/corsi/python/Lezioni/py-course-14.html"
-  },"69": {
+  },"87": {
     "doc": "Corso Python - 15",
     "title": "Introduzione alle Funzioni",
     "content": "Le funzioni vanno definite prima di utilizzarle . Una funzione è un blocco di codice che viene eseguito solo quando viene chiamata. È possibile passare dei valori, chiamati parametri, in una funzione. Una funzione può restituire dei valori come risultato. In Python una funzione viene definita utilizzando la parola chiave def. w3schools - Python Functions . #definizione di una funzione def myFunc(param) #code #chiamata di una funzione myFunc(value1) . Esempio: . def saluta(nome): print(\"ciao: \" + nome +\"!\") saluta(\"Emil\") saluta(\"Tobias\") saluta(\"Linus\") # ciao: Emil! # ciao: Tobias! # ciao: Linus! . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-15.html#introduzione-alle-funzioni",
     "relUrl": "/corsi/python/Lezioni/py-course-15.html#introduzione-alle-funzioni"
-  },"70": {
+  },"88": {
     "doc": "Corso Python - 15",
     "title": "Esercizio Asta online v4",
     "content": "Il seguente script vuole simulare l’andamento di un’asta online con la seguente regola: . | L’asta verrà aggiudicata da chi avrà fatto un’offerta la più vicina alla media delle offerte degli altri | . L’utente dovrà inserire un’offerta in bit coin e una email che rappresenterà l’identificativo. In questa quarte parte introdurremo la funzione stampa_lista(lista_offerte) che riceve in ingresso la lista delle offerte e stampa il risultato secondo un formato specifico e la funzione inserisci_offerte() che rappresenta l’acquisizione dati da tastiera da parte dell’utente e il controllo sull’integrità dei dati ricevuti. Di fatto la complessità dello script si riduce alla chiamta di due funzioni: inserisci_offerte() e stampa_lista . import re def stampa_lista(lista_offerte): for offerta in lista_offerte: print(f\"Email Offerente: {offerta[0]} - Offerta: {offerta[1]} \") def inserisci_offerte(): lista = [] altre_offerte = True while altre_offerte: offerta = input(\"Inserisci l`offerta pervenuta (0 per terminare): \") try: offerta = float(offerta) except ValueError: print(\"Formato non valido, riprova ...\") continue if offerta == 0: altre_offerte = False # USCITA DAL CICLO continue if offerta &lt; 0: print(\"Non possono essere fatte offerte negative!\") continue email = input(\"Inserire l`email dell`offerente: \") if not re.match(\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", email): print(\"Email non valida, riprova ...\") continue nuova_offerta = [email, offerta] # controllo valido solo se viene fatta la stessa offerta con la stessa mail ... limitato! if nuova_offerta in lista: print(\"Questo utente ha già fatto la sua unica offerta ... respinto!\") continue else: lista.append(nuova_offerta) return lista # grazie all`uso di funzioni la complessità del programma principale # è drasticamente ridotta offerte = inserisci_offerte() stampa_lista(offerte) . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-15.html#esercizio-asta-online-v4",
     "relUrl": "/corsi/python/Lezioni/py-course-15.html#esercizio-asta-online-v4"
-  },"71": {
+  },"89": {
     "doc": "Corso Python - 15",
     "title": "Corso Python - 15",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-15.html",
     "relUrl": "/corsi/python/Lezioni/py-course-15.html"
-  },"72": {
+  },"90": {
     "doc": "Corso Python - 16",
     "title": "Esercizio Asta online v5",
     "content": "Il seguente script vuole simulare l’andamento di un’asta online con la seguente regola: . | L’asta verrà aggiudicata da chi avrà fatto un’offerta la più vicina alla media delle offerte degli altri | . L’utente dovrà inserire un’offerta in bit coin e una email che rappresenterà l’identificativo. In questa quinta parte introdurremo le funzioni: . | trova_email(email, lista_offerte): Riceve come parametro una stringa digitata in input dall’utente che rappresenta l’identificativo utente, email e la lista di tutte le offerte, lista_offerte. Ritorna un boolean True se trova l’identificativo email ricevuto come parametro come identificativo nella lista_offerte. Questa funzione controlla quindi se un utente ha già fatto un’offerta. | media_offerte(lista_offerte): Riceve come parametro la lista di tutte le offert lista_offerte, calcola la media dei valori delle offerte che rappresentano i bit coin e ne ritorna il valore. Ritorna quindi un valore float . | minimo(lista_offerte): Riceve come parametro la lista di tutte le offert lista_offerte, calcola il minimo dei valori delle offerte che rappresentano i bit coin e ne ritorna il valore. Ritorna quindi un valore float . | massimo(lista_offerte): Riceve come parametro la lista di tutte le offert lista_offerte, calcola il massimo dei valori delle offerte che rappresentano i bit coin e ne ritorna il valore. Ritorna quindi un valore float . | . import re def trova_email(email, lista_offerte): trovato = False for offerta in lista_offerte: if offerta[0] == email: trovato = True break return trovato def media_offerte(lista_offerte): somma = 0.0 for offerta in lista_offerte: somma += offerta[1] return somma / len(lista_offerte) # si assume che la lista non sia vuota def minimo(lista_offerte): #non si parte mai da un valore assoluto #prelevo solo il valore numerico dell'offerta #min è un numero float min = lista_offerte[0][1] #lista_offerte[1:] ritorna una lista dal primo elemento fino all'ultimo #Itero ogni elemento della lista lista_offerte a partire dal primo for offerta in lista_offerte[1:]: #se trovo un elemento più piccolo dell'attuale &lt;min&gt;, aggiorno min if offerta[1] &lt; min: min = offerta[1] return min # si assume che la lista non sia vuota def massimo(lista_offerte): max = lista_offerte[0][1] for offerta in lista_offerte[1:]: if offerta[1] &gt; max: max = offerta[1] return max def stampa_lista(lista_offerte): for offerta in lista_offerte: print(f\"Email Offerente: {offerta[0]} - Offerta: {offerta[1]} \") def inserisci_offerte(): lista = [] altre_offerte = True while altre_offerte: offerta = input(\"Inserisci l`offerta pervenuta (0 per terminare): \") try: offerta = float(offerta) except ValueError: print(\"Formato non valido, riprova ...\") continue if offerta == 0: altre_offerte = False # USCITA DAL CICLO continue if offerta &lt; 0: print(\"Non possono essere fatte offerte negative!\") continue email = input(\"Inserire l`email dell`offerente: \") if not re.match(\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", email): print(\"Email non valida, riprova ...\") continue nuova_offerta = [email, offerta] # controllo valido solo se viene fatta la stessa offerta con la stessa mail ... limitato! # if nuova_offerta in offerte: # print(\"Questo utente ha già fatto la sua unica offerta ... respinto!\") # continue # else: # offerte.append(nuova_offerta) if trova_email(email, lista): print(\"Questo utente ha già fatto la sua unica offerta ... respinto!\") continue else: lista.append(nuova_offerta) return lista # grazie all`uso di funzioni la complessità del programma principale # è drasticamente ridotta offerte = inserisci_offerte() stampa_lista(offerte) print(f\"Offerta Media: {media_offerte(offerte)}\") print(f\"Offerta minima: {minimo(offerte)}\") . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-16.html#esercizio-asta-online-v5",
     "relUrl": "/corsi/python/Lezioni/py-course-16.html#esercizio-asta-online-v5"
-  },"73": {
+  },"91": {
     "doc": "Corso Python - 16",
     "title": "Corso Python - 16",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-16.html",
     "relUrl": "/corsi/python/Lezioni/py-course-16.html"
-  },"74": {
+  },"92": {
     "doc": "Corso Python - 17",
     "title": "Python - List Comprehension",
     "content": "List Comprehension offre una sintassi più breve quando si desidera creare un nuovo elenco basato sui valori di un elenco esistente. w3schools - Python - List Comprehension . E’ una sorta di RegEx utilizzata per il tipo List. Sintassi. newlist = [expression for item in iterable if condition == True] . Nell’esempio che segue costruisco una lista non utilizzando List Comprehension: . fruits = [\"apple\", \"banana\", \"cherry\", \"kiwi\", \"mango\"] newlist = [] #La nuova lista conterrà soltanto elementi che contengono il carattere \"a\" for x in fruits: if \"a\" in x: newlist.append(x) print(newlist) #[\"apple\", \"banana\", \"mango\"] . Il solito esempio utilizzando List Comprehension: . fruits = [\"apple\", \"banana\", \"cherry\", \"kiwi\", \"mango\"] #List Comprehension newlist = [x for x in fruits if \"a\" in x] print(newlist) . E’ una sintassi molto vicina alla sintassi del linguaggio matematico.. Può essere infatti tradotto nel seguente modo: « Cerca le “x” all’interno della lista “fruits” tali che il carattere “a” è contenuto in “x”» . Nel seguente esempio elenco i numeri dispari da 0 a 100 con una sola espressione List Comprehension: . #Cerca le x da 0 a 100 tali che il risultato della divisione intera tra x e 2 moltiplicato successivamente per 2 sia diverso da x #es: 3/2 = 1 &gt;&gt; 1*2 = 2 &gt;&gt; 3!=2 &gt;&gt; print #es: 4/2 = 2 &gt;&gt; 2*2 = 4 &gt;&gt; 4=4 print([x for x in range(0, 100) if x // 2 * 2 != x]) . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-17.html#python---list-comprehension",
     "relUrl": "/corsi/python/Lezioni/py-course-17.html#python---list-comprehension"
-  },"75": {
+  },"93": {
     "doc": "Corso Python - 17",
     "title": "Corso Python - 17",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-17.html",
     "relUrl": "/corsi/python/Lezioni/py-course-17.html"
-  },"76": {
+  },"94": {
     "doc": "Corso Python - 18",
     "title": "Esercizio Asta online v6",
     "content": "Il seguente script vuole simulare l’andamento di un’asta online con la seguente regola: . | L’asta verrà aggiudicata da chi avrà fatto un’offerta la più vicina alla media delle offerte degli altri | . L’utente dovrà inserire un’offerta in bit coin e una email che rappresenterà l’identificativo. In questa sesta e ultima parte introdurremo le funzioni: . | offerta_minima(lista_offerte): riceve la lista_offerte come parametro e ne identifica la lista con l’offerta minima. E’ simile alla funzione minimo(lista_offerte) solo che invece di ritornare il valore decimale dell’offerta minima ritorna una lista comprendente la coppia email/offerta con offerta minima. | offerta_massima(lista_offerte): riceve la lista_offerte come parametro e ne identifica la lista con l’offerta massima. E’ simile alla funzione massimo(lista_offerte) solo che invece di ritornare il valore decimale dell’offerta massima ritorna una lista comprendente la coppia email/offerta con offerta massima. | . Lo script filtrerà inoltre le offerte che hanno una tolleranza del 10% calcolata sul valore medio. Infine, è stata definita una funzione SIMULA_inserisci_offerte() per evitare di inserire i dati da tastiera e testare lo script . import re def SIMULA_inserisci_offerte(): return [ ['a@a.com', 1], ['b@b.com', 3.3], ['c@c.com', 4.1], ['d@d.com', 3.8], ['e@e.com', 12] ] def trova_email(email, lista_offerte): trovato = False for offerta in lista_offerte: if offerta[0] == email: trovato = True break return trovato def media_offerte(lista_offerte): somma = 0.0 for offerta in lista_offerte: somma += offerta[1] return somma / len(lista_offerte) # si assume che la lista non sia vuota def minimo(lista_offerte): min = lista_offerte[0][1] for offerta in lista_offerte[1:]: if offerta[1] &lt; min: min = offerta[1] return min # invece del solo valore minimo restituisce # l`intera offerta [email, valore_offerta] def offerta_minima(lista_offerte): min = lista_offerte[0] for offerta in lista_offerte[1:]: if offerta[1] &lt; min[1]: min = offerta #ritorna la coppia &lt;email, valore_offerta&gt; corrispondente al minimo di \"valore_offerta\" return min # si assume che la lista non sia vuota def massimo(lista_offerte): max = lista_offerte[0][1] for offerta in lista_offerte[1:]: if offerta[1] &gt; max: max = offerta[1] return max # invece del solo valore massimo restituisce # l`intera offerta [email, valore_offerta] def offerta_massima(lista_offerte): max = lista_offerte[0] for offerta in lista_offerte[1:]: if offerta[1] &gt; max[1]: max = offerta return max def stampa_lista(lista_offerte): for offerta in lista_offerte: print(f\"Email Offerente: {offerta[0]} - Offerta: {offerta[1]} \") def inserisci_offerte(): lista = [] altre_offerte = True while altre_offerte: offerta = input(\"Inserisci l`offerta pervenuta (0 per terminare): \") try: offerta = float(offerta) except ValueError: print(\"Formato non valido, riprova ...\") continue if offerta == 0: altre_offerte = False # USCITA DAL CICLO continue if offerta &lt; 0: print(\"Non possono essere fatte offerte negative!\") continue email = input(\"Inserire l`email dell`offerente: \") if not re.match(\"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$\", email): print(\"Email non valida, riprova ...\") continue nuova_offerta = [email, offerta] if trova_email(email, lista): print(\"Questo utente ha già fatto la sua unica offerta ... respinto!\") continue else: lista.append(nuova_offerta) return lista print (\"\"\" Il seguente script vuole simulare l\\'andamento di un\\'asta online con la seguente regola: &lt;&lt; L\\'asta verrà aggiudicata da chi avrà fatto un'offerta la più vicina alla media delle offerte degli altri.&gt;&gt; L'utente dovrà inserire un'offerta in bit coin e una email che rappresenterà l'identificativo\"\"\") print(\"-\"*40) # grazie all`uso di funzioni la complessità del programma principale # è drasticamente ridotta print(\"\\nStampo una lista di offerte predefinite, evito l'input da tastiera\") offerte = SIMULA_inserisci_offerte() stampa_lista(offerte) print(\"-\"*40) # eliminiamo l`offerta minima e massima print(\"\\nElimino l'offerta più alta e l'offerta più bassa\") offerte.remove(offerta_minima(offerte)) offerte.remove(offerta_massima(offerte)) stampa_lista(offerte) print(\"-\"*40) # costruiamo una nuova lista con gli elementi rimasti # che non si discostano più del 10% dalla media dei rimasti offerta_media = media_offerte(offerte) print(f\"Media: {offerta_media}\") tolleranza = offerta_media/100*10 print(f\"Tolleranza 10%: {tolleranza}\") print(\"-\"*40) offerte_filtrate = [x for x in offerte if abs(x[1]-offerta_media) &lt; tolleranza] print(\"\\nOfferte filtrate in base alla tolleranza..\") stampa_lista(offerte_filtrate) #Il seguente script vuole simulare l'andamento di un'asta online con la seguente regola: #&lt;&lt; L'asta verrà aggiudicata da chi avrà fatto un'offerta la più vicina alla media delle offerte degli altri.&gt;&gt; #L'utente dovrà inserire un'offerta in bit coin e una email che rappresenterà l'identificativo #---------------------------------------- # #Stampo una lista di offerte predefinite, evito l'input da tastiera #Email Offerente: a@a.com - Offerta: 1 #Email Offerente: b@b.com - Offerta: 3.3 #Email Offerente: c@c.com - Offerta: 4.1 #Email Offerente: d@d.com - Offerta: 3.8 #Email Offerente: e@e.com - Offerta: 12 #---------------------------------------- # #Elimino l'offerta più alta e l'offerta più bassa #Email Offerente: b@b.com - Offerta: 3.3 #Email Offerente: c@c.com - Offerta: 4.1 #Email Offerente: d@d.com - Offerta: 3.8 #---------------------------------------- #Media: 3.733333333333333 #Tolleranza 10%: 0.3733333333333333 #---------------------------------------- # #Offerte filtrate in base alla tolleranza.. #Email Offerente: c@c.com - Offerta: 4.1 #Email Offerente: d@d.com - Offerta: 3.8 . ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-18.html#esercizio-asta-online-v6",
     "relUrl": "/corsi/python/Lezioni/py-course-18.html#esercizio-asta-online-v6"
-  },"77": {
+  },"95": {
     "doc": "Corso Python - 18",
     "title": "Corso Python - 18",
     "content": " ",
     "url": "http://localhost:4000/corsi/python/Lezioni/py-course-18.html",
     "relUrl": "/corsi/python/Lezioni/py-course-18.html"
-  },"78": {
+  },"96": {
     "doc": "Python",
     "title": "Python",
     "content": " ",
     "url": "http://localhost:4000/python/",
     "relUrl": "/python/"
-  },"79": {
+  },"97": {
     "doc": "Tutorial",
     "title": "Tutorial",
     "content": " ",
     "url": "http://localhost:4000/tutorial/",
     "relUrl": "/tutorial/"
-  },"80": {
+  },"98": {
     "doc": "Crea il tuo sito tramite GitHub Pages e jekyll",
     "title": "Crea il tuo sito tramite GitHub Pages e jekyll",
     "content": "Jekyll è un semplice generatore di siti statici, compatibile con i blog, per siti personali, di progetto o di organizzazione. Scritto in Ruby da Tom Preston-Werner, co-fondatore di GitHub, è distribuito con licenza open source MIT . ",
     "url": "http://localhost:4000/tutorial/website-jekyll-githubPages/website-jekyll-githubPages.html",
     "relUrl": "/tutorial/website-jekyll-githubPages/website-jekyll-githubPages.html"
-  },"81": {
+  },"99": {
     "doc": "Crea il tuo sito tramite GitHub Pages e jekyll",
     "title": "Prerequisiti",
     "content": "Devi aver installato jekyll e git . ",
     "url": "http://localhost:4000/tutorial/website-jekyll-githubPages/website-jekyll-githubPages.html#prerequisiti",
     "relUrl": "/tutorial/website-jekyll-githubPages/website-jekyll-githubPages.html#prerequisiti"
-  },"82": {
+  },"100": {
     "doc": "Crea il tuo sito tramite GitHub Pages e jekyll",
     "title": "Installazione di jekyll su Ubuntu",
     "content": "Devi installare tutte le dipendenze: . | ruby | rubygems | gcc | make | . Il seguente comando installa tutte le dipendenze necessarie: . sudo apt-get install ruby-full build-essential zlib1g-dev . Evita di installare i pacchetti RubyGems (chiamati gems) come utente root. Invece, imposta una directory di installazione gem per il tuo account utente. I seguenti comandi aggiungeranno variabili d’ambiente al tuo file ~ / .bashrc per configurare il percorso di installazione di gem: . echo '# Install Ruby Gems to ~/gems' &gt;&gt; ~/.bashrc echo 'export GEM_HOME=\"$HOME/gems\"' &gt;&gt; ~/.bashrc echo 'export PATH=\"$HOME/gems/bin:$PATH\"' &gt;&gt; ~/.bashrc source ~/.bashrc . Installa jekyll e bundler . gem install jekyll bundler . Jekyll on Ubuntu . Con questa procedura installerai l’ultima versione di jekyll. Per verificare la versione installata digita: . jekyll -v . In generale la versione di jekyll appena installata differisce da quella utilizzata da GitHub Pages per il deploy (pubblicazione) di una pagina web. Per verificare la versione utilizzata da GitHub Pages, visita GitHub pages - Dependency versions. Per evitare problemi consiglio di allinearsi alla versione di jekyll utilizzata da GitHub Pages ma solo in fase di creazione di un nuovo sito, quindi con un’installazione locale alla directory contente il progetto. Nei prossimi passaggi vedremo come fare.. Crea il tuo primo sito . Crea una nuova directory con un nome a piacere, ad esempio myWebPage. Apri il terminale all’interno della repository appena creata e digita il comando per creare una nuova base per il sito. jekyll new . Adesso, lanciando il comando: . jekyll serve . Dovrebbe rispondere con qualcosa del genere: . Configuration file: /home/s/Repository/myWebPage/_config.yml Source: /home/s/Repository/myWebPage Destination: /home/s/Repository/myWebPage/_site Incremental build: disabled. Enable with --incremental Generating... Jekyll Feed: Generating feed for posts done in 0.211 seconds. Auto-regeneration: enabled for '/home/s/Repository/myWebPage' Server address: http://127.0.0.1:4000/ Server running... press ctrl-c to stop. Raggiungi l’indirizzo indicato dal campo Server address, nel mio caso http://127.0.0.1:4000/, da terminale è sufficiente un Ctrl + click o semplicemente copiando l’indirizzo su browser web. A questo punto dovresti vedere l’anteprima del tuo sito. Di default verrà impostato un tema dal nome minima . Non ti preoccupare adesso dei contenuti, avrai modo di configurarli con calma una volta finito il setup. Come dicevo, adesso ti consiglio di allinearti alla versione di jekyll utilizzata da GitHub Pages. Apri la directory del progetto, nel mio caso myWebPage. Troverai una serie di file: . La nostra concentrazione per adesso va ai file Gemfile, Gemfile.lock e _config.yml. Apri il file Gemfile, troverai questo contenuto scritto nel linguaggio Ruby: . source \"https://rubygems.org\" # Hello! This is where you manage which Jekyll version is used to run. # When you want to use a different version, change it below, save the # file and run `bundle install`. Run Jekyll with `bundle exec`, like so: # # bundle exec jekyll serve # # This will help ensure the proper Jekyll version is running. # Happy Jekylling! gem \"jekyll\", \"~&gt; 4.1.1\" # This is the default theme for new Jekyll sites. You may change this to anything you like. gem \"minima\", \"~&gt; 2.5\" # If you want to use GitHub Pages, remove the \"gem \"jekyll\"\" above and # uncomment the line below. To upgrade, run `bundle update github-pages`. # gem \"github-pages\", group: :jekyll_plugins # If you have any plugins, put them here! group :jekyll_plugins do gem \"jekyll-feed\", \"~&gt; 0.12\" end # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem # and associated library. platforms :mingw, :x64_mingw, :mswin, :jruby do gem \"tzinfo\", \"~&gt; 1.2\" gem \"tzinfo-data\" end # Performance-booster for watching directories on Windows gem \"wdm\", \"~&gt; 0.1.1\", :platforms =&gt; [:mingw, :x64_mingw, :mswin] . Tra i commenti del file troviamo diverse indicazioni su come procedere per utilizzare GitHub Pages. In particolare devi impostare la versione di jekyll utilizzata da GitHub, nel mio caso 3.9.0, consultabile da GitHub pages - Dependency versions. gem \"jekyll\", \"~&gt; 3.9.0\" . e devi inserire anche la direttiva giusta per github-pages con l’attuale versione di GitHub Pages consultabile sempre da GitHub pages - Dependency versions. Nel mio caso la versione è la 209 . gem \"github-pages\", \"~&gt; 209\", group: :jekyll_plugins . Il file completo sarà: . source \"https://rubygems.org\" # Hello! This is where you manage which Jekyll version is used to run. # When you want to use a different version, change it below, save the # file and run `bundle install`. Run Jekyll with `bundle exec`, like so: # # bundle exec jekyll serve # # This will help ensure the proper Jekyll version is running. # Happy Jekylling! gem \"jekyll\", \"~&gt; 3.9.0\" # This is the default theme for new Jekyll sites. You may change this to anything you like. gem \"minima\" #gem \"minima\", \"~&gt; 2.5\" # If you want to use GitHub Pages, remove the \"gem \"jekyll\"\" above and # uncomment the line below. To upgrade, run `bundle update github-pages`. gem \"github-pages\", \"~&gt; 209\", group: :jekyll_plugins # If you have any plugins, put them here! group :jekyll_plugins do gem \"jekyll-feed\", \"~&gt; 0.12\" end # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem # and associated library. platforms :mingw, :x64_mingw, :mswin, :jruby do gem \"tzinfo\", \"~&gt; 1.2\" gem \"tzinfo-data\" end # Performance-booster for watching directories on Windows gem \"wdm\", \"~&gt; 0.1.1\", :platforms =&gt; [:mingw, :x64_mingw, :mswin] . A questo punto puoi salvare ed eliminare il file Gemfile.lock. Questo file infatti contiene tutte le dipendenze ed è generato a partire dal file Gemfile. Ne dovrai generare uno nuovo. Da terminale, all’interno della directory del progetto digita: . bundle install . Verrà generato un nuovo Gemfile.lock con tutte le dipendenze necessarie per GitHub Pages. Adesso, per lanciare l’anteprima della pagina, non puoi più utilizzare il comando jekyll serve poichè tale comando invocherà la versione di jekyll installata globalmente sul tuo PC e quindi risulteresti non allineato. Dovrai lanciare il comando bundle exec jekyll serve come suggerito dal file Gemfile in modo da garantire che venga eseguita la versione di jekyll indicata dal file Gemfile e non quella installata su PC. Digita quindi: . bundle exec jekyll serve . A questo punto sei quasi pronto per pubblicare il tuo sito tramite GitHub Pages. ",
     "url": "http://localhost:4000/tutorial/website-jekyll-githubPages/website-jekyll-githubPages.html#installazione-di-jekyll-su-ubuntu",
     "relUrl": "/tutorial/website-jekyll-githubPages/website-jekyll-githubPages.html#installazione-di-jekyll-su-ubuntu"
-  },"83": {
+  },"101": {
     "doc": "Crea il tuo sito tramite GitHub Pages e jekyll",
     "title": "Pubblica il sito su GitHub Pages",
     "content": "Crea una repository vuota e pubblica su GitHub. Ti consiglio di dare lo stesso nome della directory utilizzata nel progetto, nel mio caso myWebPage. Il nome appena creato coinciderà con la subdirectory dell’indirizzo della propria pagina web che nel mio caso sarà: https://simonediricco1.github.io/myWebPage/. Adesso torna alla directory del progetto e aggiungiamo quindi il subpath myWebPage all’interno del file _config.yml, . baseurl: \"/myWebPage\" # the subpath of your site, e.g. /blog . Il file completo sarà una cosa del genere: . # Welcome to Jekyll! # # This config file is meant for settings that affect your whole blog, values # which you are expected to set up once and rarely edit after that. If you find # yourself editing this file very often, consider using Jekyll's data files # feature for the data you need to update frequently. # # For technical reasons, this file is *NOT* reloaded automatically when you use # 'bundle exec jekyll serve'. If you change this file, please restart the server process. # # If you need help with YAML syntax, here are some quick references for you: # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml # https://learnxinyminutes.com/docs/yaml/ # # Site settings # These are used to personalize your new site. If you look in the HTML files, # you will see them accessed via 8-bit, simone.diricco.1@gmail.com, and so on. # You can create any custom variable you would like, and they will be accessible # in the templates via . title: Your awesome title email: your-email@example.com description: &gt;- # this means to ignore newlines until \"baseurl:\" Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description. baseurl: \"/myWebPage\" # the subpath of your site, e.g. /blog url: \"\" # the base hostname &amp; protocol for your site, e.g. http://example.com twitter_username: jekyllrb github_username: jekyll # Build settings theme: minima plugins: - jekyll-feed # Exclude from processing. # The following items will not be processed, by default. # Any item listed under the `exclude:` key here will be automatically added to # the internal \"default list\". # # Excluded items can be processed by explicitly listing the directories or # their entries' file path in the `include:` list. # # exclude: # - .sass-cache/ # - .jekyll-cache/ # - gemfiles/ # - Gemfile # - Gemfile.lock # - node_modules/ # - vendor/bundle/ # - vendor/cache/ # - vendor/gems/ # - vendor/ruby/ . A questo punto lancia nuovamente il comando: . bundle exec jekyll serve . Bene, sei pronti a trasformare la directory nella repository GitHub che ospiterà la tua pagina web. Tramite git digita: . git init git add . git commit -m \"initial\" git branch -M master git remote add origin git@github.com:simonediricco1/myWebPage.git git push -u origin master . Adesso, tornando su GitHub alla repository myWebPage dovresti trovare gli stessi file che hai localmente. Non resta che istruire la repository ad ospitare una pagina web. Apri la Repository e vai su Settings, sezione GitHub Pages. Seleziona il branch master, premi il tasto Save, una volta aggiornata la pagina, se torni alla sezione GitHub Pages dovresti trovare: . Your site is published at https://simonediricco1.github.io/myWebPage/ . Cliccando sul link dovresti visualizzare la tua pagina. Sei online! . ",
     "url": "http://localhost:4000/tutorial/website-jekyll-githubPages/website-jekyll-githubPages.html#pubblica-il-sito-su-github-pages",
     "relUrl": "/tutorial/website-jekyll-githubPages/website-jekyll-githubPages.html#pubblica-il-sito-su-github-pages"
-  },"84": {
+  },"102": {
     "doc": "Crea il tuo sito tramite GitHub Pages e jekyll",
     "title": "Temi jekyll",
     "content": "Adesso vedrai come impostare il tema just-the-docs . Questo tema, non essendo tra quelli ufficialmente supportati da GitHub va aggiunto in un atro modo. Ovviamente questa guida vale anche per altri temi. Modifica il Gemfile inserendo al posto di: . gem \"minima\" . Il tema just-the-docs: . gem \"just-the-docs\" . Modifica file _config.yml inserendo al posto di: . theme: minima . remote_theme: pmarsceill/just-the-docs . Adesso cancella il file Gemfile.lock e lancia nuovamente: . bundle install . Per vedere l’anteprima lancia nuovamente il comando: . bundle exec jekyll serve . A questo punto esegui il commit e il push delle modifiche. git add . git commit -m \"add other theme\" git push . Verrà eseguito il deploy in automatico. L’anteprima di questo tema è una cosa del genere: . Risoluzione problemi . | just-the-docs | . ",

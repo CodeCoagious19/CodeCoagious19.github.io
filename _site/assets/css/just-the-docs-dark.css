@@ -2430,6 +2430,8 @@ a { color: #E95420; }
 
 a:not([class]):hover { background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%, rgba(44, 0, 30, 0.5) 100%); }
 
+.main-content ul > li::before { color: #333333; content: "•"; }
+
 .icon { color: #F6F6F5; }
 
 #menu-button.site-button:hover { background-image: none; }
@@ -2468,9 +2470,9 @@ a:not([class]):hover { background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%
 
 #aux-nav-text { display: block; font-size: 11px !important; text-align: center; }
 
-@media (min-width: 31.25rem) { h2, .text-beta { font-size: 28px !important; }
-  h3, .text-gamma { font-size: 22px !important; }
-  h4, .text-delta { font-size: 18px !important; } }
+@media (min-width: 31.25rem) { h2, .text-beta { font-size: 30px !important; }
+  h3, .text-gamma { font-size: 24px !important; }
+  h4, .text-delta { font-size: 20px !important; } }
 @media (min-width: 800px) { .main { max-width: 60%; margin-left: 264px; }
   .side-bar { width: 264px; }
   .nav-list .nav-list-item .nav-list-link:hover { animation-name: side-bar-border-animation; animation-duration: 0.2s; }

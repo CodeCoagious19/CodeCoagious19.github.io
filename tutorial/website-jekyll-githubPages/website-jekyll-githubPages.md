@@ -9,13 +9,25 @@ nav_exclude: false
 
 #  Crea il tuo sito tramite GitHub Pages e jekyll
 
-Jekyll è un semplice generatore di siti statici, compatibile con i blog, per siti personali, di progetto o di organizzazione. Scritto in Ruby da Tom Preston-Werner, co-fondatore di GitHub, è distribuito con licenza open source MIT
+Jekyll è un semplice generatore di siti statici, compatibile con i blog, per siti personali, di progetto o di organizzazione. Scritto in Ruby da Tom Preston-Werner, co-fondatore di GitHub, è distribuito con licenza open source MIT.
 
-## Prerequisiti
+Consente di creare un sito statico grazie alla sola conoscenza del linguaggio `markdown` supportato nativamente da GitHub. Non è quindi richiesta una conoscenza dei linguaggi `html` e `css`. Dispone di una enorme quantità di temi gratuiti i quali consentono personalizzazioni più o meno avanzate. Per chi conosce i linguaggi `html` e `css` sarà possibile aggiungere elementi o modificare lo stile a piacimento.
 
-Devi aver installato [jekyll](https://jekyllrb.com/docs/installation) e [git]()
+## Indice
 
-## Installazione di jekyll su Ubuntu
+- [Prerequisiti e installazione](#prerequisiti-e-installazione)
+  - [Installazione di jekyll su Ubuntu](#installazione-di-jekyll-su-ubuntu)
+- [Crea il tuo primo sito](Crea-il-tuo-primo-sito)
+
+## Prerequisiti e installazione
+
+Come ho già detto, non è richiesta una conoscenza dei linguaggi `html` e `css` a patto che tu conosca il linguaggio `markdown`. Jekyll si occuperà di convertire, tra le altre cose, la tue pagine `markdown` in pagine `html`. Per chi avesse la necessità di modificare il layout standard aggiungendo elementi o modificando lo stile nativo del tema al di fuori delle possibilità offerte dal creatore del tema sarà tuttavia richiesta una conoscenza intermedia dei linguaggi `html` e `css`. E' inoltre necessaria la conoscenza di `git` per la comunicazione con GitHUb
+
+Sei pronto? 
+
+Per prima cosa devi installare [jekyll](https://jekyllrb.com/docs/installation) e [git]() per il tuo sistema operativo.
+
+### Installazione di jekyll su Ubuntu
 
 Devi installare tutte le dipendenze:
 - [ruby](https://www.ruby-lang.org/en/downloads/)
@@ -58,9 +70,7 @@ In generale la versione di jekyll appena installata differisce da quella utilizz
 Per evitare problemi consiglio di allinearsi alla versione di jekyll utilizzata da GitHub Pages ma solo in fase di creazione di un nuovo sito, quindi con un'installazione locale alla directory contente il progetto. Nei prossimi passaggi vedremo come fare..
 
 
-
-
-### Crea il tuo primo sito
+## Crea il tuo primo sito
 
 Crea una nuova directory con un nome a piacere, ad esempio `myWebPage`. 
 
@@ -208,7 +218,7 @@ bundle exec jekyll serve
 A questo punto sei quasi pronto per pubblicare il tuo sito tramite GitHub Pages.
 
 
-# Pubblica il sito su GitHub Pages
+## Pubblica il sito su GitHub Pages
 
 Crea una repository vuota e pubblica su GitHub. Ti consiglio di dare lo stesso nome della directory utilizzata nel progetto, nel mio caso `myWebPage`. Il nome appena creato coinciderà con la subdirectory dell'indirizzo della propria pagina web che nel mio caso sarà: `https://simonediricco1.github.io/myWebPage/`.
 
@@ -284,7 +294,7 @@ A questo punto lancia nuovamente il comando:
 bundle exec jekyll serve
 ```
 
-Bene, sei pronti a trasformare la directory nella repository GitHub che ospiterà la tua pagina web.
+Bene, sei pronto a trasformare la directory nella repository GitHub che ospiterà la tua pagina web.
 Tramite git digita:
 
 ```bash
@@ -303,6 +313,8 @@ Your site is published at https://simonediricco1.github.io/myWebPage/
 ```
 
 Cliccando sul link dovresti visualizzare la tua pagina. Sei online!
+
+**Attenzione al branch!** Fintanto che farai le modifiche al sito ed eseguirai push sul branch `master`, GitHub effettuerà il deploy in automatico della tua pagina. Per evitare il deploy puoi utilizzare un altro branch, un branch di lavoro  qualsiasi ad esempio `changes` ma ricorda che affinchè la pagina possa essere caricata dovrai effettuare il merge del tuo branch `changes` con il branch `master`
 
 ## Temi jekyll
 
@@ -358,9 +370,60 @@ L'anteprima di questo tema è una cosa del genere:
 
 ![](./images/just-the-docs.png)
 
-### Risoluzione problemi
 
-- [just-the-docs](https://stackoverflow.com/questions/56464757/trouble-implementing-specifically-just-the-docs-theme-using-jekyll)
+## Come personalizzare un tema jekyll
+
+Stai utilizzando un tema ma vorresti personalizzarlo a tuo piacimento aggiungendo stile `css` o elelmenti `html`?
+
+Normalmente ogni tema dispone di una documentazione per la personalizzazione della propria pagina. Si tratta in generale di impostare certi parametri di *alto livello* nel file `_config.yml` o definire alcune variabili in qualche file ad un  path particolare. Ad esempio per il tema *just-the-docs* è possibile creare un file con un nome a piacimento ad esempio `my_schema.scss` ad un percorso specifico, `_sass/color_schemes/my_schema.scss` e settare certe variabili (definite dal tema) come:
+
+```scss
+$link-color: $purple-100;
+$sidebar-color: $grey-lt-100;
+$content-width: 1000px;
+```
+
+consentendo di cambiare certi colori o ridefinire alcuni margini o proporzioni. Questo file deve essere aggiunto come `build settings` inserendo la seguente riga nel file `_config.yml`:
+
+```yml
+color_scheme: my_schema
+```
+ 
+Ovviamente queste modifiche sono limitate alle possibilità definite dal creatore del tema.
+
+### Aggiunta css
+
+Per aver accesso ad una personalizzazione più profonda in genere viene data la possibilità di ridefinire completamente lo stile `css` sovraiscrivendo solo gli attributi che ci interessano. Nel caso del tema *just-the-docs* viene data la possibilità di creare un file con il nome specifico `custom.scss` al path `_sass/custom/custom.scss`. In questo modo utilizzando le regole `css` è possibile cambiare lo stile di ogni elemento della pagina.
+Purtroppo, essendo un'operazione di *basso livello* richiede una conoscenza approfondita del linguaggio `css` e di comprendere la logica di layout con cui è stata progettata la pagina. Ti dovrai armare di pazienza e dello strumento `Ispeziona` del  browser per risalire al selettore giusto per ottenere la modifica che ti serve. Potrete trovare inoltre lo stile completo `css` all'interno della cartella `_site`, nel mio caso si trova al path `_site/assets/css/just-the-docs-default.css`. Personalmente ho modificato abbondantemente lo stile `css`
+
+### Aggiunta html
+
+Se non ti basta modificare lo stile `css` e vuoi aggiungere anche elementi `html` si può fare come sempre con una procedura di *basso livello* cioè sovraiscrivendo la pagina `html` che dovrebbe occuparsi di aggiungere questi elementi.
+
+Da terminale, all'interno della root del tuo progetto digita `bundle info [nome-tema]`. In questo caso utilizzando il tema *just-the-docs* sarà:
+
+```bash
+bundle info just-the-docs
+```
+
+Risponderà con il path di installazione del tema
+
+```bahs
+* just-the-docs (0.3.3)
+	Summary: A modern, highly customizable, and responsive Jekyll theme for documention with built-in search.
+	Homepage: https://github.com/pmarsceill/just-the-docs
+	Path: /home/s/gems/gems/just-the-docs-0.3.3
+```
+
+Raggiungi questa posizione e naviga tra le directory. Troverai le pagine `html` che generano il tuo sito. Devi copiare la pagina che ti interessa all'interno del tuo progetto allo stesso path.
+
+Personalmente, per il tema *just-the-docs*, ho copiato la pagina `default.html` all'interno della directory `_layouts` e le pagine `footer.html`, `head.html`, `nav.html` all'interno della directory `_includes`. Dopo averle incollate localmente rispettando i path ho iniziato ad apportre delle modifiche, aggiungendo social-link o un logo, modificando il footer di default o la nav-bar. Per caricare le nuove modifiche è sufficiente lanciare il comando:
+
+```bash
+bundle exec jekyll serve
+```
+
+
 
 
 

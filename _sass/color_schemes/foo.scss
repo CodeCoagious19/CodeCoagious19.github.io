@@ -1,12 +1,8 @@
-$link-color: $purple-100;
-$sidebar-color: $grey-lt-100;
-$content-width: 1000px;
+//$link-color: $purple-100;
+//$sidebar-color: $grey-lt-100;
+//$content-width: 1000px;
 
 
-@media (min-width: 66.5rem) { .side-bar { width: calc((100% - 1064px) / 2 + 264px); min-width: 264px; } }
-
-@media (min-width: 50rem) { .main { position: relative; max-width: 1000px; margin-left: 248px; } }
-@media (min-width: 66.5rem) { .main { margin-left: calc( (100% - 1064px) / 2 + 264px ); } }
 
 
 

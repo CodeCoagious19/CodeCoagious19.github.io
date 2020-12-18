@@ -35,24 +35,36 @@ In questa guida ti guiderò passo passo nell'installazione di Ubuntu 20.10 (ma v
   - [git](#git)
   - [Visual studio code](#visual-studio-code)
   - [peek - gif video recorder](#peek---gif-video-recorder)
+- [Qualche configurazione](#qualche-configurazione)
+  - [Installazione/rimozione pacchetti e applicazioni](#Installazionerimozione-pacchetti-e-applicazioni)
+  - [File manager Nautilus](file-manager-nautilus)
 - [Rimozione di Ubuntu da dual-boot tramite Windows](#rimozione-di-ubuntu-da-dual-boot-tramite-windows)
 
 ## E' facile o difficile installare Ubuntu?
 Se non hai mai installato o ripristinato un sistema operativo sul tuo PC come Windows potresti non essere a conoscenza di certe procedure che potrebbero spaventarti, mi riferisco al punto [3. Riavvia il PC nel bios/uefi menu](#3-riavvia-il-pc-nel-biosuefi-menu). Prima di iniziare questo tutorial dovresti dare un'occhiata a [questa sezione](#3-riavvia-il-pc-nel-biosuefi-menu) e vedere se riesci a muoverti con il tuo PC come descritto. Se trovi difficoltà o trovi un'interfaccia diversa da quella mostrata in figura capisco che tu possa spaventarti, purtroppo ogni computer ha il suo software di gestione del BIOS. In questo caso è richiesta la massima attenzione e per questo ti consiglio di leggere più e più volte [questa sezione](#3-riavvia-il-pc-nel-biosuefi-menu) finchè non sarà tutto chiaro prima di procedere con l'installazione di Ubunutu. Questa è l'unica potenziale difficoltà che troverai.
 
 ## Installazione di Ubuntu
+- [1. Collegati alla pagina ufficiale](#1-collegati-alla-pagina-ufficiale)
+- [2. Crea un disco di avvio tramite penna USB](#2-crea-un-disco-di-avvio-tramite-penna-usb)
+  - [Creazione di un disco di avvio tramite penna USB su Windows](#creazione-di-un-disco-di-avvio-tramite-penna-usb-su-windows)
+  - [Creazione di un disco di avvio tramite penna USB su Ubuntu](#creazione-di-un-disco-di-avvio-tramite-penna-usb-su-ubuntu)
+- [3. Riavvia il PC nel bios/uefi menu](#3-riavvia-il-pc-nel-biosuefi-menu)
+- [4. Avvia ubuntu tramite penna USB](#4-avvia-ubuntu-tramite-penna-usb)
+- [5. Prova o installa ubuntu](#5-prova-o-installa-ubuntu)
+- [6. Installa Ubuntu](#6-installa-ubuntu)
+- [7. GRUB Manager](#7-grub-manager)
 
-### 1. Collegati alla pagina ufficiale
+## 1. Collegati alla pagina ufficiale
 [ubuntu.com](https://ubuntu.com/download/desktop/thank-you?version=20.04.1&architecture=amd64#download) e scarica la versione di Ubuntu che preferisci. Consiglio sempre di installare le versioni `LTS` (come la 20.04 LTS) poichè sono quelle più supportate e stabili. In questa guida installerò la versione 20.10 ma la procedura è la stessa anche per la 20.04 LTS
 
 ![](./images/download-ubunutu.png)
 
 A fine download verrà scaricato un file con estensione `.iso`, ad esempio nel caso della versione 20.10 sarà `ubuntu-20.10-desktop-amd64.iso`. Il file appena scaricato è detto *file immagine* e deve essere trasferito e scompattato su CD o su penna USB [creando un disco di avvio](#2-crea-un-disco-di-avvio-tramite-penna-usb). Ti consiglio di procurarti una penna USB da almeno 8Gb vuota o con dei file che non ritieni importanti. L'intero contenuto della penna USB verrà sovra-iscritto con il contenuto del file immagine di Ubuntu
 
-### 2. Crea un disco di avvio tramite penna USB
+## 2. Crea un disco di avvio tramite penna USB
 Procurati una penna USB da almeno 8Gb e inseriscila nel PC. Se sei su Windows segui la procedura *Creazione di un disco di avvio tramite penna USB su Windows*, se sei su ubuntu segui invece *Creazione di un disco di avvio tramite penna USB su Ubuntu*
 
-#### Creazione di un disco di avvio tramite penna USB su Windows
+### Creazione di un disco di avvio tramite penna USB su Windows
 Scarica ed esegui il software [Rufus](https://rufus.ie/). 
 Dovrai selezionare nella scheda `Dispositivo/unità` la penna USB appena inserita, dopodichè tramite il pulsante `SELEZIONA` dovrai scegliere il file immagine di ubuntu `ubuntu-20.10-desktop-amd64.iso`. Delle impostazioni successive ti consiglio di impostare:
 - Schema partizione: MBR
@@ -64,12 +76,12 @@ Premi su `AVVIA` e attendi che abbia finito
 
 **Nota:** Potrebbe comparire un messaggio chiedendo la connessione ad internet per scaricare dalla rete alcuni file importanti per il boot di Ubunut, acconsenti e procedi
 
-#### Creazione di un disco di avvio tramite penna USB su Ubuntu
+### Creazione di un disco di avvio tramite penna USB su Ubuntu
 Apri il software "Creatore dischi di avvio" e seleziona, nella scheda superiore, la sorgente che nel nostro caso sarà `ubuntu-20.10-desktop-amd64.iso` e, nella scheda inferiore, il disco da usare ovvero la penna USB appena inserita. Dopodichè clicca su `Crea disco di avvio`. Una volta terminata la procedura sarai pronto per lanciare ubuntu e installarlo
 
 ![](./images/crea-disco-davvio.png)
 
-### 3. Riavvia il PC nel bios/uefi menu
+## 3. Riavvia il PC nel bios/uefi menu
 Una volta che hai caricato il sistema operativo Ubuntu sulla penna USB dovrai istruire il tuo PC ad accendersi e leggere il contenuto della penna USB anzichè il sistema operativo Windows installato sul tuo hard disk interno. Per far ciò dovrai ravviare il computer in un menù speciale detto `BIOS` e cambiare il cosìdetto `boot order`. Devi sapere infatti che all'accensione del PC, questo software fa una semplice scansione tra tutti i dischi rigidi alla ricerca di un sistema avviabile, nel nostro caso un sistema operativo. Poichè in prima posizione c'è di default la voce `Internal hard drive` o qualcosa del genere significa che all'accensione verrà sempre controllato se c'è un sistema operativo sull'hard disk interno, troverà Windows installato e lo caricherà. Se per qualche assurdo motivo (l'hard disk viene danneggiato o formattato) il BIOS non troverà un sistema avviabile nell'hard disk, passerà alla seconda voce che probabilmente sarà `CD-ROM drive` e quindi cercherà un sistema avviabile all'interno del CD inserito nel lettore CD e così via. Tra queste voci c'è anche la voce `Removable devices` o `USB` o `USB Hard Disk` o `USB HDD` o voci simili che rappresenta proprio la penna USB. Quello che dobbiamo riuscire a fare sarà semplicemente spostare questa voce in prima posizione in modo da poter finalmente istruire il PC a partire tramite il sistema avviabile che sta sulla penna USB, Ubuntu.
 
 Per accedere al BIOS menu' dovrai riavviare il PC e probabilmente dovrai premere ripetutamente il tasto `F2` o `F12` oppure `ESC` o `F10`. Se fai attenzione, appena si avvia il PC in basso compare per un istante una scritta con le indicazioni del tasto da premere per entrare nel BIOS menu. Ecco un esempio in cui per accedere al menu' è necessario premere il tasto `DEL`
@@ -92,7 +104,7 @@ Il BIOS è un software essenziale ben lontano dalle attuali app Android. Per muo
 
 Devi riuscire a spostare l'opzione relativa al disco USB, `Removable devices` o `USB` o `USB Hard Disk` o `USB HDD` o voci simili alla prima posizione. In molti casi per spostare le voci su utilizzano i tasti `F5/F6` oppure i tasti `+/-`. Quando sarai riuscito a spostarla in prima posizione premi `F10`, salverai le modifiche e al prossimo avvio il PC scansionerà i dischi a partire dalla penna USB che hai inserito con Ubuntu pronto a partire. E' tutto!
 
-### 4. Avvia ubuntu tramite penna USB
+## 4. Avvia ubuntu tramite penna USB
 Una volta settato l'avvio tramite penna USB, mantieni collegata la penna USB e riavvia il PC. Apparirà una schermata simile alla seguente
 
 ![](./images/grub-initial.jpg)
@@ -100,7 +112,7 @@ Una volta settato l'avvio tramite penna USB, mantieni collegata la penna USB e r
 
 Scegli la prima opzione `Ubuntu` e attendi che la procedura abbia finito.
 
-### 5. Prova o installa ubuntu
+## 5. Prova o installa ubuntu
 
 Appena avviato, si aprirà la procedura di installazione. Vi chiederà se vorrete provare Ubuntu (Try Ubuntu) o se vorrete installarlo (Install Ubunutu) 
 
@@ -110,35 +122,35 @@ Se per voi è la prima volta vi consiglio l'opzione `Try Ubuntu`. Potrete naviga
 
 ![](./images/link-wizard.png)
 
-### 6. Installa Ubuntu
+## 6. Installa Ubuntu
 
 Riporto passo passo la procedura wizard per l'installazione di ubuntu. Se avete scelto `Install Ubuntu` o avete aperto il link rapido alla wizard sul desktop seguite i seguenti passaggi.
 
-#### Selziona una lingua
+### Selziona una lingua
 
 ![](./images/1.png)
 
-#### Selziona il tipo di tastiera
+### Selziona il tipo di tastiera
 
 ![](./images/2.png)
 
-#### Seleziona una rete wifi
+### Seleziona una rete wifi
 
 ![](./images/wizard-wifi.png)
 
-#### Scegli il tipo di installazione
+### Scegli il tipo di installazione
 
 Se è la prima volta che installate Ubuntu, ti consiglio `Installazione normale`. Con questo tipo di installazione verranno aggiunti software e altri pacchetti utili e ti aiuta in fase di post-installazione. Spunta anche le altre opzioni come in figura
 
 ![](./images/3.png)
 
-#### Dual boot?
+### Dual boot?
 
 Se è la prima volta che installate Ubuntu, ti consiglio di installare ubuntu a fianco di windows, nella cosìdetta modalità *dual-boot*. Ciò ti consentirà di avere sia Windows che Ubuntu sul tuo PC e di poter scegliere quale dei due sistemi operativi lanciare all'accensione del PC. E' fortemente consigliata questa modalità per chi è alle prime armi con Ubuntu perchè per qualsiasi pasticcio tu possa combinare con Ubuntu potrai sempre riavviare il PC e lanciare windows per ripristinare il sistema. Personalmente uso questa modalità.
 
 ![](./images/4.png)
 
-#### Scegli la dimensione della partizione Ubuntu
+### Scegli la dimensione della partizione Ubuntu
 
 E' possibile scegliere quanta dimensione di spazio fisso allocare a Ubuntu e quanta lasciare per Windows. Se sei alla prima installazione di Ubuntu ti consiglio di allocare circa `100Gb` in base anche ai programmi che hai intenzione di installare
 
@@ -150,25 +162,25 @@ Clicca su `Installa` e accetta i messaggi successivi.
 
 ![](./images/7.png)
 
-#### Imposta la località
+### Imposta la località
 
 ![](./images/8.png)
 
-#### Imposta lu tue informazioni personali
+### Imposta lu tue informazioni personali
 
 Scegli un nome per l'account e una password di accesso.
 
 ![](./images/9.png)
 
-#### Attendi la fine della procedura di installazione
+### Attendi la fine della procedura di installazione
 
 ![](./images/10.png)
 
-#### Riavvia il pc
+### Riavvia il pc
 
 ![](./images/wizard-end.png)
 
-#### Togli la penna USB
+### Togli la penna USB
 
 Quando compare la seguente schermata (o simile), togli la penna USB e premi `Invio`
 
@@ -176,7 +188,7 @@ Quando compare la seguente schermata (o simile), togli la penna USB e premi `Inv
 
 [SHAILESHJHA.com](https://www.shaileshjha.com/wp-content/uploads/2019/10/virtualbox_ubuntu_desktop_remove_installation_media_1.jpg)
 
-### 7. GRUB Manager
+## 7. GRUB Manager
 Al riavvio, se hai scelto la modalità dual boot dovrebbe apparire la schermata del software di gestione del dual boot, `GRUB`. Una cosa del genere..
 
 ![](./images/GRUB_with_ubuntu_and_windows_vista.png)
@@ -234,7 +246,7 @@ Ecco una breve lista di applicazioni utili per tutti che ho deciso di riportare:
 - [Gimp](#gimp)
 - [GNOME tweaks](#gnome-tweaks)
 
-### VLC media player
+## VLC media player
 
 VLC media player è un software di riproduzione multimediale gratuito e open source, portatile, multipiattaforma e un server multimediale in streaming sviluppato dal progetto VideoLAN, [VLC - official webpage](https://www.videolan.org/vlc/index.html)
 
@@ -247,7 +259,7 @@ Per installarlo digita da terminale:
 sudo snap install vlc
 ```
 
-### Chromium web browser
+## Chromium web browser
 
 Chromium è un browser per la navigazione web free e open source, [chromium - offical webpage](https://www.chromium.org/)
 
@@ -258,7 +270,7 @@ Per installarlo digita da terminale:
 ```bash
 sudo apt-get install chromium-browser
 ```
-### Telegram
+## Telegram
 
 Telegram è un servizio di messaggistica istantanea, videochiamata e VoIP multipiattaforma basato su cloud, [Telegram - offical webpage](https://telegram.org/)
 
@@ -270,7 +282,7 @@ Per installarlo digita da terminale:
 sudo snap install telegram-desktop
 ```
 
-### Gimp
+## Gimp
 
 GIMP è un editor di grafica raster gratuito e open source utilizzato per la manipolazione e l'editing di immagini o  il disegno in forma libera, [gimp - official webpage](https://www.gimp.org/)
 
@@ -282,7 +294,7 @@ Per installarlo digita da terminale:
 sudo snap install gimp
 ```
 
-### GNOME tweaks
+## GNOME tweaks
 
 GNOME Tweak Tool è un'estensione della shell GNOME che puoi usare per modificare l'interfaccia GNOME
 
@@ -306,7 +318,7 @@ Ecco una breve lista di applicazioni utili per programmatori che ho deciso di ri
 - [Visual studio code](#visual-studio-code)
 - [peek - gif video recorder](#peek---gif-video-recorder)
 
-### git
+## git
 
 Git è un sistema di controllo di versione distribuito gratuito e open source progettato per gestire qualsiasi progetto software, dai più piccoli ai più grandi vantando velocità ed efficienza, [git - official webpage](https://git-scm.com/)
 
@@ -318,7 +330,7 @@ Per installarlo digita da terminale:
 sudo apt-get install git
 ```
 
-### Visual studio code
+## Visual studio code
 
 Visual Studio Code è un editor di test gratuito realizzato da Microsoft per Windows, Linux e macOS, [VS code - offical webpage](https://code.visualstudio.com/)
 
@@ -338,7 +350,7 @@ Riporto anche alcune estensioni utili:
 - Atom One Dark Theme (akamud.vscode-theme-onedark)
 - Markdown Preview Github Styling (bierner.markdown-preview-github-styles)
 
-### peek - gif video recorder
+## peek - gif video recorder
 
 peek è un semplice registratore di schermo che consente l'esportazione diretta in formato `.gif`. Il progetto è free e open source, [peek - offical webpage](https://github.com/phw/peek#ubuntu)
 
@@ -351,6 +363,67 @@ sudo add-apt-repository ppa:peek-developers/stable
 sudo apt update
 sudo apt install peek
 ```
+
+## Qualche configurazione
+
+- [Installazione/rimozione pacchetti e applicazioni](#Installazionerimozione-pacchetti-e-applicazioni)
+- [File manager Nautilus](file-manager-nautilus)
+
+## Installazione/rimozione pacchetti e applicazioni.
+
+Ubuntu non ha un software equivalente a windows come `Disinstalla un programma` da `Pannello di controllo`. Molte applicazioni puoi trovarle su **Ubuntu Software** e da questo centro è possibili disinstallarle.
+
+![language](./images/ubuntu-software.png)
+
+Molte altre invece, trovate sul web, è probabile che tu le abbia installate tramite il comando da terminale:
+
+```bash
+sudo apt install [package name].
+```
+
+In questo caso per disinstallarle devi digitare:
+
+```bash
+sudo apt remove [package name].
+sudo apt autoremove.
+```
+
+## File manager Nautilus
+
+Nautilus è il file manager di ubuntu. Di default la visualizzazione di file e cartelle è disposta orizzontalmente.
+E' possibile cambiare la visualizzazione delle cartelle, le opzioni di antemprima dei file ed altre preferenze generali  dai tre tasti in alto a destra.
+
+In alto, centralmente, Nautilus mostra il percorso attuale detto anche `path-address` o semplicemente `path`. Premendo `Ctrl + L`, il path diventa editabile ed è possibile inserire un percorso specifico (utile per raggiungere velocemente una directory). 
+
+![](./images/nautilus-default.png)
+
+Personalmente ho preferito abilitare di default l'opzione del path editabile. Se vuoi farlo pure tu digita da terminale: 
+```bash
+gsettings set org.gnome.nautilus.preferences always-use-location-entry true
+```
+
+Se vuoi tornare all'opzione di default digita:
+```bash
+gsettings set org.gnome.nautilus.preferences always-use-location-entry false
+```
+
+Inoltre ho impostato la visualizzazione di file nascoti e, dal menu' `preferenze/viste/viste a elenco`, l'opzione `Consentire l'espansione delle cartelle`. Il risultato è il seguente.
+
+![](./images/nautilus-custom.png)
+
+Un'altra cosa molto utile è richiamare il file manager da terminale. per far ciò basta digitare da terminale 
+```bash
+nautilus .
+```
+
+In questo modo aprirà tramite il file manager il path attuale a cui punta il terminale
+
+![](./images/nautilus-bash.gif)
+
+**Osservazione:** E' sempre possibile richiamare un'applicazione da terminale digitando il nome di esecuzione (che non coincide in generale con il nome esteso)
+
+sudo apt remove [package name].
+sudo apt autoremove
 
 ## Rimozione di Ubuntu da dual-boot tramite Windows
 Qualcosa non va con Ubuntu? Vuoi tornare ad avere Windows come unica partizione? Nessun problema.. Una buona guida non dovrebbe solo aiutarti a raggiungere uno scopo ma anche a tornare indietro.
