@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Corso Python - 06
+title: Corso Python - 07
 parent: Python
 grand_parent: Corsi
 has_children: false
@@ -100,3 +100,10 @@ myList2[3][0] = 12
 print(myList)  #['kiwi', 'mela', [1, 2], 'cachi']
 print(myList2) #['banana', 'kiwi', 'mela', [12, 2], 'cachi']
 ```
+
+---
+
+<div class="next-prev">
+    <a href="./py-course-05.html" id="prev-link"> previus </a> 
+    <a href="./py-course-07.html" id="next-link"> next </a>
+</div>

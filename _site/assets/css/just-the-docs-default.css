@@ -2486,3 +2486,4 @@ a:not([class]):hover { background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%
   #aux-nav-text { display: none; } }
 @media (min-width: 1366px) { .side-bar { width: 400px; }
   .main { margin-left: 400px; } }
+.next-prev { display: flex; justify-content: space-evenly; }

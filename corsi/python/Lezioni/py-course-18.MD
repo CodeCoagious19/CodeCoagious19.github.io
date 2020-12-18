@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Corso Python - 18
+title: Corso Python - 19
 parent: Python
 grand_parent: Corsi
 has_children: false
@@ -196,3 +196,9 @@ stampa_lista(offerte_filtrate)
 #Email Offerente: c@c.com - Offerta: 4.1 
 #Email Offerente: d@d.com - Offerta: 3.8 
 ```
+
+---
+
+<div class="next-prev">
+    <a href="./py-course-17.html" id="prev-link"> previus </a> 
+</div>

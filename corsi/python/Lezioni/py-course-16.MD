@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Corso Python - 16
+title: Corso Python - 17
 parent: Python
 grand_parent: Corsi
 has_children: false
@@ -129,3 +129,10 @@ print(f"Offerta minima: {minimo(offerte)}")
 ```
 
 ![](./images/asta-05.gif)
+
+---
+
+<div class="next-prev">
+    <a href="./py-course-15.html" id="prev-link"> previus </a> 
+    <a href="./py-course-17.html" id="next-link"> next </a>
+</div>

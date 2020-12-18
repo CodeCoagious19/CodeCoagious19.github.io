@@ -17,7 +17,12 @@ Consente di creare un sito statico grazie alla sola conoscenza del linguaggio `m
 
 - [Prerequisiti e installazione](#prerequisiti-e-installazione)
   - [Installazione di jekyll su Ubuntu](#installazione-di-jekyll-su-ubuntu)
-- [Crea il tuo primo sito](Crea-il-tuo-primo-sito)
+- [Crea il tuo primo sito](#crea-il-tuo-primo-sito)
+- [Pubblica il sito su GitHub Pages](#pubblica-il-sito-su-github-pages)
+- [Temi jekyll](#temi-jekyll)
+  - [Come personalizzare un tema jekyll](#come-personalizzare-un-tema-jekyll)
+    - [Aggiunta css](#aggiunta-css)
+    - [Aggiunta html](#aggiunta-html)
 
 ## Prerequisiti e installazione
 
@@ -220,7 +225,7 @@ A questo punto sei quasi pronto per pubblicare il tuo sito tramite GitHub Pages.
 
 ## Pubblica il sito su GitHub Pages
 
-Crea una repository vuota e pubblica su GitHub. Ti consiglio di dare lo stesso nome della directory utilizzata nel progetto, nel mio caso `myWebPage`. Il nome appena creato coinciderà con la subdirectory dell'indirizzo della propria pagina web che nel mio caso sarà: `https://simonediricco1.github.io/myWebPage/`.
+Crea una repository vuota e pubblica su GitHub. Ti consiglio di dare lo stesso nome della directory utilizzata nel progetto, nel mio caso `myWebPage`. Il nome appena creato coinciderà con la subdirectory dell'indirizzo della propria pagina web che nel mio caso sarà: `https://sidiri-8bit.github.io/myWebPage/`.
 
 Adesso torna alla directory del progetto e aggiungiamo quindi il subpath `myWebPage` all'interno del file `_config.yml`, 
 
@@ -302,19 +307,84 @@ git init
 git add .
 git commit -m "initial"
 git branch -M master
-git remote add origin git@github.com:simonediricco1/myWebPage.git
+git remote add origin git@github.com:sidiri-8bit/myWebPage.git
 git push -u origin master
 ```
 
 Adesso, tornando su GitHub alla repository `myWebPage` dovresti trovare gli stessi file che hai localmente. Non resta che  istruire la repository ad ospitare una pagina web. Apri la Repository e vai su `Settings`, sezione `GitHub Pages`. Seleziona il branch `master`, premi il tasto `Save`, una volta aggiornata la pagina, se torni alla sezione `GitHub Pages` dovresti trovare:
 
 ```bash
-Your site is published at https://simonediricco1.github.io/myWebPage/
+Your site is published at https://sidiri-8bit.github.io/myWebPage/
 ```
 
 Cliccando sul link dovresti visualizzare la tua pagina. Sei online!
 
 **Attenzione al branch!** Fintanto che farai le modifiche al sito ed eseguirai push sul branch `master`, GitHub effettuerà il deploy in automatico della tua pagina. Per evitare il deploy puoi utilizzare un altro branch, un branch di lavoro  qualsiasi ad esempio `changes` ma ricorda che affinchè la pagina possa essere caricata dovrai effettuare il merge del tuo branch `changes` con il branch `master`
+
+
+**Non importa specificare un subpath per il tuo sito!**<br>
+Se non vuoi specificare un subpath e pubblicare il sito come "https://[username].github.io/" la procedura è semplificata.
+Crea una repository con il nome `[username].github.io`. Nel mio caso sarà `sidiri-8bit.github.io`.
+La repository `[username].github.io` è *speciale*, infatti GitHub la identifica già come una repository pronta ad ospitare una pagina web e ad effettuare il deploy in automatico sul branch `master`. L'unica cosa che dovrai fare è caricare il contenuto del tuo sito su questa repository togliendo dal file `_config.yml` il subpath indicato attraverso parametro `baseurl`. Riporto il file `_config.yml` completo:
+
+```yml
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you: 
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Your awesome title
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+```
+
 
 ## Temi jekyll
 

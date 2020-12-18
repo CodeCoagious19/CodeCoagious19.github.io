@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Corso Python - 08
+title: Corso Python - 09
 parent: Python
 grand_parent: Corsi
 has_children: false
@@ -126,3 +126,9 @@ for p in paragrafi:
     print("-"*50)
 ```
 
+---
+
+<div class="next-prev">
+    <a href="./py-course-07.html" id="prev-link"> previus </a> 
+    <a href="./py-course-09.html" id="next-link"> next </a>
+</div>

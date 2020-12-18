@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Corso Python - 17
+title: Corso Python - 18
 parent: Python
 grand_parent: Corsi
 has_children: false
@@ -56,3 +56,9 @@ Nel seguente esempio elenco i numeri dispari da 0 a 100 con una sola espressione
 print([x for x in range(0, 100) if x // 2 * 2 != x])
 ```
 
+---
+
+<div class="next-prev">
+    <a href="./py-course-16.html" id="prev-link"> previus </a> 
+    <a href="./py-course-18.html" id="next-link"> next </a>
+</div>

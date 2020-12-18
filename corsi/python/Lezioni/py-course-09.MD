@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Corso Python - 08
+title: Corso Python - 10
 parent: Python
 grand_parent: Corsi
 has_children: false
-nav_order: 9
+nav_order: 10
 ---
 
 ## Python `while()`
@@ -124,3 +124,10 @@ E' normale chiedersi quando usare uno e quando usare l'altro.. Riporto quindi un
 - `for` loop è un ciclo enumerativo. Andrebbe utilizzato quando è noto a priori il numero di iterazioni totali
 - `while` loop è un ciclo indefinito. Andrebbe utilizzato quando non è noto a priori il numero di iterazioni totali
 - I comandi `break` e `continue` possono essere utilizzati indistintamente sia sul ciclo `for` che sul ciclo `while`
+
+---
+
+<div class="next-prev">
+    <a href="./py-course-08.html" id="prev-link"> previus </a> 
+    <a href="./py-course-10.html" id="next-link"> next </a>
+</div>

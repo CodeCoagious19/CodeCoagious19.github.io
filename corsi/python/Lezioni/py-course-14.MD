@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Corso Python - 14
+title: Corso Python - 15
 parent: Python
 grand_parent: Corsi
 has_children: false
@@ -85,3 +85,10 @@ print(offerte)
 ![](./images/asta-04.gif)
 
 Come si vede una coppia identica *utente/bit coin* viene catturata e rifiutata ma è ancora permesso che un utente possa fare più offerte
+
+---
+
+<div class="next-prev">
+    <a href="./py-course-13.html" id="prev-link"> previus </a> 
+    <a href="./py-course-15.html" id="next-link"> next </a>
+</div>

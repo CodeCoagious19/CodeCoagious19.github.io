@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Corso Python - 10
+title: Corso Python - 11
 parent: Python
 grand_parent: Corsi
 has_children: false
-nav_order: 9
+nav_order: 11
 ---
 
 ## Esercizio Asta online v1
@@ -55,3 +55,10 @@ Che cosa succede se l'utente inserisce dei valori di input non atesi? Ad esempio
 ![](./images/asta-02.gif)
 
 Vedremo nel capito successivo come trattare questi errori tramite il costrutto `try Except`
+
+---
+
+<div class="next-prev">
+    <a href="./py-course-09.html" id="prev-link"> previus </a> 
+    <a href="./py-course-11.html" id="next-link"> next </a>
+</div>

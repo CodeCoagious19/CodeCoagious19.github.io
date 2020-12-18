@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Corso Python - 11
+title: Corso Python - 12
 parent: Python
 grand_parent: Corsi
 has_children: false
-nav_order: 10
+nav_order: 12
 ---
 
 ## Costrutto `try Except`
@@ -78,3 +78,10 @@ while 1:
 ```
 
 ![](./images/try-except-02.gif)
+
+---
+
+<div class="next-prev">
+    <a href="./py-course-10.html" id="prev-link"> previus </a> 
+    <a href="./py-course-12.html" id="next-link"> next </a>
+</div>

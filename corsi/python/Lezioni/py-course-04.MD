@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Corso Python - 04
+title: Corso Python - 05
 parent: Python
 grand_parent: Corsi
 has_children: false
@@ -115,3 +115,10 @@ print("Finito..")
 ```
 
 ![](./images/mergeAllPdf.gif)
+
+---
+
+<div class="next-prev">
+    <a href="./py-course-03.html" id="prev-link"> previus </a> 
+    <a href="./py-course-05.html" id="next-link"> next </a>
+</div>

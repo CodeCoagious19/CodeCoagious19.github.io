@@ -95,3 +95,9 @@ E' sufficiente rendere il file *eseguibile* (all'interno delle proprietà del fi
 print('ciao')
 ```
 
+---
+
+<div class="next-prev">
+    <a href="./py-course-00.html" id="prev-link"> previus </a> 
+    <a href="./py-course-02.html" id="next-link"> next </a>
+</div>

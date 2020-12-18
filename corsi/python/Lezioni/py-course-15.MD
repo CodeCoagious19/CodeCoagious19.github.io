@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Corso Python - 15
+title: Corso Python - 16
 parent: Python
 grand_parent: Corsi
 has_children: false
@@ -102,3 +102,10 @@ def inserisci_offerte():
 offerte = inserisci_offerte()
 stampa_lista(offerte)
 ```
+
+---
+
+<div class="next-prev">
+    <a href="./py-course-14.html" id="prev-link"> previus </a> 
+    <a href="./py-course-16.html" id="next-link"> next </a>
+</div>

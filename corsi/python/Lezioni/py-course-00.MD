@@ -42,3 +42,9 @@ Un ottimo ambiente di sviluppo per Python è [Pycharm](https://www.jetbrains.com
 Per questo corso ho preferito non utilizzare un IDE specifico come Pycharm ma uno con un target più ad uso generale come [Visual Studio Code](https://code.visualstudio.com/) con l'ausilio di un'estensione che possa supportare gli emmet (abbreviazioni intelligenti) per il linguaggio python e opzioni per il debug del codice. L'estension che ho installato si chiama *Python* ed è quella che riporto nell'immagine animata qua sotto.
 
 ![](./images/python-extension-vscode.gif)
+
+---
+
+<div class="next-prev">
+    <a href="./py-course-01.html" id="next-link"> next </a>
+</div>

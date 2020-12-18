@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Corso Python - 07
+title: Corso Python - 08
 parent: Python
 grand_parent: Corsi
 has_children: false
@@ -65,3 +65,9 @@ myList = ["dentista", "17:00"]
 print(f"Evento: {myList[0]} - Ora: {myList[1]} ") #Evento: dentista - Ora: 17:00 
 ```
 
+---
+
+<div class="next-prev">
+    <a href="./py-course-06.html" id="prev-link"> previus </a> 
+    <a href="./py-course-08.html" id="next-link"> next </a>
+</div>
