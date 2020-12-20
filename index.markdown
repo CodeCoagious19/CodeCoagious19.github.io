@@ -15,5 +15,5 @@ Visita la sezione Corsi, Tutorial o la mia pagina GitHub..
 
 [Corsi](./corsi.markdown){: .btn .btn-green }
 [Tutorial](./tutorial.markdown){: .btn .btn-blue }
-[GitHub](https://github.com/sidiri-8bit/){: .btn .btn-purple }
+[GitHub](https://github.com/{{ site.github_username }}){: .btn .btn-purple }
 

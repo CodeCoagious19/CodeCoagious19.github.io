@@ -23,6 +23,7 @@ Consente di creare un sito statico grazie alla sola conoscenza del linguaggio `m
   - [Come personalizzare un tema jekyll](#come-personalizzare-un-tema-jekyll)
     - [Aggiunta css](#aggiunta-css)
     - [Aggiunta html](#aggiunta-html)
+- [Personalizzazioni avanzate](#personalizzazioni-avanzate)
 
 ## Prerequisiti e installazione
 
@@ -237,24 +238,6 @@ Il file completo sarà una cosa del genere:
 
 ```yml
 # Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 
 title: Your awesome title
 email: your-email@example.com
@@ -271,26 +254,6 @@ github_username:  jekyll
 theme: minima
 plugins:
   - jekyll-feed
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
 ```
 
 A questo punto lancia nuovamente il comando:
@@ -310,8 +273,12 @@ git branch -M master
 git remote add origin git@github.com:sidiri-8bit/myWebPage.git
 git push -u origin master
 ```
-
-Adesso, tornando su GitHub alla repository `myWebPage` dovresti trovare gli stessi file che hai localmente. Non resta che  istruire la repository ad ospitare una pagina web. Apri la Repository e vai su `Settings`, sezione `GitHub Pages`. Seleziona il branch `master`, premi il tasto `Save`, una volta aggiornata la pagina, se torni alla sezione `GitHub Pages` dovresti trovare:
+e search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+ina web. Apri la Repository e vai su `Settings`, sezione `GitHub Pages`. Seleziona il branch `master`, premi il tasto `Save`, una volta aggiornata la pagina, se torni alla sezione `GitHub Pages` dovresti trovare:
 
 ```bash
 Your site is published at https://sidiri-8bit.github.io/myWebPage/
@@ -329,24 +296,6 @@ La repository `[username].github.io` è *speciale*, infatti GitHub la identifica
 
 ```yml
 # Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-#
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
 
 title: Your awesome title
 email: your-email@example.com
@@ -360,29 +309,10 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
-theme: minima
+theme: minima# Exclude from processing.
+
 plugins:
   - jekyll-feed
-
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
 ```
 
 
@@ -414,7 +344,7 @@ remote_theme: pmarsceill/just-the-docs
 
 Adesso cancella il file `Gemfile.lock` e lancia nuovamente:
 
-```bahs
+```bash
 bundle install
 ```
 
@@ -478,7 +408,7 @@ bundle info just-the-docs
 
 Risponderà con il path di installazione del tema
 
-```bahs
+```bash
 * just-the-docs (0.3.3)
 	Summary: A modern, highly customizable, and responsive Jekyll theme for documention with built-in search.
 	Homepage: https://github.com/pmarsceill/just-the-docs
@@ -492,6 +422,38 @@ Personalmente, per il tema *just-the-docs*, ho copiato la pagina `default.html` 
 ```bash
 bundle exec jekyll serve
 ```
+
+## Personalizzazioni avanzate
+
+Nel file `yml` come abbiamo già visto, sono definite delle variabili come `title`, `description`, `github_username` richiamate dalle pagine html attraverso la sintassi:
+
+![](./images/codeescape1.png)
+
+Ho dovuto usare un'immagine perchè jekyll cercherebbe di applicare la valorizzazione
+
+```yml
+# Welcome to Jekyll!
+
+title: Your awesome title
+email: your-email@example.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+baseurl: "" # the subpath of your site, e.g. /blog
+#url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+theme: minima
+plugins:
+  - jekyll-feed
+```
+
+Io ad esempio ho utilizzato la variabile `github_username` per aggiungere un icona che punti al mio account github:
+
+![](./images/codeescpe2.png)
 
 
 

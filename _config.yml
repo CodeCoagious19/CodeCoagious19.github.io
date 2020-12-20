@@ -32,6 +32,8 @@ baseurl: "" # the subpath of your site, e.g. /blog
 
 github_username: i-pp
 
+
+
 # Build settings
 #color_scheme: foo
 
