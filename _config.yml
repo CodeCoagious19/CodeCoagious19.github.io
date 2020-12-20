@@ -30,7 +30,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 #url: "https://simonediricco1.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-github_username: informatica-plusplus
+github_username: i-pp
 
 # Build settings
 #color_scheme: foo
