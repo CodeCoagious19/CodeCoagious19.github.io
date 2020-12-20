@@ -7,7 +7,7 @@ nav_order: 2
 nav_exclude: false
 ---
 
-## Ciao!
+# Ciao!
 
 Visita la sezione Corsi, Tutorial o la mia pagina GitHub..
 

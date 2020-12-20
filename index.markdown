@@ -9,7 +9,7 @@ nav_order: 1
 nav_exclude: true
 ---
 
-## Ciao!
+# Ciao!
 
 Visita la sezione Corsi, Tutorial o la mia pagina GitHub..
 
