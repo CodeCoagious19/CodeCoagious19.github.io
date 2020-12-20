@@ -4,6 +4,7 @@ title: Chi sono
 permalink: /chisono/
 has_children: false
 nav_order: 2
+nav_exclude: false
 ---
 
 ## Ciao!
