@@ -657,7 +657,7 @@ a:not([class]):hover {
 
 //Distance between header - side-bar
 .site-nav{
-    margin-top: 40px;
+    padding-top: 32px;
 }
 
 //side-bar list-item style
@@ -698,8 +698,7 @@ a:not([class]):hover {
 .site-footer {
     font-size: 32px !important;
     text-align: center;
-    margin-bottom: 24px;
-    margin-top: 24px;
+    padding: 16px;
 } 
 #site-footer-text {
     font-size: 11px !important;

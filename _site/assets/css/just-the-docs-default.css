@@ -2444,7 +2444,7 @@ a:not([class]):hover { background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%
 
 .site-header { border-bottom: 1px #F6F6F5 solid; }
 
-.site-nav { margin-top: 40px; }
+.site-nav { padding-top: 32px; }
 
 .nav-list .nav-list-item .nav-list-link { color: #F6F6F5; text-align: left; font-weight: 600; }
 
@@ -2458,7 +2458,7 @@ a:not([class]):hover { background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%
 
 .nav-list .nav-list-item .nav-list-link.active { border-left: 7px #E95420 solid; background-image: none; }
 
-.site-footer { font-size: 32px !important; text-align: center; margin-bottom: 24px; margin-top: 24px; }
+.site-footer { font-size: 32px !important; text-align: center; padding: 16px; }
 
 #site-footer-text { font-size: 11px !important; text-align: center; }
 
