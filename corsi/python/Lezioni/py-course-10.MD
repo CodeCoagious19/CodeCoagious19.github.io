@@ -59,6 +59,6 @@ Vedremo nel capito successivo come trattare questi errori tramite il costrutto `
 ---
 
 <div class="next-prev">
-    <a href="./py-course-09.html" id="prev-link"> previus </a> 
+    <a href="./py-course-09.html" id="prev-link"> back </a> 
     <a href="./py-course-11.html" id="next-link"> next </a>
 </div>

@@ -144,6 +144,6 @@ print(mySubList) #['cachi', 'mandarino', 'mela', 'kiwi', 'banana']
 ---
 
 <div class="next-prev">
-    <a href="./py-course-04.html" id="prev-link"> previus </a> 
+    <a href="./py-course-04.html" id="prev-link"> back </a> 
     <a href="./py-course-06.html" id="next-link"> next </a>
 </div>

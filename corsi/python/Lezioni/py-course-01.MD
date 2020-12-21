@@ -98,6 +98,6 @@ print('ciao')
 ---
 
 <div class="next-prev">
-    <a href="./py-course-00.html" id="prev-link"> previus </a> 
+    <a href="./py-course-00.html" id="prev-link"> back </a> 
     <a href="./py-course-02.html" id="next-link"> next </a>
 </div>

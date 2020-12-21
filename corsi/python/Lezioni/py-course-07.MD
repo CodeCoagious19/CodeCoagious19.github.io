@@ -68,6 +68,6 @@ print(f"Evento: {myList[0]} - Ora: {myList[1]} ") #Evento: dentista - Ora: 17:00
 ---
 
 <div class="next-prev">
-    <a href="./py-course-06.html" id="prev-link"> previus </a> 
+    <a href="./py-course-06.html" id="prev-link"> backa> 
     <a href="./py-course-08.html" id="next-link"> next </a>
 </div>

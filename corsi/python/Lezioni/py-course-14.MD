@@ -89,6 +89,6 @@ Come si vede una coppia identica *utente/bit coin* viene catturata e rifiutata m
 ---
 
 <div class="next-prev">
-    <a href="./py-course-13.html" id="prev-link"> previus </a> 
+    <a href="./py-course-13.html" id="prev-link"> back </a> 
     <a href="./py-course-15.html" id="next-link"> next </a>
 </div>

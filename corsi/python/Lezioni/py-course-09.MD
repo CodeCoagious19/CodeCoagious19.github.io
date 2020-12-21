@@ -128,6 +128,6 @@ E' normale chiedersi quando usare uno e quando usare l'altro.. Riporto quindi un
 ---
 
 <div class="next-prev">
-    <a href="./py-course-08.html" id="prev-link"> previus </a> 
+    <a href="./py-course-08.html" id="prev-link"> back </a> 
     <a href="./py-course-10.html" id="next-link"> next </a>
 </div>

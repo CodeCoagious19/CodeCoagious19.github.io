@@ -200,5 +200,5 @@ stampa_lista(offerte_filtrate)
 ---
 
 <div class="next-prev">
-    <a href="./py-course-17.html" id="prev-link"> previus </a> 
+    <a href="./py-course-17.html" id="prev-link"> back </a> 
 </div>

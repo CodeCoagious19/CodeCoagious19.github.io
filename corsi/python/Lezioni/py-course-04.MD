@@ -119,6 +119,6 @@ print("Finito..")
 ---
 
 <div class="next-prev">
-    <a href="./py-course-03.html" id="prev-link"> previus </a> 
+    <a href="./py-course-03.html" id="prev-link"> backa> 
     <a href="./py-course-05.html" id="next-link"> next </a>
 </div>

@@ -133,6 +133,6 @@ print(f"Offerta minima: {minimo(offerte)}")
 ---
 
 <div class="next-prev">
-    <a href="./py-course-15.html" id="prev-link"> previus </a> 
+    <a href="./py-course-15.html" id="prev-link"> back </a> 
     <a href="./py-course-17.html" id="next-link"> next </a>
 </div>

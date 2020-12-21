@@ -59,6 +59,6 @@ print([x for x in range(0, 100) if x // 2 * 2 != x])
 ---
 
 <div class="next-prev">
-    <a href="./py-course-16.html" id="prev-link"> previus </a> 
+    <a href="./py-course-16.html" id="prev-link"> back </a> 
     <a href="./py-course-18.html" id="next-link"> next </a>
 </div>

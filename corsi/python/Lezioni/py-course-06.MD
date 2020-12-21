@@ -104,6 +104,6 @@ print(myList2) #['banana', 'kiwi', 'mela', [12, 2], 'cachi']
 ---
 
 <div class="next-prev">
-    <a href="./py-course-05.html" id="prev-link"> previus </a> 
+    <a href="./py-course-05.html" id="prev-link"> backa> 
     <a href="./py-course-07.html" id="next-link"> next </a>
 </div>

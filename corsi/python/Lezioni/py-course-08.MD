@@ -129,6 +129,6 @@ for p in paragrafi:
 ---
 
 <div class="next-prev">
-    <a href="./py-course-07.html" id="prev-link"> previus </a> 
+    <a href="./py-course-07.html" id="prev-link"> backa> 
     <a href="./py-course-09.html" id="next-link"> next </a>
 </div>

@@ -89,6 +89,6 @@ pdfOutput.close()
 ---
 
 <div class="next-prev">
-    <a href="./py-course-01.html" id="prev-link"> previus </a> 
+    <a href="./py-course-01.html" id="prev-link"> back </a> 
     <a href="./py-course-03.html" id="next-link"> next </a>
 </div>

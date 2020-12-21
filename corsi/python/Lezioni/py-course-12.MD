@@ -19,6 +19,6 @@ Python ha un modulo integrato chiamato `re`, che può essere utilizzato per lavo
 ---
 
 <div class="next-prev">
-    <a href="./py-course-11.html" id="prev-link"> previus </a> 
+    <a href="./py-course-11.html" id="prev-link"> back </a> 
     <a href="./py-course-13.html" id="next-link"> next </a>
 </div>
