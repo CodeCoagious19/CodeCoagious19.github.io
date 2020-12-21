@@ -8,12 +8,14 @@ permalink:
 nav_order: 1
 nav_exclude: true
 ---
+# Link veloci
 
-# Ciao!
+Appunti, esempi e corsi completi su linguaggi di programmazione:<br>
+[C++ per esempi](./corsi/cpp/cpp.markdown){: .btn }
+[Python](./corsi/python/python.MD){: .btn .btn-purple }
+<br>
 
-Visita la sezione Corsi, Tutorial o la mia pagina GitHub..
-
-[Corsi](./corsi.markdown){: .btn .btn-green }
-[Tutorial](./tutorial.markdown){: .btn .btn-blue }
-[GitHub](https://github.com/{{ site.github_username }}){: .btn .btn-purple }
-
+Tutorial e guide su come installare ubuntu, creare una pagina web tramite Jekyll e GitHub e molto altro: <br>
+[Installa Ubuntu](./tutorial/installa-ubunutu/installa-ubuntu.markdown){: .btn .btn-green }
+[Crea la tua pagina web](./tutorial/website-jekyll-githubPages/website-jekyll-githubPages.md){: .btn .btn-blue }
+<br>

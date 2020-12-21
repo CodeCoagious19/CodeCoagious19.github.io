@@ -1,0 +1,968 @@
+<!DOCTYPE html> <html lang="en-US"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=Edge"> <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="/assets/css/just-the-docs-default.css"> <link rel="shortcut icon" type="image/png" href="favicon.png"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script> <script type="text/javascript" src="/assets/js/just-the-docs.js"></script> <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Begin Jekyll SEO tag v2.6.1 --> <title>C++ per esempi | informatica++</title> <meta name="generator" content="Jekyll v3.9.0" /> <meta property="og:title" content="C++ per esempi" /> <meta property="og:locale" content="en_US" /> <meta name="description" content="Corsi e tutorial di informatica" /> <meta property="og:description" content="Corsi e tutorial di informatica" /> <link rel="canonical" href="http://localhost:4000/cpp/" /> <meta property="og:url" content="http://localhost:4000/cpp/" /> <meta property="og:site_name" content="informatica++" /> <script type="application/ld+json"> {"@type":"WebPage","url":"http://localhost:4000/cpp/","headline":"C++ per esempi","description":"Corsi e tutorial di informatica","@context":"https://schema.org"}</script> <!-- End Jekyll SEO tag --> <meta name="google-site-verification" content="rrjmbWxEWokfhrRB8jk_PGqFkn9T1KNtLZ1pKWZoscI" /> </head> <body> <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="svg-link" viewBox="0 0 24 24"> <title>Link</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"> <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-search" viewBox="0 0 24 24"> <title>Search</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <symbol id="svg-menu" viewBox="0 0 24 24"> <title>Menu</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"> <line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewBox="0 0 24 24"> <title>Expand</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"> <polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <symbol id="svg-doc" viewBox="0 0 24 24"> <title>Document</title> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"> <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> </svg> <div class="side-bar"> <div class="site-header"> <a href="http://localhost:4000/" class="site-title lh-tight"> informatica++ </a> <a href="#" id="menu-button" class="site-button"> <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg> </a> </div> <nav role="navigation" aria-label="Main" id="site-nav" class="site-nav"> <ul class="nav-list"><li class="nav-list-item"><a href="http://localhost:4000/chisono/" class="nav-list-link">Chi sono</a></li><li class="nav-list-item"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="http://localhost:4000/tutorial/" class="nav-list-link">Tutorial</a><ul class="nav-list "><li class="nav-list-item "><a href="http://localhost:4000/tutorial/installa-ubunutu/installa-ubuntu.html" class="nav-list-link">Installazione e setup di Ubuntu in dual boot con Windows</a></li><li class="nav-list-item "><a href="http://localhost:4000/tutorial/website-jekyll-githubPages/website-jekyll-githubPages.html" class="nav-list-link">Crea il tuo sito tramite GitHub Pages e jekyll</a></li></ul></li><li class="nav-list-item active"><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="http://localhost:4000/corsi/" class="nav-list-link">Corsi</a><ul class="nav-list "><li class="nav-list-item active"><a href="http://localhost:4000/cpp/" class="nav-list-link active">C++ per esempi</a></li><li class="nav-list-item "><a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a><a href="http://localhost:4000/python/" class="nav-list-link">Python</a><ul class="nav-list"><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-00.html" class="nav-list-link">Corso Python - 01</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-01.html" class="nav-list-link">Corso Python - 02</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-02.html" class="nav-list-link">Corso Python - 03</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-03.html" class="nav-list-link">Corso Python - 04</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-04.html" class="nav-list-link">Corso Python - 05</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-05.html" class="nav-list-link">Corso Python - 06</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-06.html" class="nav-list-link">Corso Python - 07</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-07.html" class="nav-list-link">Corso Python - 08</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-08.html" class="nav-list-link">Corso Python - 09</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-09.html" class="nav-list-link">Corso Python - 10</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-10.html" class="nav-list-link">Corso Python - 11</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-11.html" class="nav-list-link">Corso Python - 12</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-12.html" class="nav-list-link">Corso Python - 13</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-13.html" class="nav-list-link">Corso Python - 14</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-14.html" class="nav-list-link">Corso Python - 15</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-15.html" class="nav-list-link">Corso Python - 16</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-16.html" class="nav-list-link">Corso Python - 17</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-17.html" class="nav-list-link">Corso Python - 18</a> </li><li class="nav-list-item "> <a href="http://localhost:4000/corsi/python/Lezioni/py-course-18.html" class="nav-list-link">Corso Python - 19</a> </li></ul></li></ul></li></ul> </nav> <footer class="site-footer"> <!-- Add font awesome icons --> <a href="https://github.com/i-pp" class="fa fa-github site-footer-item"></a> <div id="site-footer-text"> <p> Simone Di Ricco &copy 2020; Tutti i contenuti sono distribuiti con licenza <a href="https://github.com/i-pp/i-pp.github.io/LICENSE.txt">MIT</a> </p> </div> </footer> </div> <div class="main" id="top"> <div id="main-header" class="main-header"> <div class="search"> <div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search informatica++" aria-label="Search informatica++" autocomplete="off"> <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label> </div> <div id="search-results" class="search-results"></div> </div> <!-- --> <nav aria-label="Auxiliary" class="aux-nav"> <ul class="aux-nav-list"> <li class="aux-nav-list-item"><a href="https://github.com/i-pp" class="fa fa-github"></a></li> </ul> <div id="aux-nav-text"> <p> Simone Di Ricco &copy 2020; Tutti i contenuti sono distribuiti con licenza <a href="https://github.com/i-pp/i-pp.github.io/LICENSE.txt">MIT</a> </p> </div> </nav> </div> <div id="main-content-wrap" class="main-content-wrap"> <nav aria-label="Breadcrumb" class="breadcrumb-nav"> <ol class="breadcrumb-nav-list"> <li class="breadcrumb-nav-list-item"><a href="http://localhost:4000/corsi/">Corsi</a></li> <li class="breadcrumb-nav-list-item"><span>C++ per esempi</span></li> </ol> </nav> <div id="main-content" class="main-content" role="main"> <h1 id="c-per-esempi"> <a href="#c-per-esempi" class="anchor-heading" aria-labelledby="c-per-esempi"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> C++ per esempi </h1> <p>Raccolta di esempi in C++ ordinati secondo difficoltà</p> <h2 id="indice"> <a href="#indice" class="anchor-heading" aria-labelledby="indice"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Indice </h2> <ul> <li><a href="#area-e-perimetro-di-un-rettangolo">Area e perimetro di un rettangolo</a></li> <li><a href="#da-intero-a-decine-centinaia-e-unita">Da intero a decine centinaia e unita’</a></li> <li><a href="#negativo-nullo-o-positivo">Negativo, nullo o positivo?</a></li> <li><a href="#pari-o-dispari">Pari o Dispari?</a></li> <li><a href="#uguali-">Uguali ?</a></li> <li><a href="#da-intero-a-carattere">Da intero a carattere</a></li> <li><a href="#da-carattere-a-intero">Da carattere a intero</a></li> <li><a href="#da-minuscolo-a-maiuscolo">Da minuscolo a maiuscolo</a></li> <li><a href="#da-maiuscolo-a-minuscolo">Da maiuscolo a minuscolo</a></li> <li><a href="#da-minuscolo-a-maiuscolo-e-viceversa">Da minuscolo a maiuscolo e viceversa</a></li> <li><a href="#risolvi-equazioni-di-ii-grado">Risolvi equazioni di II grado</a></li> <li><a href="#conta-dispari-da-sequenza-illimitata">Conta dispari da sequenza illimitata</a></li> <li><a href="#stampa-cifre">Stampa cifre</a></li> <li><a href="#tavola-pitagorica">Tavola pitagorica</a></li> <li><a href="#conta-dispari-da-sequenza-limitata">Conta dispari da sequenza limitata</a></li> <li><a href="#sequenza-crescente-decrescente-o-non-ordinata">Sequenza crescente, decrescente o non ordinata?</a></li> <li><a href="#vettore-palindromo">Vettore palindromo</a></li> <li><a href="#conta-ricorrenza-numerica">Conta ricorrenza numerica</a></li> <li><a href="#conta-ricorrenza-letterale">Conta ricorrenza letterale</a></li> <li><a href="#segno-elementi-di-un-vettore">Segno elementi di un vettore</a></li> <li><a href="#vettore---elementi-dispari-nulli-o-pari">Vettore - elementi dispari, nulli o pari?</a></li> <li><a href="#vettore---elementi-ordinati">Vettore - elementi ordinati?</a></li> <li><a href="#buffer-circolare">Buffer circolare</a></li> <li><a href="#contenitore">Contenitore</a></li> </ul> <h2 id="area-e-perimetro-di-un-rettangolo"> <a href="#area-e-perimetro-di-un-rettangolo" class="anchor-heading" aria-labelledby="area-e-perimetro-di-un-rettangolo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Area e perimetro di un rettangolo </h2> <p>Restituisce area e perimetro di un rettangolo dati base e altezza immessi da tastiera</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Area e perimetro di un rettangolo"</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Restituisce area e perimetro di un rettangolo dati base e altezza immessi da tastiera"</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+
+    <span class="kt">double</span> <span class="n">base</span><span class="p">,</span> <span class="n">altezza</span><span class="p">,</span> <span class="n">perimetro</span><span class="p">,</span> <span class="n">area</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"base:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">base</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"altezza:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">altezza</span><span class="p">;</span>
+
+    <span class="n">perimetro</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span> <span class="n">base</span> <span class="o">+</span> <span class="n">altezza</span> <span class="p">);</span>     <span class="c1">//Conversione implicita 2 -&gt; 2.0</span>
+    <span class="n">area</span> <span class="o">=</span> <span class="n">base</span> <span class="o">*</span> <span class="n">altezza</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Perimetro: "</span> <span class="o">&lt;&lt;</span> <span class="n">perimetro</span>
+         <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Area: "</span> <span class="o">&lt;&lt;</span> <span class="n">area</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="da-intero-a-decine-centinaia-e-unita"> <a href="#da-intero-a-decine-centinaia-e-unita" class="anchor-heading" aria-labelledby="da-intero-a-decine-centinaia-e-unita"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da intero a decine centinaia e unita’ </h2> <p>Acquisisce un numero intero positivo minore o uguale a 999 immesso da tastiera e stampa la scomposizione in centinaia, decine, unita’.</p> <p><strong>Modo 1:</strong> Uso del costrutto <code class="language-plaintext highlighter-rouge">if ... else</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Da intero a decine centinaia e unita'"</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un numero intero positivo minore o uguale a 999 immesso da tastiera e stampa la scomposizione in centinaia, decine, unita'"</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">numero</span><span class="p">,</span> <span class="n">centinaia</span><span class="p">,</span> <span class="n">decine</span><span class="p">,</span> <span class="n">unita</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci un numero positivo minore o uguale a 999."</span>
+         <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Numero:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">numero</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="p">(</span> <span class="n">numero</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="o">||</span> <span class="p">(</span> <span class="n">numero</span> <span class="o">&gt;</span> <span class="mi">999</span> <span class="p">)</span> <span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Numero non valido"</span><span class="p">;</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">unita</span> <span class="o">=</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="n">decine</span> <span class="o">=</span> <span class="p">(</span> <span class="n">numero</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">)</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="n">centinaia</span> <span class="o">=</span> <span class="n">numero</span> <span class="o">/</span> <span class="mi">100</span><span class="p">;</span>
+
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"centinaia:"</span> <span class="o">&lt;&lt;</span> <span class="n">centinaia</span>
+             <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"decine:"</span> <span class="o">&lt;&lt;</span> <span class="n">decine</span>
+             <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"unita':"</span> <span class="o">&lt;&lt;</span> <span class="n">unita</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div> <p><strong>Modo 2</strong> Uso del ternary operator <code class="language-plaintext highlighter-rouge">... ? ... : ...</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Da intero a decine centinaia e unita'"</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un numero intero positivo minore o uguale a 999 immesso da tastiera e stampa la scomposizione in centinaia, decine, unita'"</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">numero</span><span class="p">,</span> <span class="n">centinaia</span><span class="p">,</span> <span class="n">decine</span><span class="p">,</span> <span class="n">unita</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci un numero positivo minore o uguale a 999."</span>
+         <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Numero:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">numero</span><span class="p">;</span>
+    <span class="c1">//Forzo i numeri maggiori 999 a 999 e i numeri minori di 0 a 0.</span>
+    <span class="n">numero</span> <span class="o">=</span> <span class="p">(</span> <span class="n">numero</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="p">(</span> <span class="n">numero</span> <span class="o">&lt;</span> <span class="mi">999</span> <span class="o">?</span> <span class="n">numero</span> <span class="o">:</span> <span class="mi">999</span> <span class="p">)</span> <span class="o">:</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="n">unita</span> <span class="o">=</span> <span class="n">numero</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">decine</span> <span class="o">=</span> <span class="p">(</span> <span class="n">numero</span> <span class="o">/</span> <span class="mi">10</span> <span class="p">)</span> <span class="o">%</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="n">centinaia</span> <span class="o">=</span> <span class="n">numero</span> <span class="o">/</span> <span class="mi">100</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"centinaia:"</span> <span class="o">&lt;&lt;</span> <span class="n">centinaia</span>
+         <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"decine:"</span> <span class="o">&lt;&lt;</span> <span class="n">decine</span>
+         <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"unita':"</span> <span class="o">&lt;&lt;</span> <span class="n">unita</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="negativo-nullo-o-positivo"> <a href="#negativo-nullo-o-positivo" class="anchor-heading" aria-labelledby="negativo-nullo-o-positivo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Negativo, nullo o positivo? </h2> <p>Acquisisce un numero intero da tastiera e stampa se è negativo, nullo o positivo</p> <p><strong>Modo 1:</strong> Uso del costrutto <code class="language-plaintext highlighter-rouge">if ... else</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Negativo, nullo o positivo?"</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un numero intero da tastiera e stampa se è negativo, nullo o positivo"</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">numero</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci un numero intero."</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Numero:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">numero</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">numero</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Negativo."</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">numero</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Nullo."</span><span class="p">;</span>
+    <span class="k">else</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Positivo."</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <p><strong>Modo 2:</strong> Uso del ternary operator <code class="language-plaintext highlighter-rouge">... ? ... : ...</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Negativo, nullo o positivo?"</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un numero intero da tastiera e stampa se è negativo, nullo o positivo"</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">numero</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci un numero intero."</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Numero:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">numero</span><span class="p">;</span>
+
+    <span class="p">(</span> <span class="n">numero</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span> <span class="o">?</span> <span class="p">(</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Nullo."</span> <span class="p">)</span> <span class="o">:</span> <span class="p">(</span> <span class="p">(</span><span class="n">numero</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="p">(</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Positivo."</span><span class="p">)</span> <span class="o">:</span> <span class="p">(</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Negativo."</span><span class="p">)</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="pari-o-dispari"> <a href="#pari-o-dispari" class="anchor-heading" aria-labelledby="pari-o-dispari"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Pari o Dispari? </h2> <p>Acquisisce un numero intero da tastiera e stampa se è pari o dispari</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp"># include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Ttitle: Pari o dispari?"</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> 
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un numero intero da tastiera e stampa se è pari o dispari"</span><span class="p">;</span>
+        
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci un numero:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+
+    <span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span> <span class="o">?</span> <span class="p">(</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Dispari."</span><span class="p">)</span> <span class="o">:</span> <span class="p">(</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Pari."</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="uguali-"> <a href="#uguali-" class="anchor-heading" aria-labelledby="uguali-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Uguali ? </h2> <p>Acquisisce tre numeri interi da tastiera e stampa se sono uguali</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Uguali ?</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Acquisisce tre numeri interi da tastiera e stampa se sono uguali</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">n3</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci tre numeri interi."</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"n1:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n1</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"n2:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n2</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"n3:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n3</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">n1</span> <span class="o">==</span> <span class="n">n2</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">n2</span> <span class="o">==</span> <span class="n">n3</span><span class="p">)</span> <span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Tutti uguali."</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">n1</span> <span class="o">==</span> <span class="n">n2</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">n1</span> <span class="o">==</span> <span class="n">n3</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">n2</span> <span class="o">==</span> <span class="n">n3</span><span class="p">)</span> <span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Due uguali."</span><span class="p">;</span>
+    <span class="k">else</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Diversi."</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="da-intero-a-carattere"> <a href="#da-intero-a-carattere" class="anchor-heading" aria-labelledby="da-intero-a-carattere"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da intero a carattere </h2> <p>Acquisisce un numero intero da tastiera e lo converte in un carattere stampabile</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Da intero a carattere</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un numero intero da tastiera e lo converte in un carattere stampabile</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"insercisci un numero:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">i</span><span class="p">;</span>
+
+    <span class="c1">//Se minore di 31 o maggiore di 127 forza a 32.</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="p">(</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">32</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">127</span><span class="p">)</span> <span class="p">)</span> <span class="o">?</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span> <span class="o">:</span> <span class="n">i</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="kt">char</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="da-carattere-a-intero"> <a href="#da-carattere-a-intero" class="anchor-heading" aria-labelledby="da-carattere-a-intero"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da carattere a intero </h2> <p>Acquisisce un carattere da tastiera e lo converte nel corrispondente codice ASCII</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Da carattere a intero</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un carattere da tastiera e lo converte nel corrispondente codice ASCII</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci un carattere: "</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="p">(</span> <span class="p">(</span><span class="n">c</span> <span class="o">&gt;=</span> <span class="sc">'a'</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;=</span> <span class="sc">'z'</span><span class="p">)</span> <span class="p">)</span> <span class="o">||</span> <span class="p">(</span> <span class="p">(</span><span class="n">c</span> <span class="o">&gt;=</span> <span class="sc">'A'</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;=</span> <span class="sc">'Z'</span><span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Codisce ASCII: "</span> <span class="o">&lt;&lt;</span> <span class="kt">int</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+    <span class="k">else</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Non � una lettera dell'alfabeto."</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="da-minuscolo-a-maiuscolo"> <a href="#da-minuscolo-a-maiuscolo" class="anchor-heading" aria-labelledby="da-minuscolo-a-maiuscolo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da minuscolo a maiuscolo </h2> <p>Acquisisce un carattere letterale minuscolo da tastiera e lo converte in un carattere letterale maiuscolo</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="c1">//0100 0000 -&gt; MAIUSC</span>
+<span class="c1">//0110 0000 -&gt; min</span>
+
+<span class="c1">//Devo mettere a 0 il quinto bit. Quindi min = (xx1x xxxx) &amp; (1101 1111);</span>
+<span class="c1">// 1101 1111 --&gt; = ~(1&lt;&lt;5)</span>
+<span class="c1">// ATT:</span>
+<span class="c1">// 1&lt;&lt;5 = 0010 0000</span>
+<span class="c1">// ~(1&lt;&lt;5) = 1101 1111</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Da minuscolo a maiuscolo</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un carattere letterale minuscolo da tastiera e lo converte in un carattere letterale maiuscolo</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci un carattere minuscolo: "</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
+
+    <span class="n">c</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="p">(</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span> <span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Il carattere maiuscolo e': "</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="da-maiuscolo-a-minuscolo"> <a href="#da-maiuscolo-a-minuscolo" class="anchor-heading" aria-labelledby="da-maiuscolo-a-minuscolo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da maiuscolo a minuscolo </h2> <p>Acquisisce un carattere letterale maiuscolo da tastiera e lo converte in un carattere letterale minuscolo</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="c1">//0100 0000 -&gt; MAIUSC</span>
+<span class="c1">//0110 0000 -&gt; min</span>
+
+<span class="c1">//Devo mettere a 1 il quinto bit. Quindi min = (xx1x xxxx) | (0010 0000);</span>
+<span class="c1">// 0010 0000 --&gt; = (1&lt;&lt;5)</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Da maiuscolo a minuscolo</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un carattere letterale maiuscolo da tastiera e lo converte in un carattere letterale minuscolo</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci un carattere MAIUSCOLO: "</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
+
+    <span class="n">c</span> <span class="o">|=</span> <span class="p">(</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span> <span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Il carattere minuscolo e': "</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="da-minuscolo-a-maiuscolo-e-viceversa"> <a href="#da-minuscolo-a-maiuscolo-e-viceversa" class="anchor-heading" aria-labelledby="da-minuscolo-a-maiuscolo-e-viceversa"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da minuscolo a maiuscolo e viceversa </h2> <p>Acquisisce un carattere letterale da tastiera e:</p> <ul> <li>Lo converte in maiuscolo se è minuscolo</li> <li>Lo converte in minuscolo se è maiuscolo</li> <li>Restituisce il carattere se non è una lettera</li> </ul> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="c1">//010x xxxx -&gt; MAIUSC</span>
+<span class="c1">//011x xxxx -&gt; minusc</span>
+<span class="c1">//La lettera 'k' differisce di 2^5 rispetto alla lettera 'K'</span>
+<span class="c1">//Calcolo 'a' - 'A'</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Da minuscolo a maiuscolo e viceversa</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un carattere letterale da tastiera e:</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"- Lo converte in maiuscolo se è minuscolo</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"- Lo converte in minuscolo se è maiuscolo</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"- Restituisce il carattere se non è una lettera</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci un carattere: "</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
+
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">t</span> <span class="o">=</span> <span class="sc">'a'</span> <span class="o">-</span> <span class="sc">'A'</span><span class="p">;</span>               <span class="c1">//Costante di conversione min&lt;-&gt;MAIUSC</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">c</span> <span class="o">&gt;=</span> <span class="sc">'a'</span> <span class="o">&amp;&amp;</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="sc">'z'</span> <span class="p">){</span>
+        <span class="n">c</span> <span class="o">-=</span> <span class="n">t</span><span class="p">;</span>                            <span class="c1">//Trasformo min-&gt;MAIUSC</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Il carattere maiuscolo e': "</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">c</span> <span class="o">&gt;=</span> <span class="sc">'A'</span> <span class="o">&amp;&amp;</span> <span class="n">c</span> <span class="o">&lt;=</span> <span class="sc">'Z'</span> <span class="p">){</span>
+        <span class="n">c</span> <span class="o">+=</span> <span class="n">t</span><span class="p">;</span>                            <span class="c1">//Trasformo MAIUSC-min</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Il carattere minuscolo e': "</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Il carattere inserito e': "</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="risolvi-equazioni-di-ii-grado"> <a href="#risolvi-equazioni-di-ii-grado" class="anchor-heading" aria-labelledby="risolvi-equazioni-di-ii-grado"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Risolvi equazioni di II grado </h2> <p>Calcola i risultati di un equazione di secondo grado del tipo:</p><pre><code class="language-math">ax^2 + bx + c = 0
+</code></pre><p>Inserendo da tastiera i valori dei coefficienti <code class="language-plaintext highlighter-rouge">a</code>, <code class="language-plaintext highlighter-rouge">b</code>, <code class="language-plaintext highlighter-rouge">c</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;cmath&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Ttile: Risolvi equazioni di II grado</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Calcola i risultati di un equazione di secondo grado del tipo:</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"ax^2 + bx +c = 0</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Inserendo da tastiera i valori dei coefficienti a, b, c</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">double</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">,</span> <span class="n">x1</span><span class="p">,</span> <span class="n">x2</span><span class="p">,</span> <span class="n">delta</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Inserisci i coefficienti a, b, c.</span><span class="se">\n\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"a:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">a</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"b:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">b</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"c:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">c</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Equazione DEGENERE."</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">b</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span> <span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Equazione IMPOSSIBILE."</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Equazione di PRIMO grado."</span><span class="p">;</span>
+        <span class="n">x1</span> <span class="o">=</span> <span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="n">c</span><span class="p">;</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">x="</span> <span class="o">&lt;&lt;</span> <span class="n">x1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">delta</span> <span class="o">=</span> <span class="n">b</span><span class="o">*</span><span class="n">b</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">delta</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="p">)</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">x1, x2, soluzioni immaginarie.</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">delta</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">x1</span> <span class="o">=</span> <span class="o">-</span><span class="n">b</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">a</span><span class="p">);</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">x1=x2="</span> <span class="o">&lt;&lt;</span> <span class="n">x1</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Soluzioni reali e distinte.</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+            <span class="n">x1</span> <span class="o">=</span> <span class="p">(</span> <span class="o">-</span><span class="n">b</span> <span class="o">+</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span> <span class="p">)</span><span class="o">/</span> <span class="p">(</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">a</span> <span class="p">);</span>
+            <span class="n">x2</span> <span class="o">=</span> <span class="p">(</span> <span class="o">-</span><span class="n">b</span> <span class="o">-</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span> <span class="p">)</span><span class="o">/</span> <span class="p">(</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">a</span> <span class="p">);</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">x1:"</span> <span class="o">&lt;&lt;</span> <span class="n">x1</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">x2:"</span> <span class="o">&lt;&lt;</span> <span class="n">x2</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="conta-dispari-da-sequenza-illimitata"> <a href="#conta-dispari-da-sequenza-illimitata" class="anchor-heading" aria-labelledby="conta-dispari-da-sequenza-illimitata"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Conta dispari da sequenza illimitata </h2> <p>Conta i numeri dispari inseriti da tastiera. Termina al primo negativo o nullo</p> <p><strong>Modo 1:</strong> Uso del ciclo <code class="language-plaintext highlighter-rouge">while()</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="cm">/*
+NOTA:
+- Lo statemeant: conta += n%2;
+- Equivake a: conta = conta + n%2;
+- Equivale a: if ( n%2 ) conta++;
+*/</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Conta dispari"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Conta i numeri dispari inseriti da tastiera. Termina al primo negativo o nullo.</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">conta</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"n: "</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">){</span>
+        <span class="n">conta</span> <span class="o">+=</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"n: "</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">conta</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <p><strong>Modo 2:</strong> Uso del ciclo <code class="language-plaintext highlighter-rouge">for(;;)</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="cm">/*
+NOTA:
+- Lo statemeant: conta += n%2;
+- Equivake a: conta = conta + n%2;
+- Equivale a: if ( n%2 ) conta++;
+*/</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Conta dispari</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Conta i numeri dispari inseriti da tastiera. Termina al primo negativo o nullo.</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">conta</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"n: "</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(;;)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span> <span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">conta</span> <span class="o">+=</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span><span class="p">;</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"n: "</span><span class="p">;</span>
+            <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+            <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">conta</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="stampa-cifre"> <a href="#stampa-cifre" class="anchor-heading" aria-labelledby="stampa-cifre"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Stampa cifre </h2> <p>Stampa le cifre di un numero intero inserito da tastiera a partire da quella meno significativa.</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Stampa cifre</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Stampa le cifre di un numero intero inserito da tastiera a partire da quella meno significativa.</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci un numero intero</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="p">(</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="o">?</span> <span class="n">n</span> <span class="o">:</span> <span class="o">-</span><span class="n">n</span><span class="p">;</span>
+
+    <span class="k">do</span> <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'&gt;'</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="o">%</span><span class="mi">10</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+        <span class="n">n</span> <span class="o">/=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">while</span> <span class="p">(</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="tavola-pitagorica"> <a href="#tavola-pitagorica" class="anchor-heading" aria-labelledby="tavola-pitagorica"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Tavola pitagorica </h2> <p>Costruisce la tavola pitagorica dato l’ordine “n” immesso da tastiera.</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Tavola pitagorica"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Costruisce la tavola pitagorica dato l'ordine 'n' immesso da tastiera.</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci l'ordine 'n' della tavola pitagorica:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="n">n</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="n">n</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span> <span class="p">)</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="o">*</span><span class="n">j</span> <span class="o">&lt;&lt;</span> <span class="sc">'\t'</span><span class="p">;</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n\n\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="conta-dispari-da-sequenza-limitata"> <a href="#conta-dispari-da-sequenza-limitata" class="anchor-heading" aria-labelledby="conta-dispari-da-sequenza-limitata"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Conta dispari da sequenza limitata </h2> <p>Riceve una sequenza di numeri da tastiera e conta i dispari</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Conta dispari da sequenza limitata"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Riceve una sequenza di numeri da tastiera e conta i dispari</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">M</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">conta</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci il numero di elementi della sequenza:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">M</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Inserisci la sequenza:</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">conta</span> <span class="o">+=</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="p">(</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">M</span> <span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">);</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+        <span class="n">conta</span> <span class="o">+=</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">I numeri dispari della sequenza sono:"</span> <span class="o">&lt;&lt;</span> <span class="n">conta</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="sequenza-crescente-decrescente-o-non-ordinata"> <a href="#sequenza-crescente-decrescente-o-non-ordinata" class="anchor-heading" aria-labelledby="sequenza-crescente-decrescente-o-non-ordinata"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Sequenza crescente, decrescente o non ordinata? </h2> <p>Riceve da tastiera una sequenza di numeri interi e calcola se la sequenza è ordinata in modo crescente, decrescente o non ordinata</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Sequenza crescente, decrescente o non ordinata?"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Riceve da tastiera una sequenza di numeri interi e calcola se la sequenza è ordinata in modo crescente, decrescente o non ordinata</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">crescente</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">decrescente</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">uguale</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Immetti la Lunghezza seq, n:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Immetti la sequenza:</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n1</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="p">(</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="p">)</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n2</span><span class="p">;</span>
+        <span class="n">crescente</span> <span class="o">+=</span> <span class="n">n2</span> <span class="o">&gt;</span> <span class="n">n1</span><span class="p">;</span>
+        <span class="n">decrescente</span> <span class="o">+=</span> <span class="n">n2</span> <span class="o">&lt;</span> <span class="n">n1</span><span class="p">;</span>
+        <span class="n">uguale</span> <span class="o">+=</span> <span class="n">n2</span> <span class="o">==</span> <span class="n">n1</span><span class="p">;</span>
+        <span class="n">n1</span> <span class="o">=</span> <span class="n">n2</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">crescente</span> <span class="o">==</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"CRESCENTE"</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">decrescente</span> <span class="o">==</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"DECRESCENTE"</span><span class="p">;</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">uguale</span> <span class="o">==</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span> <span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"UGUALE."</span><span class="p">;</span>
+    <span class="k">else</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"NON ORDINATA."</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="vettore-palindromo"> <a href="#vettore-palindromo" class="anchor-heading" aria-labelledby="vettore-palindromo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Vettore palindromo </h2> <p>Calcola se il vettore immesso da tastiera è palindromo</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">riempi</span> <span class="p">(</span> <span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span> <span class="p">);</span>
+<span class="kt">void</span> <span class="nf">stampa</span> <span class="p">(</span> <span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span> <span class="p">);</span>
+<span class="kt">int</span> <span class="nf">palindromo</span> <span class="p">(</span> <span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span> <span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Vettore palindromo"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Calcola se il vettore immesso da tastiera è palindromo</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">nElem</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Dimensione del vettore: "</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">nElem</span><span class="p">;</span>
+
+    <span class="n">nElem</span> <span class="o">=</span> <span class="p">(</span> <span class="n">nElem</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="p">)</span> <span class="o">?</span> <span class="mi">1</span> <span class="o">:</span> <span class="n">nElem</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="o">*</span><span class="n">vett</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">nElem</span><span class="p">];</span>
+
+    <span class="n">riempi</span><span class="p">(</span> <span class="n">vett</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">);</span>
+    <span class="n">stampa</span> <span class="p">(</span> <span class="n">vett</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">palindromo</span> <span class="p">(</span> <span class="n">vett</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">)</span> <span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Vettore palindromo."</span><span class="p">;</span>
+    <span class="k">else</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Vettore non palindromo."</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">riempi</span> <span class="p">(</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">){</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Elemento "</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="s">": "</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>                        <span class="c1">//v[i] = *(v+i)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">stampa</span> <span class="p">(</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">["</span> <span class="o">&lt;&lt;</span> <span class="n">n</span> <span class="o">&lt;&lt;</span> <span class="s">"] &lt;"</span> <span class="o">&lt;&lt;</span> <span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">", "</span> <span class="o">&lt;&lt;</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>               <span class="c1">//v[i] = *(v+i)</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"&gt;</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">palindromo</span> <span class="p">(</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">){</span>
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">j</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">,</span> <span class="n">j</span><span class="o">--</span><span class="p">){</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">v</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="p">)</span>                 <span class="c1">//v[i] != v[j] -&gt; *(v+i) != *(v+j)</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="conta-ricorrenza-numerica"> <a href="#conta-ricorrenza-numerica" class="anchor-heading" aria-labelledby="conta-ricorrenza-numerica"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Conta ricorrenza numerica </h2> <p>Conta la ricorrenza delle cifre 0-9 presenti nella sequenza inserita da tastiera</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">azzera</span> <span class="p">(</span> <span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">conta</span> <span class="p">(</span> <span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+<span class="kt">void</span> <span class="nf">stampa</span> <span class="p">(</span> <span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Conta ricorrenza numerica</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Conta la ricorrenza delle cifre 0-9 presenti nella sequenza inserita da tastiera.</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">LunghSeq</span><span class="p">,</span> <span class="n">nElem</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">vettConta</span><span class="p">[</span><span class="n">nElem</span><span class="p">];</span>            <span class="c1">//Vettore conteggio cifre.</span>
+    <span class="n">azzera</span> <span class="p">(</span> <span class="n">vettConta</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Lunghezza sequenza: "</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">LunghSeq</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci la sequenza:</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="n">conta</span> <span class="p">(</span> <span class="n">vettConta</span><span class="p">,</span> <span class="n">LunghSeq</span> <span class="p">);</span>
+    <span class="n">stampa</span> <span class="p">(</span> <span class="n">vettConta</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">azzera</span> <span class="p">(</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">){</span>
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
+        <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">conta</span> <span class="p">(</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">l</span> <span class="p">){</span>
+    <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">l</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">num</span><span class="p">;</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="p">(</span> <span class="n">num</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="n">num</span> <span class="o">:</span> <span class="o">-</span><span class="n">num</span><span class="p">;</span>     <span class="c1">//Controllo sul segno.</span>
+        <span class="k">do</span><span class="p">{</span>
+            <span class="n">v</span><span class="p">[</span> <span class="n">num</span> <span class="o">%</span> <span class="mi">10</span> <span class="p">]</span><span class="o">++</span><span class="p">;</span>
+            <span class="n">num</span> <span class="o">=</span> <span class="n">num</span> <span class="o">/</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="p">}</span> <span class="k">while</span> <span class="p">(</span> <span class="n">num</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">stampa</span> <span class="p">(</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">){</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="sc">':'</span> <span class="o">&lt;&lt;</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="conta-ricorrenza-letterale"> <a href="#conta-ricorrenza-letterale" class="anchor-heading" aria-labelledby="conta-ricorrenza-letterale"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Conta ricorrenza letterale </h2> <p>Conta la ricorrenza delle lettere contenute in una stringa</p> <ul> <li>I caratteri non alfabetici vengono ignorati</li> <li>Le maiuscole sono considerate muinuscole</li> </ul> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">azzera</span> <span class="p">(</span> <span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span> <span class="p">);</span>
+<span class="kt">void</span> <span class="nf">contaLettere</span> <span class="p">(</span> <span class="kt">char</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span> <span class="p">);</span>
+<span class="kt">void</span> <span class="nf">stampaLettere</span> <span class="p">(</span> <span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span> <span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Conta ricorrenza letterale</span><span class="se">\n</span><span class="s">"</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Description Conta la ricorrenza delle lettere contenute in una stringa</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"- I caratteri non alfabetici vengono ignorati</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"- Le maiuscole sono considerate muinuscole</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">char</span> <span class="n">stringa</span> <span class="p">[</span><span class="mi">100</span><span class="p">];</span>
+    <span class="k">const</span> <span class="kt">int</span> <span class="n">lettere</span> <span class="o">=</span> <span class="mi">26</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">vettConta</span><span class="p">[</span><span class="n">lettere</span><span class="p">];</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci la stringa:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">stringa</span><span class="p">;</span>
+
+    <span class="n">azzera</span> <span class="p">(</span> <span class="n">vettConta</span><span class="p">,</span> <span class="n">lettere</span> <span class="p">);</span>
+    <span class="n">contaLettere</span> <span class="p">(</span> <span class="n">stringa</span><span class="p">,</span> <span class="n">vettConta</span> <span class="p">);</span>
+    <span class="n">stampaLettere</span> <span class="p">(</span> <span class="n">vettConta</span><span class="p">,</span> <span class="n">lettere</span> <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">azzera</span> <span class="p">(</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
+        <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">contaLettere</span> <span class="p">(</span> <span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">c</span> <span class="p">){</span>
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="sc">'\0'</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="sc">'a'</span> <span class="o">&amp;&amp;</span> <span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="sc">'z'</span><span class="p">)</span>
+            <span class="n">c</span><span class="p">[</span> <span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="sc">'a'</span> <span class="p">]</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="sc">'A'</span> <span class="o">&amp;&amp;</span> <span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="sc">'Z'</span> <span class="p">)</span>
+            <span class="n">c</span><span class="p">[</span> <span class="n">str</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="sc">'A'</span> <span class="p">]</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">stampaLettere</span> <span class="p">(</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">){</span>
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="kt">char</span><span class="p">(</span><span class="sc">'a'</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="sc">':'</span> <span class="o">&lt;&lt;</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="segno-elementi-di-un-vettore"> <a href="#segno-elementi-di-un-vettore" class="anchor-heading" aria-labelledby="segno-elementi-di-un-vettore"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Segno elementi di un vettore </h2> <p>Stampa il segno degli elementi di un vettore.</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Segno elementi di un vettore</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Stampa il segno degli elementi di un vettore</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">nElem</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">null</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">neg</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci nElem: "</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">nElem</span><span class="p">;</span>
+
+    <span class="n">nElem</span> <span class="o">=</span> <span class="p">(</span> <span class="n">nElem</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="o">?</span> <span class="n">nElem</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="o">*</span><span class="n">vett</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">nElem</span><span class="p">];</span>
+
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nElem</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Elemento "</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="sc">':'</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">vett</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">nElem</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">vett</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="n">pos</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span> <span class="n">vett</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span> <span class="n">null</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">else</span> <span class="n">neg</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Pos: "</span> <span class="o">&lt;&lt;</span> <span class="n">pos</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Null: "</span> <span class="o">&lt;&lt;</span> <span class="n">null</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Neg: "</span> <span class="o">&lt;&lt;</span> <span class="n">neg</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="vettore---elementi-dispari-nulli-o-pari"> <a href="#vettore---elementi-dispari-nulli-o-pari" class="anchor-heading" aria-labelledby="vettore---elementi-dispari-nulli-o-pari"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Vettore - elementi dispari, nulli o pari? </h2> <p>Acquisisce un vettore da tastiera e restituisce il numero degli elementi dispari, nulli e pari in un vettore</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">leggi</span> <span class="p">(</span> <span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span> <span class="p">);</span>
+<span class="kt">int</span> <span class="nf">dzp</span> <span class="p">(</span> <span class="kt">int</span><span class="p">,</span> <span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span> <span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Vettore - elementi dispari, nulli o pari?</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un vettore da tastiera Stampa il numero degli elementi dispari, nulli e pari in un vettore</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+    <span class="kt">int</span> <span class="n">nElem</span><span class="p">,</span> <span class="n">selettore</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci il numero di elementi del vettore, nElem: "</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">nElem</span><span class="p">;</span>
+    <span class="n">nElem</span> <span class="o">=</span> <span class="n">nElem</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">?</span> <span class="n">nElem</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="c1">//Riempi vettore</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">vett</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">nElem</span><span class="p">];</span>
+    <span class="n">leggi</span> <span class="p">(</span> <span class="n">vett</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">);</span>
+
+    <span class="c1">//Stampa il numero di elementi dispari</span>
+    <span class="n">selettore</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Dispari: "</span> <span class="o">&lt;&lt;</span> <span class="n">dzp</span> <span class="p">(</span> <span class="n">selettore</span><span class="p">,</span> <span class="n">vett</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">);</span>
+    <span class="c1">//Stampa il numero di elementi nulli</span>
+    <span class="n">selettore</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Nulli: "</span> <span class="o">&lt;&lt;</span> <span class="n">dzp</span> <span class="p">(</span> <span class="n">selettore</span><span class="p">,</span> <span class="n">vett</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">);</span>
+    <span class="c1">//Stampa il numero di elementi pari</span>
+    <span class="n">selettore</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Pari: "</span> <span class="o">&lt;&lt;</span> <span class="n">dzp</span> <span class="p">(</span> <span class="n">selettore</span><span class="p">,</span> <span class="n">vett</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">);</span>
+
+    <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Comando?: (d = dispari, n = nulli, p = pari)"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">c</span><span class="p">){</span>
+        <span class="k">case</span> <span class="sc">'d'</span><span class="p">:</span>
+           <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Dispari: "</span> <span class="o">&lt;&lt;</span> <span class="n">dzp</span> <span class="p">(</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">vett</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">);</span>
+           <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">'n'</span><span class="p">:</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Nulli: "</span> <span class="o">&lt;&lt;</span> <span class="n">dzp</span> <span class="p">(</span> <span class="mi">0</span><span class="p">,</span> <span class="n">vett</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">'p'</span><span class="p">:</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Dispari: "</span> <span class="o">&lt;&lt;</span> <span class="n">dzp</span> <span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="n">vett</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="nl">default:</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"!!!"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">leggi</span> <span class="p">(</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">){</span>
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span> <span class="o">++</span> <span class="p">){</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Elemento "</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="sc">':'</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">dzp</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">sel</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">){</span>
+    <span class="kt">int</span> <span class="n">conta</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">sel</span><span class="p">){</span>
+        <span class="k">case</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+                <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="o">-</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">:</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>     <span class="c1">//NECESSARIO!!</span>
+                <span class="n">conta</span> <span class="o">+=</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">%</span><span class="mi">2</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+                <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="o">-</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">:</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>     <span class="c1">//NECESSARIO!!</span>
+                <span class="n">conta</span> <span class="o">+=</span> <span class="p">(</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+                <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="o">-</span><span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">:</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>     <span class="c1">//NECESSARIO!!</span>
+                <span class="n">conta</span> <span class="o">+=</span> <span class="o">!</span><span class="p">(</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">%</span><span class="mi">2</span> <span class="o">||</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">);</span>
+
+            <span class="p">}</span>
+            <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">conta</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="vettore---elementi-ordinati"> <a href="#vettore---elementi-ordinati" class="anchor-heading" aria-labelledby="vettore---elementi-ordinati"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Vettore - elementi ordinati? </h2> <p>Acquisisce un vettore da tastiera e restitusice se gli elementi sono in ordine crescente, descrescente o non ordinati</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">void</span> <span class="nf">leggi</span> <span class="p">(</span> <span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span> <span class="p">);</span>
+<span class="kt">int</span> <span class="nf">ordinato</span> <span class="p">(</span> <span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span> <span class="p">);</span>
+<span class="kt">void</span> <span class="nf">stampa</span> <span class="p">(</span> <span class="kt">int</span> <span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Vettore - elementi ordinati? </span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un vettore da tastiera e restitusice se gli elementi sono in ordine crescente, descrescente o non ordinati</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span> 
+
+    <span class="kt">int</span> <span class="n">nElem</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"nElem: "</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">nElem</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">vett</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span> <span class="p">[</span><span class="n">nElem</span><span class="p">];</span>
+    <span class="n">leggi</span> <span class="p">(</span> <span class="n">vett</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">);</span>
+    <span class="n">stampa</span> <span class="p">(</span> <span class="n">ordinato</span><span class="p">(</span> <span class="n">vett</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">)</span> <span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">leggi</span> <span class="p">(</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">){</span>
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"El "</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="sc">':'</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">ordinato</span> <span class="p">(</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">){</span>
+
+    <span class="kt">int</span> <span class="n">decrescente</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">crescente</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">uguale</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="n">decrescente</span> <span class="o">&amp;=</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+        <span class="n">crescente</span> <span class="o">&amp;=</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+        <span class="n">uguale</span> <span class="o">&amp;=</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">v</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="k">if</span> <span class="p">(</span> <span class="n">decrescente</span> <span class="p">)</span> <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">uguale</span> <span class="p">)</span> <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">crescente</span> <span class="p">)</span> <span class="k">return</span> <span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">return</span> <span class="o">+</span><span class="mi">2</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">stampa</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">ord</span> <span class="p">){</span>
+    <span class="k">switch</span> <span class="p">(</span> <span class="n">ord</span> <span class="p">){</span>
+        <span class="k">case</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Vettore ordinato in senso decrescente."</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Elementi del vettore uguali."</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="o">+</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Vettore ordinato in senso crescente."</span><span class="p">;</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">case</span> <span class="o">+</span><span class="mi">2</span><span class="p">:</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Elementi del vettore non ordinati."</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="buffer-circolare"> <a href="#buffer-circolare" class="anchor-heading" aria-labelledby="buffer-circolare"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Buffer circolare </h2> <p>Inizializza un buffer circolare di una dimensione impostata da tastiera. Sono disponibili i comandi:</p> <ul> <li><code class="language-plaintext highlighter-rouge">i</code>: inserisci, inscerisce un elemento nel buffer</li> <li><code class="language-plaintext highlighter-rouge">e</code>: estrai, estrai il primo elemento dal buffer in modoalità LIFO (last input, first output)</li> <li><code class="language-plaintext highlighter-rouge">&lt;</code>: termina</li> </ul> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="c1">// 'in' e 'out' devono essere inizialmente sovrapposti.</span>
+<span class="c1">// 'in' e 'out' sono INDICI.</span>
+<span class="c1">// COMANDO :</span>
+<span class="c1">// i = inserisci</span>
+<span class="c1">// e = estrai</span>
+
+<span class="k">struct</span> <span class="nc">buffer</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">dimensione</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">in</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">out</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">nElem</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">pHEAP</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">inizializza</span><span class="p">(</span> <span class="n">buffer</span> <span class="o">&amp;</span><span class="n">buf</span> <span class="p">,</span> <span class="kt">int</span> <span class="n">dim</span> <span class="p">);</span>
+<span class="kt">int</span> <span class="nf">inserisci</span> <span class="p">(</span> <span class="n">buffer</span> <span class="o">&amp;</span><span class="n">buf</span> <span class="p">,</span> <span class="kt">int</span> <span class="n">val</span> <span class="p">);</span>
+<span class="kt">int</span> <span class="nf">estrai</span> <span class="p">(</span> <span class="n">buffer</span> <span class="o">&amp;</span><span class="n">buf</span> <span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">val</span> <span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Buffer circolare</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Inizializza un buffer circolare di una dimensione impostata da tastiera.</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Sono disponibili i comandi:</span><span class="se">\n</span><span class="s">"</span> 
+         <span class="o">&lt;&lt;</span> <span class="s">"- 'i': inserisci, inscerisce un elemento nel buffer</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"- 'e': estrai, estrai il primo elemento dal buffer in modoalità LIFO (last input, first output)</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"- '&lt;': termina</span><span class="se">\n</span><span class="s">"</span>
+
+    <span class="n">buffer</span> <span class="n">b1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">dim</span><span class="p">,</span> <span class="n">val</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Inizializza il buffer.</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Dimensione:"</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">dim</span><span class="p">;</span>
+    <span class="n">inizializza</span> <span class="p">(</span> <span class="n">b1</span><span class="p">,</span> <span class="n">dim</span> <span class="p">);</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Inserisci un comando.</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"i -&gt; inserisci.</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"e -&gt; estrai.</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"&lt; -&gt; termina.</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(;;){</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n\n</span><span class="s">Comando?? "</span><span class="p">;</span>
+        <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">c</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">c</span> <span class="o">==</span> <span class="sc">'&lt;'</span><span class="p">)</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="k">switch</span> <span class="p">(</span><span class="n">c</span><span class="p">){</span>
+            <span class="k">case</span> <span class="sc">'i'</span><span class="p">:{</span>
+                <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+                <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Immetti un valore:"</span><span class="p">;</span>
+                <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">val</span><span class="p">;</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="n">inserisci</span> <span class="p">(</span> <span class="n">b1</span><span class="p">,</span> <span class="n">val</span><span class="p">);</span>
+                <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">i</span> <span class="p">)</span>
+                    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n\n</span><span class="s">BUFFER PIENO.</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">case</span> <span class="sc">'e'</span><span class="p">:{</span>
+                <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+                <span class="n">i</span> <span class="o">=</span> <span class="n">estrai</span> <span class="p">(</span> <span class="n">b1</span><span class="p">,</span> <span class="n">val</span> <span class="p">);</span>
+                <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">i</span> <span class="p">){</span>
+                    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n\n</span><span class="s">BUFFER VUOTO.</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+                <span class="k">else</span><span class="p">{</span>
+                    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">L'elemento vale: "</span> <span class="o">&lt;&lt;</span> <span class="n">val</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="nl">default:</span>
+                <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">inizializza</span> <span class="p">(</span> <span class="n">buffer</span><span class="o">&amp;</span> <span class="n">buf</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dim</span> <span class="p">){</span>
+    <span class="n">buf</span><span class="p">.</span><span class="n">in</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">buf</span><span class="p">.</span><span class="n">out</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">buf</span><span class="p">.</span><span class="n">nElem</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">buf</span><span class="p">.</span><span class="n">dimensione</span> <span class="o">=</span> <span class="n">dim</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">?</span> <span class="n">dim</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">buf</span><span class="p">.</span><span class="n">pHEAP</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span> <span class="p">[</span><span class="n">buf</span><span class="p">.</span><span class="n">dimensione</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">inserisci</span> <span class="p">(</span> <span class="n">buffer</span><span class="o">&amp;</span> <span class="n">buf</span><span class="p">,</span> <span class="kt">int</span> <span class="n">val</span><span class="p">){</span>
+    <span class="c1">// Controllo se e' pieno.</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">buf</span><span class="p">.</span><span class="n">nElem</span> <span class="o">&gt;=</span> <span class="n">buf</span><span class="p">.</span><span class="n">dimensione</span> <span class="p">){</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="c1">// Inserisco l'elemento nel primo posto vuoto.</span>
+    <span class="n">buf</span><span class="p">.</span><span class="n">pHEAP</span> <span class="p">[</span><span class="n">buf</span><span class="p">.</span><span class="n">in</span><span class="o">++</span><span class="p">]</span> <span class="o">=</span> <span class="n">val</span><span class="p">;</span>
+    <span class="n">buf</span><span class="p">.</span><span class="n">in</span> <span class="o">=</span> <span class="n">buf</span><span class="p">.</span><span class="n">in</span> <span class="o">==</span> <span class="n">buf</span><span class="p">.</span><span class="n">dimensione</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="n">buf</span><span class="p">.</span><span class="n">in</span><span class="p">;</span>
+    <span class="n">buf</span><span class="p">.</span><span class="n">nElem</span><span class="o">++</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">estrai</span> <span class="p">(</span> <span class="n">buffer</span><span class="o">&amp;</span> <span class="n">buf</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&amp;</span><span class="n">val</span> <span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">buf</span><span class="p">.</span><span class="n">nElem</span> <span class="o">&lt;=</span> <span class="mi">0</span> <span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">val</span> <span class="o">=</span> <span class="n">buf</span><span class="p">.</span><span class="n">pHEAP</span> <span class="p">[</span><span class="n">buf</span><span class="p">.</span><span class="n">out</span><span class="o">++</span><span class="p">];</span>
+    <span class="n">buf</span><span class="p">.</span><span class="n">out</span> <span class="o">=</span> <span class="n">buf</span><span class="p">.</span><span class="n">out</span> <span class="o">==</span> <span class="n">buf</span><span class="p">.</span><span class="n">dimensione</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="n">buf</span><span class="p">.</span><span class="n">out</span><span class="p">;</span>
+    <span class="n">buf</span><span class="p">.</span><span class="n">nElem</span><span class="o">--</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div> <h2 id="contenitore"> <a href="#contenitore" class="anchor-heading" aria-labelledby="contenitore"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Contenitore </h2> <p>Inizializza due contenitori di una dimensione impostata da tastiera contenenti lettere. Sono disponibili i seguenti comandi:</p> <ul> <li><code class="language-plaintext highlighter-rouge">i</code>: inizializza, inizializza un contenitore</li> <li><code class="language-plaintext highlighter-rouge">&gt;</code>: inserisci, iscerisce un elemento immesso da tastiera nel contenitore</li> <li><code class="language-plaintext highlighter-rouge">&lt;</code>: estrai, estrae un elmento da un contenitore</li> <li><code class="language-plaintext highlighter-rouge">u</code>: Ritorna un contenitore con gli elementi a comune</li> <li><code class="language-plaintext highlighter-rouge">d</code>: Ritorna un contenitore con gli elementi diversi</li> </ul> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="k">struct</span> <span class="nc">contenitore</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">nElem</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">cap</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">ee</span><span class="p">[</span><span class="mi">26</span><span class="p">];</span>
+<span class="p">};</span>
+
+<span class="kt">void</span> <span class="nf">inizializza</span> <span class="p">(</span> <span class="n">contenitore</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">,</span> <span class="kt">int</span> <span class="n">N</span> <span class="p">){</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="n">N</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">?</span> <span class="n">N</span> <span class="o">:</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">c</span><span class="p">.</span><span class="n">cap</span> <span class="o">=</span> <span class="n">N</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">26</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">)</span>
+        <span class="n">c</span><span class="p">.</span><span class="n">ee</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">c</span><span class="p">.</span><span class="n">nElem</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">inserisci</span> <span class="p">(</span> <span class="n">contenitore</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">,</span> <span class="kt">char</span> <span class="n">p</span> <span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">c</span><span class="p">.</span><span class="n">nElem</span> <span class="o">&gt;=</span> <span class="n">c</span><span class="p">.</span><span class="n">cap</span> <span class="o">||</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="sc">'a'</span> <span class="o">||</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="sc">'z'</span> <span class="p">)</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="n">c</span><span class="p">.</span><span class="n">ee</span><span class="p">[</span> <span class="n">p</span> <span class="o">-</span> <span class="sc">'a'</span> <span class="p">]</span><span class="o">++</span><span class="p">;</span>
+    <span class="n">c</span><span class="p">.</span><span class="n">nElem</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">estrai</span> <span class="p">(</span> <span class="n">contenitore</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">,</span> <span class="kt">char</span> <span class="n">p</span> <span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">p</span> <span class="o">&lt;</span> <span class="sc">'a'</span> <span class="o">||</span> <span class="n">p</span> <span class="o">&gt;</span> <span class="sc">'z'</span> <span class="p">)</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="n">c</span><span class="p">.</span><span class="n">nElem</span> <span class="o">-=</span> <span class="n">c</span><span class="p">.</span><span class="n">ee</span><span class="p">[</span> <span class="n">p</span> <span class="o">-</span> <span class="sc">'a'</span> <span class="p">];</span>
+    <span class="n">c</span><span class="p">.</span><span class="n">ee</span><span class="p">[</span> <span class="n">p</span> <span class="o">-</span> <span class="sc">'a'</span> <span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">scrivi</span> <span class="p">(</span> <span class="n">contenitore</span> <span class="o">&amp;</span><span class="n">c</span> <span class="p">){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'&lt;'</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">c</span><span class="p">.</span><span class="n">ee</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'a'</span> <span class="o">&lt;&lt;</span> <span class="s">": "</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">.</span><span class="n">ee</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+        <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">25</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+            <span class="k">if</span> <span class="p">(</span> <span class="n">c</span><span class="p">.</span><span class="n">ee</span> <span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span>
+            <span class="k">continue</span><span class="p">;</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">", "</span> <span class="o">&lt;&lt;</span> <span class="kt">char</span> <span class="p">(</span> <span class="sc">'a'</span> <span class="o">+</span> <span class="n">i</span> <span class="p">)</span> <span class="o">&lt;&lt;</span> <span class="s">": "</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">.</span><span class="n">ee</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="p">}</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'&gt;'</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">contenitore</span> <span class="nf">cambiaCapienza</span> <span class="p">(</span> <span class="k">const</span> <span class="n">contenitore</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">,</span> <span class="kt">int</span> <span class="n">N</span> <span class="p">){</span>
+    <span class="k">if</span> <span class="p">(</span> <span class="n">N</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">.</span><span class="n">nElem</span> <span class="p">)</span>
+        <span class="k">return</span> <span class="n">c</span><span class="p">;</span>
+    <span class="n">contenitore</span> <span class="n">t</span><span class="p">;</span>
+    <span class="n">t</span> <span class="o">=</span> <span class="n">c</span><span class="p">;</span>
+    <span class="n">t</span><span class="p">.</span><span class="n">cap</span> <span class="o">=</span> <span class="n">N</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">t</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="n">contenitore</span> <span class="nf">diversiE</span> <span class="p">(</span> <span class="k">const</span> <span class="n">contenitore</span> <span class="o">&amp;</span><span class="n">c1</span><span class="p">,</span> <span class="k">const</span> <span class="n">contenitore</span> <span class="o">&amp;</span><span class="n">c2</span> <span class="p">){</span>
+    <span class="n">contenitore</span> <span class="n">c3</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">N</span><span class="p">;</span>
+    <span class="n">N</span> <span class="o">=</span> <span class="p">(</span><span class="n">c1</span><span class="p">.</span><span class="n">cap</span> <span class="o">&lt;=</span> <span class="n">c2</span><span class="p">.</span><span class="n">cap</span><span class="p">)</span> <span class="o">?</span> <span class="n">c1</span><span class="p">.</span><span class="n">cap</span> <span class="o">:</span> <span class="n">c2</span><span class="p">.</span><span class="n">cap</span><span class="p">;</span>
+    <span class="n">inizializza</span> <span class="p">(</span> <span class="n">c3</span><span class="p">,</span> <span class="n">N</span> <span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">26</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">c1</span><span class="p">.</span><span class="n">ee</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">c2</span><span class="p">.</span><span class="n">ee</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span>
+            <span class="k">continue</span><span class="p">;</span>
+        <span class="n">c3</span><span class="p">.</span><span class="n">ee</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">c3</span><span class="p">.</span><span class="n">nElem</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">contenitore</span> <span class="nf">diversiN</span> <span class="p">(</span> <span class="k">const</span> <span class="n">contenitore</span> <span class="o">&amp;</span><span class="n">c1</span><span class="p">,</span> <span class="k">const</span> <span class="n">contenitore</span> <span class="o">&amp;</span><span class="n">c2</span> <span class="p">){</span>
+    <span class="n">contenitore</span> <span class="n">c3</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">N</span><span class="p">;</span>
+    <span class="n">inizializza</span> <span class="p">(</span> <span class="n">c3</span><span class="p">,</span> <span class="n">c1</span><span class="p">.</span><span class="n">cap</span> <span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span> <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">26</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span> <span class="p">){</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="n">c1</span><span class="p">.</span><span class="n">ee</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">c2</span><span class="p">.</span><span class="n">ee</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">){</span>
+            <span class="n">c3</span><span class="p">.</span><span class="n">ee</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="n">c3</span><span class="p">.</span><span class="n">nElem</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">c3</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">capienza</span> <span class="p">(</span> <span class="k">const</span> <span class="n">contenitore</span> <span class="n">c</span> <span class="p">){</span>
+    <span class="k">return</span> <span class="n">c</span><span class="p">.</span><span class="n">cap</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">quanti</span> <span class="p">(</span> <span class="k">const</span> <span class="n">contenitore</span> <span class="n">c</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="n">c</span><span class="p">.</span><span class="n">nElem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span> <span class="p">(){</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Buffer</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Inizializza due contenitori di una dimensione impostata da tastiera contenenti lettere.</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Sono disponibili i seguenti comandi:</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"- `i`: inizializza, inizializza un contenitore</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"- `&gt;`: inserisci, iscerisce un elemento immesso da tastiera nel contenitore</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"- `&lt;`: estrai, estrae un elmento da un contenitore</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"- `u`: Ritorna un contenitore con gli elementi a comune</span><span class="se">\n</span><span class="s">"</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"- `d`: Ritorna un contenitore con gli elementi diversi</span><span class="se">\n</span><span class="s">"</span>
+
+    <span class="cm">/*
+    contenitore c1, c2;
+    cout &lt;&lt; "\n\n"
+         &lt;&lt; "i: inizializza.\n"
+         &lt;&lt; "&gt;: inserisci.\n"
+         &lt;&lt; "&lt;: estrai.\n"
+         &lt;&lt; "c: cambia capienaza.\n"
+         &lt;&lt; "u: Ritorna un contenitore con gli elementi a comune.\n"
+         &lt;&lt; "d: Ritorna un contenitore con elementi diversi"
+         &lt;&lt; "q:"
+    int capienza;
+    int c;
+    cout &lt;&lt; "Inserisci capienza: ";
+    cin &gt;&gt; capienza;
+    */</span>
+    <span class="n">contenitore</span> <span class="n">c1</span><span class="p">;</span>
+    <span class="n">inizializza</span> <span class="p">(</span> <span class="n">c1</span><span class="p">,</span> <span class="mi">5</span> <span class="p">);</span>
+
+
+    <span class="n">inserisci</span> <span class="p">(</span> <span class="n">c1</span><span class="p">,</span> <span class="sc">'a'</span> <span class="p">);</span>
+    <span class="n">inserisci</span> <span class="p">(</span> <span class="n">c1</span><span class="p">,</span> <span class="sc">'b'</span> <span class="p">);</span>
+    <span class="n">inserisci</span> <span class="p">(</span> <span class="n">c1</span><span class="p">,</span> <span class="sc">'a'</span> <span class="p">);</span>
+    <span class="n">inserisci</span> <span class="p">(</span> <span class="n">c1</span><span class="p">,</span> <span class="sc">'a'</span> <span class="p">);</span>
+    <span class="n">inserisci</span> <span class="p">(</span> <span class="n">c1</span><span class="p">,</span> <span class="sc">'d'</span> <span class="p">);</span>
+    <span class="n">scrivi</span> <span class="p">(</span><span class="n">c1</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div> </div> </div> <div class="search-overlay"></div> </div> </body> </html>

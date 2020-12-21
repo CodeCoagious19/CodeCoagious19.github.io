@@ -7,11 +7,6 @@ nav_order: 2
 nav_exclude: false
 ---
 
-# Ciao!
+# Chi sono
 
-Visita la sezione Corsi, Tutorial o la mia pagina GitHub..
-
-[Corsi](./corsi.markdown){: .btn .btn-green }
-[Tutorial](./tutorial.markdown){: .btn .btn-blue }
-[GitHub](https://github.com/{{ site.github_username }}){: .btn .btn-purple }
-
+Sono simone, ingegnere elettronico specializzato nella programmazione embedded per il settore automotive. Porto avanti questo blog da dicembre 2020
