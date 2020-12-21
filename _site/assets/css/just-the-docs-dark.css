@@ -2410,17 +2410,19 @@ figure.highlight pre, figure.highlight code { padding: 0; margin: 0; border: 0; 
   to { border-left: 7px #E95420 solid; } }
 @keyframes site-footer-element-animation { from { font-size: 32px; }
   to { font-size: 36px; } }
-body { text-align: justify; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji; }
+html { font-size: 16px !important; }
 
-#main-content { color: #111111; }
+body { text-align: justify; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji; color: #24292e; }
 
-.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { font-weight: 500; text-align: left; }
+#main-content p { line-height: 1.5; }
 
-h2, .text-beta { font-size: 24px !important; }
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 { font-weight: 500; text-align: left; color: #24292e; margin-bottom: 16px; font-weight: 600; line-height: 1.25; letter-spacing: 0; text-transform: none; }
 
-h3, .text-gamma { font-size: 20px !important; }
+.main-content h1 { font-size: 32px !important; }
 
-h4, .text-delta { font-size: 18px !important; font-weight: 500; text-transform: none; letter-spacing: 0; }
+.main-content h2 { font-size: 24px !important; }
+
+.main-content h3 { font-size: 20px !important; }
 
 a { color: #E95420; }
 
@@ -2436,7 +2438,7 @@ a:not([class]):hover { background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%
 
 #menu-button.site-button:hover { background-image: none; }
 
-.site-title { color: #F6F6F5; justify-content: left; }
+.site-title { color: #F6F6F5; justify-content: left; font-size: 24px !important; }
 
 .site-title:hover { background-image: none; }
 
@@ -2472,7 +2474,8 @@ a:not([class]):hover { background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%
 
 @media (min-width: 31.25rem) { h2, .text-beta { font-size: 30px !important; }
   h3, .text-gamma { font-size: 24px !important; }
-  h4, .text-delta { font-size: 20px !important; } }
+  h4, .text-delta { font-size: 20px !important; }
+  .site-title { font-size: 24px !important; } }
 @media (min-width: 800px) { .main { max-width: 60%; margin-left: 264px; }
   .side-bar { width: 264px; }
   .nav-list .nav-list-item .nav-list-link:hover { animation-name: side-bar-border-animation; animation-duration: 0.2s; }

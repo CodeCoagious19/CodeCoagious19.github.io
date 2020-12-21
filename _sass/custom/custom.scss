@@ -8,6 +8,7 @@
 
 //----------------------------------------------------------------------------------------------
 //GREY
+$markdown-text-github:#24292e;
 //dark
 $ubuntu-text-grey-100:#111111;
 //mid-dark
@@ -509,12 +510,18 @@ code {
 
 //----------------------------------------------------------------------------------------------//----------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------//----------------------------------------------------------------------------------------------
+//TEXT
+html{
+  font-size: 16px !important;
+}
+
 body{
     text-align: justify;
     font-family: $main-font-family;
+    color: $markdown-text-github;
 }
-#main-content {
-    color: $main-content-color;
+#main-content p{
+    line-height: 1.5;
 }
 
 //----------------------------------------------------------------------------------------------
@@ -522,25 +529,31 @@ body{
 .main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
     font-weight: 500;
     text-align: left;
+    color: $markdown-text-github;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: 0;
+    text-transform: none;
 }
 
 
 //----------------------------------------------------------------------------------------------
 //FONT with screen < 500px, MOBILE MODE
-h2, .text-beta {
-    font-size: 24px !important;
+
+.main-content h1 {
+  font-size: 32px !important;
 }
 
-h3, .text-gamma {
-    font-size: 20px !important;
+.main-content h2 {
+  font-size: 24px !important;
 }
 
-h4, .text-delta {
-    font-size: 18px !important;
-    font-weight: 500;
-    text-transform: none;
-    letter-spacing: 0;
+.main-content h3 {
+  font-size: 20px !important;
 }
+
+
 //----------------------------------------------------------------------------------------------
 
 
@@ -616,6 +629,7 @@ a:not([class]):hover {
 .site-title{
     color: $site-title-color;
     justify-content: left;
+    font-size: 24px !important;
 }
 .site-title:hover {
     //Remove the default background-image when hover
@@ -799,6 +813,9 @@ a:not([class]):hover {
     h4, .text-delta {
         font-size: 20px !important;
     }
+    .site-title {
+      font-size: 24px !important;
+    }
 }
 
 
@@ -883,13 +900,4 @@ a:not([class]):hover {
   display: flex;
   justify-content: space-evenly;
   
-}
-
-
-#next-link{
-
-}
-
-#prev-link{
-
 }

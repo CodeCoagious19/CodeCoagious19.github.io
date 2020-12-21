@@ -30,7 +30,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 #url: "https://simonediricco1.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-github_username: i-pp
+github_username: simone-ipp
 
 footer_copyright: Simone Di Ricco &copy 2020; Tutti i contenuti sono distribuiti con licenza <a href="https://github.com/i-pp/i-pp.github.io/blob/master/LICENSE.txt">MIT</a>
 
