@@ -27,8 +27,8 @@ else:
 
 Esempio:
 
-```py
-print("Inserisci due numeri..)
+```python
+print("Inserisci due numeri..")
 
 primoValore = input()
 secondoValore = input()

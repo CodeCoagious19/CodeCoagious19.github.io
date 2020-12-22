@@ -42,7 +42,7 @@ $ubuntu-orange-100:#E95420;
 
 
 .mytile-second {
-  color:#E95420;
+  color:#f6f8fa;
 }
 
 
@@ -56,7 +56,6 @@ $ubuntu-orange-100:#E95420;
 .mytile-fourth {
   color:#E95420;
 }
-
 
 
 
@@ -735,6 +734,7 @@ a:not([class]):hover {
     color: $side-bar-item-color;
     text-align: left;
     font-weight: 600;
+    font-size: 16px !important;
 }
 
 //side-bar list-item-children style
@@ -867,6 +867,9 @@ a:not([class]):hover {
     .site-title {
       font-size: 24px !important;
     }
+    .nav-list .nav-list-item .nav-list-link:hover {
+      font-size: 16px !important;
+  }
 }
 
 

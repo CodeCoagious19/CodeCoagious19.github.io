@@ -13,7 +13,7 @@ Il seguente script prende in input un pdf "input.pdf" e ne produce una copia sul
 Faremo uso della proprietà della classe *PdfFileReader*:
 - `numPages`: Restituisce il numero delle pagine del file pdf dell'istanza (della classe *PdfFileReader*) si cui si legge la proprietà
 
-```py
+```python
 import PyPDF2
 
 pdfInput = open("pdf/input.pdf", "rb")

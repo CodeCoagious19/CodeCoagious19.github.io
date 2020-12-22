@@ -23,4 +23,5 @@ Appunti, esempi e corsi completi su linguaggi di programmazione:<br>
 Tutorial e guide su come installare ubuntu, creare una pagina web tramite Jekyll e GitHub e molto altro: <br>
 [Installa Ubuntu](./tutorial/installa-ubunutu/installa-ubuntu.markdown){: .btn .btn-green }
 [Crea la tua pagina web](./tutorial/website-jekyll-githubPages/website-jekyll-githubPages.md){: .btn .btn-blue }
-<br>
+
+---

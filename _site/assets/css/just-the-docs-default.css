@@ -2251,7 +2251,7 @@ figure.highlight pre, figure.highlight code { padding: 0; margin: 0; border: 0; 
 
 .mytile-first { color: #f6f8fa; }
 
-.mytile-second { color: #E95420; }
+.mytile-second { color: #f6f8fa; }
 
 .mytile-third { color: #f6f8fa; }
 
@@ -2460,7 +2460,7 @@ a:not([class]):hover { background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%
 
 .site-nav { padding-top: 48px; }
 
-.nav-list .nav-list-item .nav-list-link { color: #F6F6F5; text-align: left; font-weight: 600; }
+.nav-list .nav-list-item .nav-list-link { color: #F6F6F5; text-align: left; font-weight: 600; font-size: 16px !important; }
 
 .nav-list .nav-list-item > .nav-list .nav-list-item .nav-list-link { color: #D6D3CF; font-weight: unset; }
 
@@ -2487,7 +2487,8 @@ a:not([class]):hover { background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%
 @media (min-width: 31.25rem) { h2, .text-beta { font-size: 30px !important; }
   h3, .text-gamma { font-size: 24px !important; }
   h4, .text-delta { font-size: 20px !important; }
-  .site-title { font-size: 24px !important; } }
+  .site-title { font-size: 24px !important; }
+  .nav-list .nav-list-item .nav-list-link:hover { font-size: 16px !important; } }
 @media (min-width: 800px) { .main { max-width: 60%; margin-left: 264px; }
   .side-bar { width: 264px; }
   .nav-list .nav-list-item .nav-list-link:hover { animation-name: side-bar-border-animation; animation-duration: 0.2s; }
