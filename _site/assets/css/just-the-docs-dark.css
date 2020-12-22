@@ -2247,27 +2247,25 @@ figure.highlight pre, figure.highlight code { padding: 0; margin: 0; border: 0; 
   .text-small { font-size: 8pt !important; }
   pre.highlight { border: 1px solid #44434d; }
   .main { max-width: none; margin-left: 0; } }
-.language-plaintext { background-color: #F6F6F5; color: #333333; }
+div.highlighter-rouge div.highlight, div.highlighter-rouge pre.highlight, div.highlighter-rouge code { line-height: 1.2; }
 
-div.highlighter-rouge div.highlight, div.highlighter-rouge pre.highlight, div.highlighter-rouge code { line-height: 1; }
-
-code { color: #F6F6F5; padding: 0.2em 0.15em; font-weight: 600; background-color: #333333; border: 1px solid #44434d; border-radius: 4px; }
+code { color: #24292e; padding: 0.2em 0.15em; background-color: #f6f8fa; border: 1px solid #44434d; border-radius: 4px; font-size: 85%; }
 
 a:visited code { border-color: #44434d; }
 
-div.highlighter-rouge { padding: 0.75rem; margin-top: 0; margin-bottom: 0.75rem; overflow-x: auto; background-color: #333333; border-radius: 4px; box-shadow: none; -webkit-overflow-scrolling: touch; }
+div.highlighter-rouge { padding: 0.75rem; margin-top: 0; margin-bottom: 0.75rem; overflow-x: auto; background-color: #f6f8fa; border-radius: 4px; box-shadow: none; -webkit-overflow-scrolling: touch; }
 div.highlighter-rouge div.highlight, div.highlighter-rouge pre.highlight, div.highlighter-rouge code { padding: 0; margin: 0; border: 0; }
 
-figure.highlight { padding: 0.75rem; margin-top: 0; margin-bottom: 0.75rem; background-color: #333333; border-radius: 4px; box-shadow: none; -webkit-overflow-scrolling: touch; }
+figure.highlight { padding: 0.75rem; margin-top: 0; margin-bottom: 0.75rem; background-color: #f6f8fa; border-radius: 4px; box-shadow: none; -webkit-overflow-scrolling: touch; }
 figure.highlight pre, figure.highlight code { padding: 0; margin: 0; border: 0; }
 
 .highlight .table-wrapper { padding: 0; margin: 0; border: 0; box-shadow: none; }
-.highlight .table-wrapper td, .highlight .table-wrapper pre { font-size: 11px !important; min-width: 0; padding: 0; background-color: #333333; border: 0; }
+.highlight .table-wrapper td, .highlight .table-wrapper pre { font-size: 11px !important; min-width: 0; padding: 0; background-color: #f6f8fa; border: 0; }
 @media (min-width: 31.25rem) { .highlight .table-wrapper td, .highlight .table-wrapper pre { font-size: 12px !important; } }
 .highlight .table-wrapper td.gl { padding-right: 0.75rem; }
 .highlight .table-wrapper pre { margin: 0; line-height: 2; }
 
-.highlight .c { color: #586e75; }
+.highlight .c { color: #7e8996; }
 
 .highlight .err { color: #93a1a1; }
 
@@ -2277,7 +2275,7 @@ figure.highlight pre, figure.highlight code { padding: 0; margin: 0; border: 0; 
 
 .highlight .l { color: #93a1a1; }
 
-.highlight .n { color: #93a1a1; }
+.highlight .n { color: #032f62; }
 
 .highlight .o { color: #859900; }
 
@@ -2285,11 +2283,11 @@ figure.highlight pre, figure.highlight code { padding: 0; margin: 0; border: 0; 
 
 .highlight .p { color: #93a1a1; }
 
-.highlight .cm { color: #586e75; }
+.highlight .cm { color: #7e8996; }
 
 .highlight .cp { color: #859900; }
 
-.highlight .c1 { color: #586e75; }
+.highlight .c1 { color: #7e8996; }
 
 .highlight .cs { color: #859900; }
 
@@ -2331,7 +2329,7 @@ figure.highlight pre, figure.highlight code { padding: 0; margin: 0; border: 0; 
 
 .highlight .s { color: #2aa198; }
 
-.highlight .na { color: #555; }
+.highlight .na { color: #91790e; }
 
 .highlight .nb { color: #b58900; }
 
@@ -2349,13 +2347,13 @@ figure.highlight pre, figure.highlight code { padding: 0; margin: 0; border: 0; 
 
 .highlight .nl { color: #555; }
 
-.highlight .nn { color: #93a1a1; }
+.highlight .nn { color: #0f5099; }
 
 .highlight .nx { color: #555; }
 
 .highlight .py { color: #93a1a1; }
 
-.highlight .nt { color: #268bd2; }
+.highlight .nt { color: #b31c19; }
 
 .highlight .nv { color: #268bd2; }
 

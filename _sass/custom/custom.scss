@@ -17,6 +17,9 @@ $ubuntu-cool-grey-100:#333333;
 $ubuntu-warm-grey-100:#AEA79F;
 $ubuntu-warm-grey-50: #D6D3CF;
 $ubuntu-warm-grey-10:#F6F6F5;
+
+//light
+$github-light-color: #f6f8fa;
 //----------------------------------------------------------------------------------------------
 
 //PURPLE-VIOLET
@@ -54,16 +57,12 @@ $ubuntu-orange-100:#E95420;
 
 //----------------------------------------------------------------------------------------------//----------------------------------------------------------------------------------------------
 //----------------------------------------------------------------------------------------------//----------------------------------------------------------------------------------------------
-$background-color-code: $ubuntu-cool-grey-100;
-$background-color-code-inline: $ubuntu-warm-grey-10;
-$color-code-inline: $ubuntu-cool-grey-100;
-$color-code: $ubuntu-warm-grey-10;
-
 //CODE
-$background-color-code: $ubuntu-cool-grey-100;
-$background-color-code-inline: $ubuntu-warm-grey-10;
-$color-code-inline: $ubuntu-cool-grey-100;
-$color-code: $ubuntu-warm-grey-10;
+
+$background-color-code: $github-light-color;
+$background-color-code-inline: $github-light-color;
+$color-code-inline: $markdown-text-github;
+$color-code: $markdown-text-github;
 
 //TITLE
 $site-title-color: $ubuntu-warm-grey-10;
@@ -121,25 +120,27 @@ $main-link-tag-color: $ubuntu-orange-100;
 //NEW
 .language-plaintext {
 
-    background-color: $background-color-code-inline;
-    color: $color-code-inline;
+    //background-color: $background-color-code-inline;
+    //color: $color-code-inline;
 }
 
 //NEW
 div.highlighter-rouge div.highlight, div.highlighter-rouge pre.highlight, div.highlighter-rouge code {
-    line-height: 1;
+    line-height: 1.2;
 }
 
 code {
     color: $color-code;                       //NEW
     padding: 0.2em 0.15em;
-    font-weight: 600;                         //NEW
-    //background-color:  #2C001E;
+   // font-weight: 600;                         //NEW
     background-color: $background-color-code; //NEW
     border: $border $border-color;
     border-radius: $border-radius;
+    font-size: 85%;
   }
   
+
+
   // Avoid appearance of dark border around visited code links in Safari
   a:visited code {
     border-color: $border-color;
@@ -224,7 +225,7 @@ code {
       @include fs-2;
       min-width: 0;
       padding: 0;
-      background-color:  $background-color-code; //NEW
+     background-color:  $background-color-code; //NEW
       border: 0;
     }
   
@@ -239,7 +240,8 @@ code {
   }
   
   .highlight .c {
-    color: #586e75;
+    color: #7e8996;
+    //color: #586e75;
   } // comment //
   .highlight .err {
     color: #93a1a1;
@@ -254,7 +256,10 @@ code {
     color: #93a1a1;
   } // literal //
   .highlight .n {
-    color: #93a1a1;
+    //color: #93a1a1;
+    //color: #24292e;
+    color: #032f62;
+    //24292e
   } // name //
   .highlight .o {
     color: #859900;
@@ -266,13 +271,15 @@ code {
     color: #93a1a1;
   } // punctuation //
   .highlight .cm {
-    color: #586e75;
+    color: #7e8996
+    //color: #586e75;
   } // comment.multiline //
   .highlight .cp {
     color: #859900;
   } // comment.preproc //
   .highlight .c1 {
-    color: #586e75;
+    color: #7e8996;
+    //color: #586e75;
   } // comment.single //
   .highlight .cs {
     color: #859900;
@@ -337,7 +344,8 @@ code {
     color: #2aa198;
   } // literal.string //
   .highlight .na {
-    color: #555;
+    //color: #555;
+    color: #91790e;
   } // name.attribute //
   .highlight .nb {
     color: #b58900;
@@ -364,7 +372,8 @@ code {
     color: #555;
   } // name.label //
   .highlight .nn {
-    color: #93a1a1;
+    //color: #93a1a1;
+    color: #0f5099;
   } // name.namespace //
   .highlight .nx {
     color: #555;
@@ -373,7 +382,8 @@ code {
     color: #93a1a1;
   } // name.property //
   .highlight .nt {
-    color: #268bd2;
+    //color: #268bd2;
+    color: #b31c19;
   } // name.tag //
   .highlight .nv {
     color: #268bd2;

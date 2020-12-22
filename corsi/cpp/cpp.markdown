@@ -183,7 +183,7 @@ int main ()
 }
 ```
 
-![](./images/negativo-nullo-o-positivo.gifa)
+![](./images/negativo-nullo-o-positivo.gif)
 
 ## Pari o Dispari?
 
@@ -315,7 +315,7 @@ using namespace std;
 // ~(1<<5) = 1101 1111
 
 int main() {
-    cout << "Title: Da minuscolo a maiuscolo\n";
+    cout << "Title: Da minuscolo a maiuscolo\n"
          << "Description: Acquisisce un carattere letterale minuscolo da tastiera e lo converte in un carattere letterale maiuscolo\n";
 
     char c;
@@ -329,6 +329,8 @@ int main() {
     cout << '\n';
 }
 ```
+
+![](./images/da-minuscolo-a-maiuscolo.gif)
 
 ## Da maiuscolo a minuscolo
 
@@ -345,7 +347,7 @@ using namespace std;
 // 0010 0000 --> = (1<<5)
 
 int main() {
-    cout << "Title: Da maiuscolo a minuscolo\n";
+    cout << "Title: Da maiuscolo a minuscolo\n"
          << "Description: Acquisisce un carattere letterale maiuscolo da tastiera e lo converte in un carattere letterale minuscolo\n";
 
     char c;
@@ -359,6 +361,8 @@ int main() {
     cout << '\n';
 }
 ```
+
+![](./images/da-maiuscolo-a-minuscolo.gif)
 
 
 ## Da minuscolo a maiuscolo e viceversa
@@ -378,7 +382,7 @@ using namespace std;
 //Calcolo 'a' - 'A'
 
 int main (){
-    cout << "Title: Da minuscolo a maiuscolo e viceversa\n";
+    cout << "Title: Da minuscolo a maiuscolo e viceversa\n"
          << "Description: Acquisisce un carattere letterale da tastiera e:\n"
          << "- Lo converte in maiuscolo se è minuscolo\n"
          << "- Lo converte in minuscolo se è maiuscolo\n"
@@ -404,6 +408,9 @@ int main (){
     cout << '\n';
 }
 ```
+
+![](./images/da-minuscolo-a-maiuscolo-e-viceversa.gif)
+
 
 ## Risolvi equazioni di II grado
 
@@ -467,6 +474,8 @@ int main (){
     cout << '\n';
 }
 ```
+
+![](./images/risolvi-equazioni-di-ii-grado.gif)
 
 ## Conta dispari da sequenza illimitata
 
@@ -540,6 +549,8 @@ int main (){
 }
 ```
 
+![](./images/conta-dispari-da-sequenza-illimitata.gif)
+
 ## Stampa cifre
 
 Stampa le cifre di un numero intero inserito da tastiera a partire da quella meno significativa.
@@ -558,6 +569,7 @@ int main(){
 
     n = ( n > 0 ) ? n : -n;
 
+    cout << "Cifre:\n";
     do {
         cout << '>' << n%10 << '\n';
         n /= 10;
@@ -566,6 +578,8 @@ int main(){
     cout << '\n';
 }
 ```
+
+![](./images/stampa-cifre.gif)
 
 ## Tavola pitagorica
 
@@ -596,9 +610,11 @@ int main(){
 }
 ```
 
+![](./images/tavola-pitagorica.gif)
+
 ## Conta dispari da sequenza limitata
 
-Riceve una sequenza di numeri da tastiera e conta i dispari
+Riceve una sequenza di numeri da tastiera e conta i dispari. Termina anche se un numero inserito è nullo o negativo
 
 ```c++
 #include <iostream>
@@ -606,7 +622,7 @@ using namespace std;
 
 int main(){
     cout << "Title: Conta dispari da sequenza limitata"
-         << "Description: Riceve una sequenza di numeri da tastiera e conta i dispari\n";
+         << "Description: Riceve una sequenza di numeri da tastiera e conta i dispari. Termina anche se un numero inserito è nullo o negativo\n";
 
     int M, n, conta = 0;
     cout << "Inserisci il numero di elementi della sequenza:";
@@ -626,6 +642,8 @@ int main(){
 }
 ```
 
+![](./images/conta-dispari-da-sequenza-limitata.gif)
+
 ## Sequenza crescente, decrescente o non ordinata?
 
 Riceve da tastiera una sequenza di numeri interi e calcola se la sequenza è ordinata in modo crescente, decrescente o non ordinata
@@ -635,11 +653,11 @@ Riceve da tastiera una sequenza di numeri interi e calcola se la sequenza è ord
 using namespace std;
 
 int main(){
-    cout << "Title: Sequenza crescente, decrescente o non ordinata?"
+    cout << "Title: Sequenza crescente, decrescente o non ordinata?\n"
          << "Description: Riceve da tastiera una sequenza di numeri interi e calcola se la sequenza è ordinata in modo crescente, decrescente o non ordinata\n";
 
     int n, n1, n2, crescente = 0, decrescente = 0, uguale = 0;
-    cout << "Immetti la Lunghezza seq, n:";
+    cout << "Immetti la Lunghezza della sequenza numerica:";
     cin >> n;
     cout << "\nImmetti la sequenza:\n";
     cin >> n1;
@@ -664,6 +682,8 @@ int main(){
     cout << '\n';
 }
 ```
+
+![](./images/sequenza-crescente-decrescente-o-non-ordinata.gif)
 
 ## Vettore palindromo
 
@@ -721,6 +741,8 @@ int palindromo ( int *v, int n ){
     return 1;
 }
 ```
+
+![](./images/vettore-palindromo.gif)
 
 ## Conta ricorrenza numerica
 

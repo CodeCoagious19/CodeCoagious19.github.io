@@ -16,9 +16,9 @@
     <span class="n">area</span> <span class="o">=</span> <span class="n">base</span> <span class="o">*</span> <span class="n">altezza</span><span class="p">;</span>
 
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Perimetro: "</span> <span class="o">&lt;&lt;</span> <span class="n">perimetro</span>
-         <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Area: "</span> <span class="o">&lt;&lt;</span> <span class="n">area</span><span class="p">;</span>
+         <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Area: "</span> <span class="o">&lt;&lt;</span> <span class="n">area</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="da-intero-a-decine-centinaia-e-unita"> <a href="#da-intero-a-decine-centinaia-e-unita" class="anchor-heading" aria-labelledby="da-intero-a-decine-centinaia-e-unita"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da intero a decine centinaia e unita’ </h2> <p>Acquisisce un numero intero positivo minore o uguale a 999 immesso da tastiera e stampa la scomposizione in centinaia, decine, unita’.</p> <p><strong>Modo 1:</strong> Uso del costrutto <code class="language-plaintext highlighter-rouge">if ... else</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</code></pre></div></div> <p><img src="/corsi/cpp/images/area-e-perimetro-di-un-rettangolo.gif" alt="121x26" /></p> <h2 id="da-intero-a-decine-centinaia-e-unita"> <a href="#da-intero-a-decine-centinaia-e-unita" class="anchor-heading" aria-labelledby="da-intero-a-decine-centinaia-e-unita"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da intero a decine centinaia e unita’ </h2> <p>Acquisisce un numero intero positivo minore o uguale a 999 immesso da tastiera e stampa la scomposizione in centinaia, decine, unita’.</p> <p><strong>Modo 1:</strong> Uso del costrutto <code class="language-plaintext highlighter-rouge">if ... else</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span>
@@ -40,7 +40,8 @@
 
         <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"centinaia:"</span> <span class="o">&lt;&lt;</span> <span class="n">centinaia</span>
              <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"decine:"</span> <span class="o">&lt;&lt;</span> <span class="n">decine</span>
-             <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"unita':"</span> <span class="o">&lt;&lt;</span> <span class="n">unita</span><span class="p">;</span>
+             <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"unita':"</span> <span class="o">&lt;&lt;</span> <span class="n">unita</span>
+             <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div></div> <p><strong>Modo 2</strong> Uso del ternary operator <code class="language-plaintext highlighter-rouge">... ? ... : ...</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
@@ -65,8 +66,9 @@
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"centinaia:"</span> <span class="o">&lt;&lt;</span> <span class="n">centinaia</span>
          <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"decine:"</span> <span class="o">&lt;&lt;</span> <span class="n">decine</span>
          <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"unita':"</span> <span class="o">&lt;&lt;</span> <span class="n">unita</span><span class="p">;</span>
+         <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="negativo-nullo-o-positivo"> <a href="#negativo-nullo-o-positivo" class="anchor-heading" aria-labelledby="negativo-nullo-o-positivo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Negativo, nullo o positivo? </h2> <p>Acquisisce un numero intero da tastiera e stampa se è negativo, nullo o positivo</p> <p><strong>Modo 1:</strong> Uso del costrutto <code class="language-plaintext highlighter-rouge">if ... else</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</code></pre></div></div> <p><img src="/corsi/cpp/images/da-intero-a-decine-centinaia-e-unita.gif" alt="" /></p> <h2 id="negativo-nullo-o-positivo"> <a href="#negativo-nullo-o-positivo" class="anchor-heading" aria-labelledby="negativo-nullo-o-positivo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Negativo, nullo o positivo? </h2> <p>Acquisisce un numero intero da tastiera e stampa se è negativo, nullo o positivo</p> <p><strong>Modo 1:</strong> Uso del costrutto <code class="language-plaintext highlighter-rouge">if ... else</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span> <span class="p">()</span>
@@ -85,6 +87,8 @@
         <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Nullo."</span><span class="p">;</span>
     <span class="k">else</span>
         <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Positivo."</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div> <p><strong>Modo 2:</strong> Uso del ternary operator <code class="language-plaintext highlighter-rouge">... ? ... : ...</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -100,21 +104,25 @@
     <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">numero</span><span class="p">;</span>
 
     <span class="p">(</span> <span class="n">numero</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span> <span class="o">?</span> <span class="p">(</span> <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Nullo."</span> <span class="p">)</span> <span class="o">:</span> <span class="p">(</span> <span class="p">(</span><span class="n">numero</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="o">?</span> <span class="p">(</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Positivo."</span><span class="p">)</span> <span class="o">:</span> <span class="p">(</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Negativo."</span><span class="p">)</span> <span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="pari-o-dispari"> <a href="#pari-o-dispari" class="anchor-heading" aria-labelledby="pari-o-dispari"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Pari o Dispari? </h2> <p>Acquisisce un numero intero da tastiera e stampa se è pari o dispari</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp"># include &lt;iostream&gt;
+</code></pre></div></div> <p><img src="/corsi/cpp/images/negativo-nullo-o-positivo.gif" alt="" /></p> <h2 id="pari-o-dispari"> <a href="#pari-o-dispari" class="anchor-heading" aria-labelledby="pari-o-dispari"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Pari o Dispari? </h2> <p>Acquisisce un numero intero da tastiera e stampa se è pari o dispari</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp"># include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Ttitle: Pari o dispari?"</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> 
-         <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un numero intero da tastiera e stampa se è pari o dispari"</span><span class="p">;</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un numero intero da tastiera e stampa se è pari o dispari</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
         
     <span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci un numero:"</span><span class="p">;</span>
     <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
 
     <span class="p">(</span><span class="n">n</span><span class="o">%</span><span class="mi">2</span><span class="p">)</span> <span class="o">?</span> <span class="p">(</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Dispari."</span><span class="p">)</span> <span class="o">:</span> <span class="p">(</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Pari."</span><span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="uguali-"> <a href="#uguali-" class="anchor-heading" aria-labelledby="uguali-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Uguali ? </h2> <p>Acquisisce tre numeri interi da tastiera e stampa se sono uguali</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</code></pre></div></div> <p><img src="/corsi/cpp/images/pari-o-dispari.gif" alt="" /></p> <h2 id="uguali-"> <a href="#uguali-" class="anchor-heading" aria-labelledby="uguali-"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Uguali ? </h2> <p>Acquisisce tre numeri interi da tastiera e stampa se sono uguali</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
@@ -136,8 +144,10 @@
         <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Due uguali."</span><span class="p">;</span>
     <span class="k">else</span>
         <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span> <span class="o">&lt;&lt;</span> <span class="s">"Diversi."</span><span class="p">;</span>
+    
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="da-intero-a-carattere"> <a href="#da-intero-a-carattere" class="anchor-heading" aria-labelledby="da-intero-a-carattere"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da intero a carattere </h2> <p>Acquisisce un numero intero da tastiera e lo converte in un carattere stampabile</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</code></pre></div></div> <p><img src="/corsi/cpp/images/uguali-.gif" alt="" /></p> <h2 id="da-intero-a-carattere"> <a href="#da-intero-a-carattere" class="anchor-heading" aria-labelledby="da-intero-a-carattere"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da intero a carattere </h2> <p>Acquisisce un numero intero da tastiera e lo converte in un carattere stampabile</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
@@ -151,12 +161,14 @@
     <span class="c1">//Se minore di 31 o maggiore di 127 forza a 32.</span>
     <span class="n">i</span> <span class="o">=</span> <span class="p">(</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">32</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">127</span><span class="p">)</span> <span class="p">)</span> <span class="o">?</span> <span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">32</span><span class="p">)</span> <span class="o">:</span> <span class="n">i</span><span class="p">;</span>
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="kt">char</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="da-carattere-a-intero"> <a href="#da-carattere-a-intero" class="anchor-heading" aria-labelledby="da-carattere-a-intero"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da carattere a intero </h2> <p>Acquisisce un carattere da tastiera e lo converte nel corrispondente codice ASCII</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</code></pre></div></div> <p><img src="/corsi/cpp/images/da-intero-a-carattere.gif" alt="" /></p> <h2 id="da-carattere-a-intero"> <a href="#da-carattere-a-intero" class="anchor-heading" aria-labelledby="da-carattere-a-intero"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da carattere a intero </h2> <p>Acquisisce un carattere da tastiera e lo converte nel corrispondente codice ASCII</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Da carattere a intero</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Da carattere a intero</span><span class="se">\n</span><span class="s">"</span>
          <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un carattere da tastiera e lo converte nel corrispondente codice ASCII</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
 
     <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
@@ -165,9 +177,11 @@
     <span class="k">if</span> <span class="p">(</span> <span class="p">(</span> <span class="p">(</span><span class="n">c</span> <span class="o">&gt;=</span> <span class="sc">'a'</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;=</span> <span class="sc">'z'</span><span class="p">)</span> <span class="p">)</span> <span class="o">||</span> <span class="p">(</span> <span class="p">(</span><span class="n">c</span> <span class="o">&gt;=</span> <span class="sc">'A'</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="n">c</span> <span class="o">&lt;=</span> <span class="sc">'Z'</span><span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
         <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Codisce ASCII: "</span> <span class="o">&lt;&lt;</span> <span class="kt">int</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
     <span class="k">else</span>
-        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Non � una lettera dell'alfabeto."</span><span class="p">;</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Non e' una lettera dell'alfabeto."</span><span class="p">;</span>
+    
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="da-minuscolo-a-maiuscolo"> <a href="#da-minuscolo-a-maiuscolo" class="anchor-heading" aria-labelledby="da-minuscolo-a-maiuscolo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da minuscolo a maiuscolo </h2> <p>Acquisisce un carattere letterale minuscolo da tastiera e lo converte in un carattere letterale maiuscolo</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</code></pre></div></div> <p><img src="/corsi/cpp/images/da-carattere-a-intero.gif" alt="" /></p> <h2 id="da-minuscolo-a-maiuscolo"> <a href="#da-minuscolo-a-maiuscolo" class="anchor-heading" aria-labelledby="da-minuscolo-a-maiuscolo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da minuscolo a maiuscolo </h2> <p>Acquisisce un carattere letterale minuscolo da tastiera e lo converte in un carattere letterale maiuscolo</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="c1">//0100 0000 -&gt; MAIUSC</span>
@@ -180,7 +194,7 @@
 <span class="c1">// ~(1&lt;&lt;5) = 1101 1111</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Da minuscolo a maiuscolo</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Da minuscolo a maiuscolo</span><span class="se">\n</span><span class="s">"</span>
          <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un carattere letterale minuscolo da tastiera e lo converte in un carattere letterale maiuscolo</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
 
     <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
@@ -190,8 +204,10 @@
     <span class="n">c</span> <span class="o">&amp;=</span> <span class="o">~</span><span class="p">(</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span> <span class="p">);</span>
 
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Il carattere maiuscolo e': "</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="da-maiuscolo-a-minuscolo"> <a href="#da-maiuscolo-a-minuscolo" class="anchor-heading" aria-labelledby="da-maiuscolo-a-minuscolo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da maiuscolo a minuscolo </h2> <p>Acquisisce un carattere letterale maiuscolo da tastiera e lo converte in un carattere letterale minuscolo</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</code></pre></div></div> <p><img src="/corsi/cpp/images/da-minuscolo-a-maiuscolo.gif" alt="" /></p> <h2 id="da-maiuscolo-a-minuscolo"> <a href="#da-maiuscolo-a-minuscolo" class="anchor-heading" aria-labelledby="da-maiuscolo-a-minuscolo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da maiuscolo a minuscolo </h2> <p>Acquisisce un carattere letterale maiuscolo da tastiera e lo converte in un carattere letterale minuscolo</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="c1">//0100 0000 -&gt; MAIUSC</span>
@@ -201,7 +217,7 @@
 <span class="c1">// 0010 0000 --&gt; = (1&lt;&lt;5)</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Da maiuscolo a minuscolo</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Da maiuscolo a minuscolo</span><span class="se">\n</span><span class="s">"</span>
          <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un carattere letterale maiuscolo da tastiera e lo converte in un carattere letterale minuscolo</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
 
     <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
@@ -211,8 +227,10 @@
     <span class="n">c</span> <span class="o">|=</span> <span class="p">(</span> <span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="mi">5</span> <span class="p">);</span>
 
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Il carattere minuscolo e': "</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="da-minuscolo-a-maiuscolo-e-viceversa"> <a href="#da-minuscolo-a-maiuscolo-e-viceversa" class="anchor-heading" aria-labelledby="da-minuscolo-a-maiuscolo-e-viceversa"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da minuscolo a maiuscolo e viceversa </h2> <p>Acquisisce un carattere letterale da tastiera e:</p> <ul> <li>Lo converte in maiuscolo se è minuscolo</li> <li>Lo converte in minuscolo se è maiuscolo</li> <li>Restituisce il carattere se non è una lettera</li> </ul> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</code></pre></div></div> <p><img src="/corsi/cpp/images/da-maiuscolo-a-minuscolo.gif" alt="" /></p> <h2 id="da-minuscolo-a-maiuscolo-e-viceversa"> <a href="#da-minuscolo-a-maiuscolo-e-viceversa" class="anchor-heading" aria-labelledby="da-minuscolo-a-maiuscolo-e-viceversa"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Da minuscolo a maiuscolo e viceversa </h2> <p>Acquisisce un carattere letterale da tastiera e:</p> <ul> <li>Lo converte in maiuscolo se è minuscolo</li> <li>Lo converte in minuscolo se è maiuscolo</li> <li>Restituisce il carattere se non è una lettera</li> </ul> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="c1">//010x xxxx -&gt; MAIUSC</span>
@@ -221,7 +239,7 @@
 <span class="c1">//Calcolo 'a' - 'A'</span>
 
 <span class="kt">int</span> <span class="nf">main</span> <span class="p">(){</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Da minuscolo a maiuscolo e viceversa</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Da minuscolo a maiuscolo e viceversa</span><span class="se">\n</span><span class="s">"</span>
          <span class="o">&lt;&lt;</span> <span class="s">"Description: Acquisisce un carattere letterale da tastiera e:</span><span class="se">\n</span><span class="s">"</span>
          <span class="o">&lt;&lt;</span> <span class="s">"- Lo converte in maiuscolo se è minuscolo</span><span class="se">\n</span><span class="s">"</span>
          <span class="o">&lt;&lt;</span> <span class="s">"- Lo converte in minuscolo se è maiuscolo</span><span class="se">\n</span><span class="s">"</span>
@@ -243,8 +261,10 @@
     <span class="p">}</span>
     <span class="k">else</span>
         <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Il carattere inserito e': "</span> <span class="o">&lt;&lt;</span> <span class="n">c</span><span class="p">;</span>
+    
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="risolvi-equazioni-di-ii-grado"> <a href="#risolvi-equazioni-di-ii-grado" class="anchor-heading" aria-labelledby="risolvi-equazioni-di-ii-grado"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Risolvi equazioni di II grado </h2> <p>Calcola i risultati di un equazione di secondo grado del tipo:</p><pre><code class="language-math">ax^2 + bx + c = 0
+</code></pre></div></div> <p><img src="/corsi/cpp/images/da-minuscolo-a-maiuscolo-e-viceversa.gif" alt="" /></p> <h2 id="risolvi-equazioni-di-ii-grado"> <a href="#risolvi-equazioni-di-ii-grado" class="anchor-heading" aria-labelledby="risolvi-equazioni-di-ii-grado"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Risolvi equazioni di II grado </h2> <p>Calcola i risultati di un equazione di secondo grado del tipo:</p><pre><code class="language-math">ax^2 + bx + c = 0
 </code></pre><p>Inserendo da tastiera i valori dei coefficienti <code class="language-plaintext highlighter-rouge">a</code>, <code class="language-plaintext highlighter-rouge">b</code>, <code class="language-plaintext highlighter-rouge">c</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 #include &lt;cmath&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -292,8 +312,10 @@
             <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">x1:"</span> <span class="o">&lt;&lt;</span> <span class="n">x1</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">x2:"</span> <span class="o">&lt;&lt;</span> <span class="n">x2</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="conta-dispari-da-sequenza-illimitata"> <a href="#conta-dispari-da-sequenza-illimitata" class="anchor-heading" aria-labelledby="conta-dispari-da-sequenza-illimitata"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Conta dispari da sequenza illimitata </h2> <p>Conta i numeri dispari inseriti da tastiera. Termina al primo negativo o nullo</p> <p><strong>Modo 1:</strong> Uso del ciclo <code class="language-plaintext highlighter-rouge">while()</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</code></pre></div></div> <p><img src="/corsi/cpp/images/risolvi-equazioni-di-ii-grado.gif" alt="" /></p> <h2 id="conta-dispari-da-sequenza-illimitata"> <a href="#conta-dispari-da-sequenza-illimitata" class="anchor-heading" aria-labelledby="conta-dispari-da-sequenza-illimitata"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Conta dispari da sequenza illimitata </h2> <p>Conta i numeri dispari inseriti da tastiera. Termina al primo negativo o nullo</p> <p><strong>Modo 1:</strong> Uso del ciclo <code class="language-plaintext highlighter-rouge">while()</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="cm">/*
@@ -317,6 +339,8 @@ NOTA:
         <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">conta</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div> <p><strong>Modo 2:</strong> Uso del ciclo <code class="language-plaintext highlighter-rouge">for(;;)</code></p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -348,8 +372,10 @@ NOTA:
             <span class="k">break</span><span class="p">;</span>
     <span class="p">}</span>
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">conta</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="stampa-cifre"> <a href="#stampa-cifre" class="anchor-heading" aria-labelledby="stampa-cifre"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Stampa cifre </h2> <p>Stampa le cifre di un numero intero inserito da tastiera a partire da quella meno significativa.</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</code></pre></div></div> <p><img src="/corsi/cpp/images/conta-dispari-da-sequenza-illimitata.gif" alt="" /></p> <h2 id="stampa-cifre"> <a href="#stampa-cifre" class="anchor-heading" aria-labelledby="stampa-cifre"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Stampa cifre </h2> <p>Stampa le cifre di un numero intero inserito da tastiera a partire da quella meno significativa.</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
@@ -362,12 +388,15 @@ NOTA:
 
     <span class="n">n</span> <span class="o">=</span> <span class="p">(</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="p">)</span> <span class="o">?</span> <span class="n">n</span> <span class="o">:</span> <span class="o">-</span><span class="n">n</span><span class="p">;</span>
 
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Cifre:</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
     <span class="k">do</span> <span class="p">{</span>
         <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'&gt;'</span> <span class="o">&lt;&lt;</span> <span class="n">n</span><span class="o">%</span><span class="mi">10</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
         <span class="n">n</span> <span class="o">/=</span> <span class="mi">10</span><span class="p">;</span>
     <span class="p">}</span> <span class="k">while</span> <span class="p">(</span> <span class="n">n</span><span class="o">&gt;</span><span class="mi">0</span> <span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="tavola-pitagorica"> <a href="#tavola-pitagorica" class="anchor-heading" aria-labelledby="tavola-pitagorica"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Tavola pitagorica </h2> <p>Costruisce la tavola pitagorica dato l’ordine “n” immesso da tastiera.</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</code></pre></div></div> <p><img src="/corsi/cpp/images/stampa-cifre.gif" alt="" /></p> <h2 id="tavola-pitagorica"> <a href="#tavola-pitagorica" class="anchor-heading" aria-labelledby="tavola-pitagorica"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Tavola pitagorica </h2> <p>Costruisce la tavola pitagorica dato l’ordine “n” immesso da tastiera.</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
@@ -386,13 +415,15 @@ NOTA:
             <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="o">*</span><span class="n">j</span> <span class="o">&lt;&lt;</span> <span class="sc">'\t'</span><span class="p">;</span>
         <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n\n\n</span><span class="s">"</span><span class="p">;</span>
     <span class="p">}</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="conta-dispari-da-sequenza-limitata"> <a href="#conta-dispari-da-sequenza-limitata" class="anchor-heading" aria-labelledby="conta-dispari-da-sequenza-limitata"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Conta dispari da sequenza limitata </h2> <p>Riceve una sequenza di numeri da tastiera e conta i dispari</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</code></pre></div></div> <p><img src="/corsi/cpp/images/tavola-pitagorica.gif" alt="" /></p> <h2 id="conta-dispari-da-sequenza-limitata"> <a href="#conta-dispari-da-sequenza-limitata" class="anchor-heading" aria-labelledby="conta-dispari-da-sequenza-limitata"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Conta dispari da sequenza limitata </h2> <p>Riceve una sequenza di numeri da tastiera e conta i dispari. Termina anche se un numero inserito è nullo o negativo</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Conta dispari da sequenza limitata"</span>
-         <span class="o">&lt;&lt;</span> <span class="s">"Description: Riceve una sequenza di numeri da tastiera e conta i dispari</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+         <span class="o">&lt;&lt;</span> <span class="s">"Description: Riceve una sequenza di numeri da tastiera e conta i dispari. Termina anche se un numero inserito è nullo o negativo</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
 
     <span class="kt">int</span> <span class="n">M</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">conta</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Inserisci il numero di elementi della sequenza:"</span><span class="p">;</span>
@@ -407,16 +438,18 @@ NOTA:
     <span class="p">}</span>
 
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">I numeri dispari della sequenza sono:"</span> <span class="o">&lt;&lt;</span> <span class="n">conta</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="sequenza-crescente-decrescente-o-non-ordinata"> <a href="#sequenza-crescente-decrescente-o-non-ordinata" class="anchor-heading" aria-labelledby="sequenza-crescente-decrescente-o-non-ordinata"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Sequenza crescente, decrescente o non ordinata? </h2> <p>Riceve da tastiera una sequenza di numeri interi e calcola se la sequenza è ordinata in modo crescente, decrescente o non ordinata</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</code></pre></div></div> <p><img src="./images/conta-dispari-da-sequenza-limitata.gif" alt="" /></p> <h2 id="sequenza-crescente-decrescente-o-non-ordinata"> <a href="#sequenza-crescente-decrescente-o-non-ordinata" class="anchor-heading" aria-labelledby="sequenza-crescente-decrescente-o-non-ordinata"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Sequenza crescente, decrescente o non ordinata? </h2> <p>Riceve da tastiera una sequenza di numeri interi e calcola se la sequenza è ordinata in modo crescente, decrescente o non ordinata</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Sequenza crescente, decrescente o non ordinata?"</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Title: Sequenza crescente, decrescente o non ordinata?</span><span class="se">\n</span><span class="s">"</span>
          <span class="o">&lt;&lt;</span> <span class="s">"Description: Riceve da tastiera una sequenza di numeri interi e calcola se la sequenza è ordinata in modo crescente, decrescente o non ordinata</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
 
     <span class="kt">int</span> <span class="n">n</span><span class="p">,</span> <span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="p">,</span> <span class="n">crescente</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">decrescente</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">uguale</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Immetti la Lunghezza seq, n:"</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Immetti la Lunghezza della sequenza numerica:"</span><span class="p">;</span>
     <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n</span><span class="p">;</span>
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Immetti la sequenza:</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
     <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">n1</span><span class="p">;</span>
@@ -437,8 +470,10 @@ NOTA:
         <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"UGUALE."</span><span class="p">;</span>
     <span class="k">else</span>
         <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"NON ORDINATA."</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="vettore-palindromo"> <a href="#vettore-palindromo" class="anchor-heading" aria-labelledby="vettore-palindromo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Vettore palindromo </h2> <p>Calcola se il vettore immesso da tastiera è palindromo</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</code></pre></div></div> <p><img src="./images/sequenza-crescente-decrescente-o-non-ordinata.gif" alt="" /></p> <h2 id="vettore-palindromo"> <a href="#vettore-palindromo" class="anchor-heading" aria-labelledby="vettore-palindromo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Vettore palindromo </h2> <p>Calcola se il vettore immesso da tastiera è palindromo</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">riempi</span> <span class="p">(</span> <span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span> <span class="p">);</span>
@@ -463,6 +498,8 @@ NOTA:
         <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Vettore palindromo."</span><span class="p">;</span>
     <span class="k">else</span>
         <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Vettore non palindromo."</span><span class="p">;</span>
+    
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">riempi</span> <span class="p">(</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">){</span>
@@ -486,7 +523,7 @@ NOTA:
     <span class="p">}</span>
     <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div></div> <h2 id="conta-ricorrenza-numerica"> <a href="#conta-ricorrenza-numerica" class="anchor-heading" aria-labelledby="conta-ricorrenza-numerica"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Conta ricorrenza numerica </h2> <p>Conta la ricorrenza delle cifre 0-9 presenti nella sequenza inserita da tastiera</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</code></pre></div></div> <p><img src="./images/vettore-palindromo.gif" alt="" /></p> <h2 id="conta-ricorrenza-numerica"> <a href="#conta-ricorrenza-numerica" class="anchor-heading" aria-labelledby="conta-ricorrenza-numerica"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Conta ricorrenza numerica </h2> <p>Conta la ricorrenza delle cifre 0-9 presenti nella sequenza inserita da tastiera</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
 
 <span class="kt">void</span> <span class="nf">azzera</span> <span class="p">(</span> <span class="kt">int</span><span class="o">*</span><span class="p">,</span> <span class="kt">int</span><span class="p">);</span>
@@ -507,6 +544,8 @@ NOTA:
 
     <span class="n">conta</span> <span class="p">(</span> <span class="n">vettConta</span><span class="p">,</span> <span class="n">LunghSeq</span> <span class="p">);</span>
     <span class="n">stampa</span> <span class="p">(</span> <span class="n">vettConta</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">azzera</span> <span class="p">(</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">){</span>
@@ -553,6 +592,8 @@ NOTA:
     <span class="n">azzera</span> <span class="p">(</span> <span class="n">vettConta</span><span class="p">,</span> <span class="n">lettere</span> <span class="p">);</span>
     <span class="n">contaLettere</span> <span class="p">(</span> <span class="n">stringa</span><span class="p">,</span> <span class="n">vettConta</span> <span class="p">);</span>
     <span class="n">stampaLettere</span> <span class="p">(</span> <span class="n">vettConta</span><span class="p">,</span> <span class="n">lettere</span> <span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">azzera</span> <span class="p">(</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">){</span>
@@ -602,6 +643,8 @@ NOTA:
     <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Pos: "</span> <span class="o">&lt;&lt;</span> <span class="n">pos</span>
          <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Null: "</span> <span class="o">&lt;&lt;</span> <span class="n">null</span>
          <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">Neg: "</span> <span class="o">&lt;&lt;</span> <span class="n">neg</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div> <h2 id="vettore---elementi-dispari-nulli-o-pari"> <a href="#vettore---elementi-dispari-nulli-o-pari" class="anchor-heading" aria-labelledby="vettore---elementi-dispari-nulli-o-pari"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Vettore - elementi dispari, nulli o pari? </h2> <p>Acquisisce un vettore da tastiera e restituisce il numero degli elementi dispari, nulli e pari in un vettore</p> <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -649,6 +692,8 @@ NOTA:
         <span class="nl">default:</span>
             <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"!!!"</span><span class="p">;</span>
     <span class="p">}</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">leggi</span> <span class="p">(</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">){</span>
@@ -700,6 +745,8 @@ NOTA:
     <span class="kt">int</span> <span class="o">*</span><span class="n">vett</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span> <span class="p">[</span><span class="n">nElem</span><span class="p">];</span>
     <span class="n">leggi</span> <span class="p">(</span> <span class="n">vett</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">);</span>
     <span class="n">stampa</span> <span class="p">(</span> <span class="n">ordinato</span><span class="p">(</span> <span class="n">vett</span><span class="p">,</span> <span class="n">nElem</span> <span class="p">)</span> <span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">leggi</span> <span class="p">(</span> <span class="kt">int</span> <span class="o">*</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span> <span class="p">){</span>
@@ -813,6 +860,8 @@ NOTA:
                 <span class="k">break</span><span class="p">;</span>
         <span class="p">}</span>
     <span class="p">}</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
 
 <span class="kt">void</span> <span class="nf">inizializza</span> <span class="p">(</span> <span class="n">buffer</span><span class="o">&amp;</span> <span class="n">buf</span><span class="p">,</span> <span class="kt">int</span> <span class="n">dim</span> <span class="p">){</span>
@@ -964,5 +1013,7 @@ NOTA:
     <span class="n">inserisci</span> <span class="p">(</span> <span class="n">c1</span><span class="p">,</span> <span class="sc">'a'</span> <span class="p">);</span>
     <span class="n">inserisci</span> <span class="p">(</span> <span class="n">c1</span><span class="p">,</span> <span class="sc">'d'</span> <span class="p">);</span>
     <span class="n">scrivi</span> <span class="p">(</span><span class="n">c1</span><span class="p">);</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="sc">'\n'</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div> </div> </div> <div class="search-overlay"></div> </div> </body> </html>
