@@ -61,9 +61,11 @@ int main()
     area = base * altezza;
 
     cout << '\n' << "Perimetro: " << perimetro
-         << '\n' << "Area: " << area;
+         << '\n' << "Area: " << area << '\n';
 }
 ```
+
+![121x26](./images/area-e-perimetro-di-un-rettangolo.gif)
 
 ## Da intero a decine centinaia e unita'
 
@@ -93,7 +95,8 @@ int main ()
 
         cout << '\n' << "centinaia:" << centinaia
              << '\n' << "decine:" << decine
-             << '\n' << "unita':" << unita;
+             << '\n' << "unita':" << unita
+             << '\n';
     }
 }
 ```
@@ -122,8 +125,12 @@ int main ()
     cout << '\n' << "centinaia:" << centinaia
          << '\n' << "decine:" << decine
          << '\n' << "unita':" << unita;
+         << '\n';
 }
 ```
+
+![](./images/da-intero-a-decine-centinaia-e-unita.gif)
+
 
 ## Negativo, nullo o positivo?
 
@@ -150,6 +157,8 @@ int main ()
         cout << '\n' << "Nullo.";
     else
         cout << '\n' << "Positivo.";
+
+    cout << '\n';
 }
 ```
 
@@ -169,8 +178,12 @@ int main ()
     cin >> numero;
 
     ( numero == 0 ) ? ( cout << '\n' << "Nullo." ) : ( (numero > 0) ? (cout << '\n' << "Positivo.") : (cout << '\n' << "Negativo.") );
+
+    cout << '\n';
 }
 ```
+
+![](./images/negativo-nullo-o-positivo.gifa)
 
 ## Pari o Dispari?
 
@@ -182,15 +195,20 @@ using namespace std;
 
 int main(){
     cout << "Ttitle: Pari o dispari?" << '\n' 
-         << "Description: Acquisisce un numero intero da tastiera e stampa se è pari o dispari";
+         << "Description: Acquisisce un numero intero da tastiera e stampa se è pari o dispari\n";
         
     int n;
     cout << "Inserisci un numero:";
     cin >> n;
 
     (n%2) ? (cout << "Dispari.") : (cout << "Pari.");
+
+    cout << '\n';
 }
 ```
+
+![](./images/pari-o-dispari.gif)
+
 
 ## Uguali ?
 
@@ -219,8 +237,13 @@ int main(){
         cout << '\n' << "Due uguali.";
     else
         cout << '\n' << "Diversi.";
+    
+    cout << '\n';
 }
 ```
+
+![](./images/uguali-.gif)
+
 
 ## Da intero a carattere
 
@@ -241,8 +264,12 @@ int main(){
     //Se minore di 31 o maggiore di 127 forza a 32.
     i = ( (i < 32) || (i > 127) ) ? (i=32) : i;
     cout << char(i);
+
+    cout << '\n';
 }
 ```
+
+![](./images/da-intero-a-carattere.gif)
 
 ## Da carattere a intero
 
@@ -253,7 +280,7 @@ Acquisisce un carattere da tastiera e lo converte nel corrispondente codice ASCI
 using namespace std;
 
 int main(){
-    cout << "Title: Da carattere a intero\n";
+    cout << "Title: Da carattere a intero\n"
          << "Description: Acquisisce un carattere da tastiera e lo converte nel corrispondente codice ASCII\n";
 
     char c;
@@ -262,9 +289,13 @@ int main(){
     if ( ( (c >= 'a') && (c <= 'z') ) || ( (c >= 'A') && (c <= 'Z') ) )
         cout << "\nCodisce ASCII: " << int(c);
     else
-        cout << "\nNon � una lettera dell'alfabeto.";
+        cout << "\nNon e' una lettera dell'alfabeto.";
+    
+    cout << '\n';
 }
 ```
+
+![](./images/da-carattere-a-intero.gif)
 
 ## Da minuscolo a maiuscolo
 
@@ -294,6 +325,8 @@ int main() {
     c &= ~( 1 << 5 );
 
     cout << "Il carattere maiuscolo e': " << c;
+
+    cout << '\n';
 }
 ```
 
@@ -322,6 +355,8 @@ int main() {
     c |= ( 1 << 5 );
 
     cout << "Il carattere minuscolo e': " << c;
+
+    cout << '\n';
 }
 ```
 
@@ -365,6 +400,8 @@ int main (){
     }
     else
         cout << "Il carattere inserito e': " << c;
+    
+    cout << '\n';
 }
 ```
 
@@ -426,6 +463,8 @@ int main (){
             cout << "\nx1:" << x1 << "\nx2:" << x2;
         }
     }
+
+    cout << '\n';
 }
 ```
 
@@ -459,6 +498,8 @@ int main (){
         cin >> n;
     }
     cout << conta;
+
+    cout << '\n';
 }
 ```
 
@@ -494,6 +535,8 @@ int main (){
             break;
     }
     cout << conta;
+
+    cout << '\n';
 }
 ```
 
@@ -519,6 +562,8 @@ int main(){
         cout << '>' << n%10 << '\n';
         n /= 10;
     } while ( n>0 );
+
+    cout << '\n';
 }
 ```
 
@@ -546,6 +591,8 @@ int main(){
             cout << i*j << '\t';
         cout << "\n\n\n";
     }
+
+    cout << '\n';
 }
 ```
 
@@ -574,6 +621,8 @@ int main(){
     }
 
     cout << "\nI numeri dispari della sequenza sono:" << conta;
+
+    cout << '\n';
 }
 ```
 
@@ -611,6 +660,8 @@ int main(){
         cout << "UGUALE.";
     else
         cout << "NON ORDINATA.";
+
+    cout << '\n';
 }
 ```
 
@@ -644,6 +695,8 @@ int main(){
         cout << "Vettore palindromo.";
     else
         cout << "Vettore non palindromo.";
+    
+    cout << '\n';
 }
 
 void riempi ( int *v, int n ){
@@ -695,6 +748,8 @@ int main(){
 
     conta ( vettConta, LunghSeq );
     stampa ( vettConta, nElem );
+
+    cout << '\n';
 }
 
 void azzera ( int *v, int n ){
@@ -750,6 +805,8 @@ int main (){
     azzera ( vettConta, lettere );
     contaLettere ( stringa, vettConta );
     stampaLettere ( vettConta, lettere );
+
+    cout << '\n';
 }
 
 void azzera ( int *v, int n){
@@ -806,6 +863,8 @@ int main(){
     cout << "\nPos: " << pos
          << "\nNull: " << null
          << "\nNeg: " << neg;
+
+    cout << '\n';
 }
 ```
 
@@ -861,6 +920,8 @@ int main (){
         default:
             cout << "!!!";
     }
+
+    cout << '\n';
 }
 
 void leggi ( int *v, int n ){
@@ -919,6 +980,8 @@ int main (){
     int *vett = new int [nElem];
     leggi ( vett, nElem );
     stampa ( ordinato( vett, nElem ) );
+
+    cout << '\n';
 }
 
 void leggi ( int *v, int n ){
@@ -1043,6 +1106,8 @@ int main () {
                 break;
         }
     }
+
+    cout << '\n';
 }
 
 void inizializza ( buffer& buf, int dim ){
@@ -1208,5 +1273,7 @@ int main (){
     inserisci ( c1, 'a' );
     inserisci ( c1, 'd' );
     scrivi (c1);
+
+    cout << '\n';
 }
 ```
