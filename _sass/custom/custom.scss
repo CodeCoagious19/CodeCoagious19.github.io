@@ -32,37 +32,36 @@ $ubuntu-orange-100:#E95420;
 
 
 .mytitle{
-  font-family: 'Courier New', Courier, monospace;
+  //font-family: 'Courier New', Courier, monospace;
   font-weight: 600;
 }
 
 .mytile-first {
-  color:#859900;
+  color:#f6f8fa;
 }
 
-.mytile-pre-second {
-  font-size: 0.6em;
-  color:#93a1a1;
-}
 
 .mytile-second {
-  font-size: 0.6em;
   color:#E95420;
 }
 
 
-.mytile-post-second {
-  font-size: 0.6em;
-  color:#93a1a1;
-}
+
 
 .mytile-third {
-  color:#859900;
+  color:#f6f8fa;
 }
+
 
 .mytile-fourth {
   color:#E95420;
 }
+
+
+
+
+
+
 
 
 
@@ -103,7 +102,8 @@ $color-code: $markdown-text-github;
 $site-title-color: $ubuntu-warm-grey-10;
 
 //SIDE-BAR
-$side-bar-background-color: $ubuntu-dark-aubergine-100; 
+//$side-bar-background-color: $ubuntu-dark-aubergine-100; 24292e
+$side-bar-background-color: #24292e;
 $side-bar-divider-header-nav-bar-color: $ubuntu-warm-grey-10;
 $side-bar-item-color: $ubuntu-warm-grey-10;
 $side-bar-item-children-color: $ubuntu-warm-grey-50;

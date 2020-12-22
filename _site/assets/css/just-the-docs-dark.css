@@ -2247,17 +2247,13 @@ figure.highlight pre, figure.highlight code { padding: 0; margin: 0; border: 0; 
   .text-small { font-size: 8pt !important; }
   pre.highlight { border: 1px solid #44434d; }
   .main { max-width: none; margin-left: 0; } }
-.mytitle { font-family: 'Courier New', Courier, monospace; font-weight: 600; }
+.mytitle { font-weight: 600; }
 
-.mytile-first { color: #859900; }
+.mytile-first { color: #f6f8fa; }
 
-.mytile-pre-second { font-size: 0.6em; color: #93a1a1; }
+.mytile-second { color: #E95420; }
 
-.mytile-second { font-size: 0.6em; color: #E95420; }
-
-.mytile-post-second { font-size: 0.6em; color: #93a1a1; }
-
-.mytile-third { color: #859900; }
+.mytile-third { color: #f6f8fa; }
 
 .mytile-fourth { color: #E95420; }
 
@@ -2458,7 +2454,7 @@ a:not([class]):hover { background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%
 
 .site-title:hover { background-image: none; }
 
-.side-bar { background: #2C001E; }
+.side-bar { background: #24292e; }
 
 .site-header { border-bottom: 1px #F6F6F5 solid; }
 
