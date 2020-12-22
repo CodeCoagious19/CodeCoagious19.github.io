@@ -2247,6 +2247,20 @@ figure.highlight pre, figure.highlight code { padding: 0; margin: 0; border: 0; 
   .text-small { font-size: 8pt !important; }
   pre.highlight { border: 1px solid #eeebee; }
   .main { max-width: none; margin-left: 0; } }
+.mytitle { font-family: 'Courier New', Courier, monospace; font-weight: 600; }
+
+.mytile-first { color: #859900; }
+
+.mytile-pre-second { font-size: 0.6em; color: #93a1a1; }
+
+.mytile-second { font-size: 0.6em; color: #E95420; }
+
+.mytile-post-second { font-size: 0.6em; color: #93a1a1; }
+
+.mytile-third { color: #859900; }
+
+.mytile-fourth { color: #E95420; }
+
 div.highlighter-rouge div.highlight, div.highlighter-rouge pre.highlight, div.highlighter-rouge code { line-height: 1.2; }
 
 code { color: #24292e; padding: 0.2em 0.15em; background-color: #f6f8fa; border: 1px solid #eeebee; border-radius: 4px; font-size: 85%; }
@@ -2404,6 +2418,10 @@ figure.highlight pre, figure.highlight code { padding: 0; margin: 0; border: 0; 
 .code-example { padding: 0.75rem; margin-bottom: 0.75rem; overflow: auto; border: 1px solid #eeebee; border-radius: 4px; }
 .code-example + .highlighter-rouge, .code-example + figure.highlight { position: relative; margin-top: -1rem; border-right: 1px solid #eeebee; border-bottom: 1px solid #eeebee; border-left: 1px solid #eeebee; border-top-left-radius: 0; border-top-right-radius: 0; }
 
+.main-content .mypic { text-align: center; }
+
+.mypic img { width: 25%; border-radius: 50%; }
+
 @keyframes side-bar-border-animation { from { border-left: 0px #2C001E solid; }
   to { border-left: 7px #E95420 solid; } }
 @keyframes site-footer-element-animation { from { font-size: 32px; }
@@ -2485,6 +2503,6 @@ a:not([class]):hover { background-image: linear-gradient(rgba(44, 0, 30, 0.5) 0%
   .site-footer .site-footer-item:hover { animation-name: site-footer-element-animation; animation-duration: 0.2s; font-size: 36px; }
   .aux-nav .aux-nav-list { display: none; }
   #aux-nav-text { display: none; } }
-@media (min-width: 1366px) { .side-bar { width: 400px; }
-  .main { margin-left: 400px; } }
+@media (min-width: 1366px) { .side-bar { width: 264px; }
+  .main { margin-left: 264px; } }
 .next-prev { display: flex; justify-content: space-evenly; }

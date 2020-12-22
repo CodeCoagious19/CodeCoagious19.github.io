@@ -31,6 +31,41 @@ $ubuntu-orange-100:#E95420;
 //----------------------------------------------------------------------------------------------//----------------------------------------------------------------------------------------------
 
 
+.mytitle{
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+}
+
+.mytile-first {
+  color:#859900;
+}
+
+.mytile-pre-second {
+  font-size: 0.6em;
+  color:#93a1a1;
+}
+
+.mytile-second {
+  font-size: 0.6em;
+  color:#E95420;
+}
+
+
+.mytile-post-second {
+  font-size: 0.6em;
+  color:#93a1a1;
+}
+
+.mytile-third {
+  color:#859900;
+}
+
+.mytile-fourth {
+  color:#E95420;
+}
+
+
+
 
 
 
@@ -483,10 +518,15 @@ code {
 
 
 
+.main-content .mypic{
+  text-align: center;
+}
 
 
-
-
+.mypic img{
+  width: 25%;
+  border-radius:50%;
+}
 
 
 
@@ -510,6 +550,7 @@ code {
     from {font-size: 32px}
     to {font-size: 36px}
 }
+
 //----------------------------------------------------------------------------------------------
 
 
@@ -893,10 +934,10 @@ a:not([class]):hover {
     //----------------------------------------------------------------------------------------------
     //Set width of main-content and side-bar
     .side-bar {
-        width: 400px;
+        width: 264px;
     }
     .main { 
-        margin-left: 400px;
+        margin-left: 264px;
     }
 }
 //----------------------------------------------------------------------------------------------//----------------------------------------------------------------------------------------------

@@ -30,9 +30,9 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 #url: "https://simonediricco1.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
-github_username: simone-ipp
+github_username: en0m1s-ipp
 
-footer_copyright: Simone Di Ricco &copy 2020; Tutti i contenuti sono distribuiti con licenza <a href="https://github.com/i-pp/i-pp.github.io/blob/master/LICENSE.txt">MIT</a>
+footer_copyright: Simone Di Ricco &copy 2020; Tutti i contenuti sono distribuiti con licenza <a href="https://github.com/en0m1s-ipp/en0m1s-ipp.github.io/blob/master/LICENSE.txt">MIT</a>
 
 
 # Build settings
@@ -42,6 +42,9 @@ remote_theme: pmarsceill/just-the-docs
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+#logo: "/favicon2.png"
+
 
 
 #markdown: kramdown

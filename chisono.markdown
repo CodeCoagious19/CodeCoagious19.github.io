@@ -7,6 +7,8 @@ nav_order: 2
 nav_exclude: false
 ---
 
-# Chi sono
+<div class="mypic">
+    <img src="/mypic.png" alt="persona1">
+</div>
 
 Sono simone, ingegnere elettronico specializzato nella programmazione embedded per il settore automotive. Porto avanti questo blog da dicembre 2020

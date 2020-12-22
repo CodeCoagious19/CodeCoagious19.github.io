@@ -8,11 +8,12 @@ permalink:
 nav_order: 1
 nav_exclude: true
 ---
-# Link veloci
+## Link veloci
 
 Appunti, esempi e corsi completi su linguaggi di programmazione:<br>
-[C++ per esempi](./corsi/cpp/cpp.markdown){: .btn }
-[Python](./corsi/python/python.MD){: .btn .btn-purple }
+[C++ per esempi](./corsi/cpp/cpp.markdown){: .btn .btn-purple}
+[Python](./corsi/python/python.MD){: .btn  }
+[Javascript](./corsi/javascript/Javscript.MD){: .btn .btn-green }
 <br>
 
 Tutorial e guide su come installare ubuntu, creare una pagina web tramite Jekyll e GitHub e molto altro: <br>
